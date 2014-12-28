@@ -13,7 +13,6 @@ namespace DissDlcToolkit.Models
         public static UInt32 MAGIC_NUMBER = 0x0C;
 
         public UInt32 magic {get; set;}
-        public UInt32 entryNumber { get; set; }
         public ArrayList entries { get; set; }
 
         public ObjectTable()
@@ -33,7 +32,7 @@ namespace DissDlcToolkit.Models
                         // Throw exception if needed
                         return;
                     }
-                    entryNumber = reader.ReadUInt32();
+                    UInt32 entryNumber = reader.ReadUInt32();
                     for (int i = 0; i < entryNumber; i++)
                     {
                         ObjectEntry entry = new ObjectEntry(reader);
@@ -50,7 +49,7 @@ namespace DissDlcToolkit.Models
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {
                     writer.Write(MAGIC_NUMBER);
-                    writer.Write(entryNumber);
+                    writer.Write(entries.Count);
                     foreach (ObjectEntry entry in entries){
                         entry.write(writer);
                     }

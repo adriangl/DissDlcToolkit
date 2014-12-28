@@ -1,4 +1,5 @@
-﻿using DissDlcToolkit.Models;
+﻿using DissDlcToolkit.Forms;
+using DissDlcToolkit.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,8 @@ namespace DissDlcToolkit
         public MainForm()
         {
             InitializeComponent();
-        }
+            InitializeDlcGenTab();
+        }        
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -30,9 +32,14 @@ namespace DissDlcToolkit
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            ObjectTable table = new ObjectTable(@"C:\objentry.bin");
-            table.writeToFile(@"C:\objentry.dup.bin");
+            
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm frmAbout = new AboutForm();
+            frmAbout.ShowDialog(this);
+        }       
 
     }
 }

@@ -40,7 +40,7 @@
             this.dlcGenBrowseAssistGmoButton = new System.Windows.Forms.Button();
             this.dlcGenCharacterComboBox = new System.Windows.Forms.ComboBox();
             this.dlcGenCostumeSlotComboBox = new System.Windows.Forms.ComboBox();
-            this.dlcGenPlayerSlotComboBox = new System.Windows.Forms.ComboBox();
+            this.dlcGenPlayerDlcSlotComboBox = new System.Windows.Forms.ComboBox();
             this.dlcGenAssistDlcSlotComboBox = new System.Windows.Forms.ComboBox();
             this.dlcGenPlayerGmoFileTextBox = new System.Windows.Forms.TextBox();
             this.dlcGenPlayerGimFileMainTextBox = new System.Windows.Forms.TextBox();
@@ -123,6 +123,7 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tabHostMain
             // 
@@ -149,7 +150,7 @@
             this.tableLayoutPanel1.Controls.Add(this.dlcGenBrowseAssistGmoButton, 2, 7);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenCharacterComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenCostumeSlotComboBox, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.dlcGenPlayerSlotComboBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dlcGenPlayerDlcSlotComboBox, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenAssistDlcSlotComboBox, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenPlayerGmoFileTextBox, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenPlayerGimFileMainTextBox, 1, 4);
@@ -199,6 +200,7 @@
             this.dlcGenCharacterComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.dlcGenCharacterComboBox, "dlcGenCharacterComboBox");
             this.dlcGenCharacterComboBox.Name = "dlcGenCharacterComboBox";
+            this.dlcGenCharacterComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenCharacterComboBox_SelectedIndexChanged);
             // 
             // dlcGenCostumeSlotComboBox
             // 
@@ -206,11 +208,11 @@
             resources.ApplyResources(this.dlcGenCostumeSlotComboBox, "dlcGenCostumeSlotComboBox");
             this.dlcGenCostumeSlotComboBox.Name = "dlcGenCostumeSlotComboBox";
             // 
-            // dlcGenPlayerSlotComboBox
+            // dlcGenPlayerDlcSlotComboBox
             // 
-            this.dlcGenPlayerSlotComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.dlcGenPlayerSlotComboBox, "dlcGenPlayerSlotComboBox");
-            this.dlcGenPlayerSlotComboBox.Name = "dlcGenPlayerSlotComboBox";
+            this.dlcGenPlayerDlcSlotComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.dlcGenPlayerDlcSlotComboBox, "dlcGenPlayerDlcSlotComboBox");
+            this.dlcGenPlayerDlcSlotComboBox.Name = "dlcGenPlayerDlcSlotComboBox";
             // 
             // dlcGenAssistDlcSlotComboBox
             // 
@@ -594,7 +596,7 @@
         private System.Windows.Forms.Button dlcGenBrowseAssistGmoButton;
         private System.Windows.Forms.ComboBox dlcGenCharacterComboBox;
         private System.Windows.Forms.ComboBox dlcGenCostumeSlotComboBox;
-        private System.Windows.Forms.ComboBox dlcGenPlayerSlotComboBox;
+        private System.Windows.Forms.ComboBox dlcGenPlayerDlcSlotComboBox;
         private System.Windows.Forms.ComboBox dlcGenAssistDlcSlotComboBox;
         private System.Windows.Forms.TextBox dlcGenPlayerGmoFileTextBox;
         private System.Windows.Forms.TextBox dlcGenPlayerGimFileMainTextBox;

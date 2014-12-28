@@ -309,25 +309,25 @@
   <data name="&gt;&gt;dlcGenCostumeSlotComboBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="dlcGenPlayerSlotComboBox.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="dlcGenPlayerDlcSlotComboBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 63</value>
   </data>
-  <data name="dlcGenPlayerSlotComboBox.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="dlcGenPlayerDlcSlotComboBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 21</value>
   </data>
-  <data name="dlcGenPlayerSlotComboBox.TabIndex" type="System.Int32, mscorlib">
+  <data name="dlcGenPlayerDlcSlotComboBox.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;dlcGenPlayerSlotComboBox.Name" xml:space="preserve">
-    <value>dlcGenPlayerSlotComboBox</value>
+  <data name="&gt;&gt;dlcGenPlayerDlcSlotComboBox.Name" xml:space="preserve">
+    <value>dlcGenPlayerDlcSlotComboBox</value>
   </data>
-  <data name="&gt;&gt;dlcGenPlayerSlotComboBox.Type" xml:space="preserve">
+  <data name="&gt;&gt;dlcGenPlayerDlcSlotComboBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dlcGenPlayerSlotComboBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;dlcGenPlayerDlcSlotComboBox.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;dlcGenPlayerSlotComboBox.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;dlcGenPlayerDlcSlotComboBox.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="dlcGenAssistDlcSlotComboBox.Location" type="System.Drawing.Point, System.Drawing">
@@ -775,7 +775,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dlcGenBrowsePlayerGmoButton" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowsePlayerGimFileMainButton" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowsePlayerGimFileExtraButton" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowseAssistGmoButton" Row="7" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenCharacterComboBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenCostumeSlotComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerSlotComboBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenAssistDlcSlotComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGmoFileTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGimFileMainTextBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGimFileExtraTextBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenAssistGmoFileTextBox" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenGenerateButton" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,26,Percent,48,Percent,26" /&gt;&lt;Rows Styles="Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dlcGenBrowsePlayerGmoButton" Row="3" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowsePlayerGimFileMainButton" Row="4" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowsePlayerGimFileExtraButton" Row="5" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenBrowseAssistGmoButton" Row="7" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenCharacterComboBox" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenCostumeSlotComboBox" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerDlcSlotComboBox" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenAssistDlcSlotComboBox" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGmoFileTextBox" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGimFileMainTextBox" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenPlayerGimFileExtraTextBox" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenAssistGmoFileTextBox" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="dlcGenGenerateButton" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,26,Percent,48,Percent,26" /&gt;&lt;Rows Styles="Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111,Percent,11.11111" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tabDlcGen.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
