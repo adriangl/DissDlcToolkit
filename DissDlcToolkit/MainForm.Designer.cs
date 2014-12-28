@@ -171,24 +171,28 @@
             resources.ApplyResources(this.dlcGenBrowsePlayerGmoButton, "dlcGenBrowsePlayerGmoButton");
             this.dlcGenBrowsePlayerGmoButton.Name = "dlcGenBrowsePlayerGmoButton";
             this.dlcGenBrowsePlayerGmoButton.UseVisualStyleBackColor = true;
+            this.dlcGenBrowsePlayerGmoButton.Click += new System.EventHandler(this.dlcGenBrowsePlayerGmoButton_Click);
             // 
             // dlcGenBrowsePlayerGimFileMainButton
             // 
             resources.ApplyResources(this.dlcGenBrowsePlayerGimFileMainButton, "dlcGenBrowsePlayerGimFileMainButton");
             this.dlcGenBrowsePlayerGimFileMainButton.Name = "dlcGenBrowsePlayerGimFileMainButton";
             this.dlcGenBrowsePlayerGimFileMainButton.UseVisualStyleBackColor = true;
+            this.dlcGenBrowsePlayerGimFileMainButton.Click += new System.EventHandler(this.dlcGenBrowsePlayerGimFileMainButton_Click);
             // 
             // dlcGenBrowsePlayerGimFileExtraButton
             // 
             resources.ApplyResources(this.dlcGenBrowsePlayerGimFileExtraButton, "dlcGenBrowsePlayerGimFileExtraButton");
             this.dlcGenBrowsePlayerGimFileExtraButton.Name = "dlcGenBrowsePlayerGimFileExtraButton";
             this.dlcGenBrowsePlayerGimFileExtraButton.UseVisualStyleBackColor = true;
+            this.dlcGenBrowsePlayerGimFileExtraButton.Click += new System.EventHandler(this.dlcGenBrowsePlayerGimFileExtraButton_Click);
             // 
             // dlcGenBrowseAssistGmoButton
             // 
             resources.ApplyResources(this.dlcGenBrowseAssistGmoButton, "dlcGenBrowseAssistGmoButton");
             this.dlcGenBrowseAssistGmoButton.Name = "dlcGenBrowseAssistGmoButton";
             this.dlcGenBrowseAssistGmoButton.UseVisualStyleBackColor = true;
+            this.dlcGenBrowseAssistGmoButton.Click += new System.EventHandler(this.dlcGenBrowseAssistGmoButton_Click);
             // 
             // dlcGenCharacterComboBox
             // 
@@ -279,6 +283,7 @@
             resources.ApplyResources(this.dlcGenGenerateButton, "dlcGenGenerateButton");
             this.dlcGenGenerateButton.Name = "dlcGenGenerateButton";
             this.dlcGenGenerateButton.UseVisualStyleBackColor = true;
+            this.dlcGenGenerateButton.Click += new System.EventHandler(this.dlcGenGenerateButton_Click);
             // 
             // tabExex
             // 
@@ -378,6 +383,7 @@
             this.exexParticleColorPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexParticleColorPictureBox.Name = "exexParticleColorPictureBox";
             this.exexParticleColorPictureBox.TabStop = false;
+            this.exexParticleColorPictureBox.Click += new System.EventHandler(this.exexParticleColorPictureBox_Click);
             // 
             // exexOuterGlowPictureBox
             // 
@@ -385,6 +391,7 @@
             this.exexOuterGlowPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexOuterGlowPictureBox.Name = "exexOuterGlowPictureBox";
             this.exexOuterGlowPictureBox.TabStop = false;
+            this.exexOuterGlowPictureBox.Click += new System.EventHandler(this.exexOuterGlowPictureBox_Click);
             // 
             // exexInnerGlowPictureBox
             // 
@@ -392,6 +399,7 @@
             this.exexInnerGlowPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexInnerGlowPictureBox.Name = "exexInnerGlowPictureBox";
             this.exexInnerGlowPictureBox.TabStop = false;
+            this.exexInnerGlowPictureBox.Click += new System.EventHandler(this.exexInnerGlowPictureBox_Click);
             // 
             // exexSmoke1PictureBox
             // 
@@ -399,6 +407,7 @@
             this.exexSmoke1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexSmoke1PictureBox.Name = "exexSmoke1PictureBox";
             this.exexSmoke1PictureBox.TabStop = false;
+            this.exexSmoke1PictureBox.Click += new System.EventHandler(this.exexSmoke1PictureBox_Click);
             // 
             // exexSmoke2PictureBox
             // 
@@ -406,6 +415,7 @@
             this.exexSmoke2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexSmoke2PictureBox.Name = "exexSmoke2PictureBox";
             this.exexSmoke2PictureBox.TabStop = false;
+            this.exexSmoke2PictureBox.Click += new System.EventHandler(this.exexSmoke2PictureBox_Click);
             // 
             // exexBoltsPictureBox
             // 
@@ -413,6 +423,7 @@
             this.exexBoltsPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.exexBoltsPictureBox.Name = "exexBoltsPictureBox";
             this.exexBoltsPictureBox.TabStop = false;
+            this.exexBoltsPictureBox.Click += new System.EventHandler(this.exexBoltsPictureBox_Click);
             // 
             // panel2
             // 
@@ -432,7 +443,6 @@
             // 
             resources.ApplyResources(this.exexBoltsTextBox, "exexBoltsTextBox");
             this.exexBoltsTextBox.Name = "exexBoltsTextBox";
-            this.exexBoltsTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // exexOuterGlowTextBox
             // 
@@ -538,6 +548,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabHostMain.ResumeLayout(false);

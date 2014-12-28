@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DissDlcToolkit.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,9 +28,11 @@ namespace DissDlcToolkit
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-
+            ObjectTable table = new ObjectTable(@"C:\objentry.bin");
+            table.writeToFile(@"C:\objentry.dup.bin");
         }
+
     }
 }
