@@ -17,6 +17,7 @@ namespace DissDlcToolkit
         public MainForm()
         {
             InitializeComponent();
+            GlobalData data = GlobalData.getInstance();
             InitializeDlcGenTab();
         }        
 
@@ -39,7 +40,12 @@ namespace DissDlcToolkit
         {
             AboutForm frmAbout = new AboutForm();
             frmAbout.ShowDialog(this);
-        }       
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            
+        }     
 
     }
 }

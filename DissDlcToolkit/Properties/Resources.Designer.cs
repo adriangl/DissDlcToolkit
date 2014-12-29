@@ -69,5 +69,1275 @@ namespace DissDlcToolkit.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT110_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT110_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT110_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT110_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV210_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV210_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV210_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV210_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR110_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR110_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR110_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR110_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST110_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST110_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST110_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST110_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST120_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST120_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST120_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST120_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST130_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST130_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST130_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST130_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ORG210_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG210_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ORG210_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG210_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ORG210_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG210_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ORG800_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG800_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV110_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV110_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV110_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV110_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV120_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV120_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV120_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV120_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV120_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV120_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN110_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN110_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN110_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN110_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO100_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO100_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO100_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO100_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO200_1P {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_1P", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO200_1P_A {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_1P_A", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO200_COSX {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_COSX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO200_EXEX {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

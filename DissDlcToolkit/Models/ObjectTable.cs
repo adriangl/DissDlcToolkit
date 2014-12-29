@@ -20,31 +20,44 @@ namespace DissDlcToolkit.Models
             entries = new ArrayList();
         }
 
+        public ObjectTable(byte[] file) : this()
+        {
+            using (MemoryStream stream = new MemoryStream(file))
+            {
+                createFromStream(stream);
+            }
+        }
+
         public ObjectTable(String path) : this()
         {
             using (FileStream stream = new FileStream(path, FileMode.Open))
             {
-                using (BinaryReader reader = new BinaryReader(stream))
+                createFromStream(stream);
+            }
+        }
+
+        private void createFromStream(Stream stream)
+        {
+            using (BinaryReader reader = new BinaryReader(stream))
+            {
+                magic = reader.ReadUInt32();
+                if (magic != MAGIC_NUMBER)
                 {
-                    magic = reader.ReadUInt32();
-                    if (magic != MAGIC_NUMBER)
-                    {
-                        // Throw exception if needed
-                        return;
-                    }
-                    UInt32 entryNumber = reader.ReadUInt32();
-                    for (int i = 0; i < entryNumber; i++)
-                    {
-                        ObjectEntry entry = new ObjectEntry(reader);
-                        entries.Add(entry);
-                    }
+                    // Throw exception if needed
+                    throw new Exception("Not a valid Object table file");
+                }
+                UInt32 entryNumber = reader.ReadUInt32();
+                for (int i = 0; i < entryNumber; i++)
+                {
+                    ObjectEntry entry = new ObjectEntry(reader);
+                    entries.Add(entry);
                 }
             }
         }
 
         public void writeToFile(String path)
         {
-            using (FileStream stream = new FileStream(path, FileMode.CreateNew))
+            using (FileStream stream = new FileStream(path, FileMode.Create))
             {
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {

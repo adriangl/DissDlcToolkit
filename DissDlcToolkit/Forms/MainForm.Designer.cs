@@ -114,30 +114,30 @@
             // 
             // menuStrip1
             // 
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tabHostMain
             // 
+            resources.ApplyResources(this.tabHostMain, "tabHostMain");
             this.tabHostMain.Controls.Add(this.tabDlcGen);
             this.tabHostMain.Controls.Add(this.tabExex);
             this.tabHostMain.Controls.Add(this.tabReporter);
-            resources.ApplyResources(this.tabHostMain, "tabHostMain");
             this.tabHostMain.Name = "tabHostMain";
             this.tabHostMain.SelectedIndex = 0;
             // 
             // tabDlcGen
             // 
-            this.tabDlcGen.Controls.Add(this.tableLayoutPanel1);
             resources.ApplyResources(this.tabDlcGen, "tabDlcGen");
+            this.tabDlcGen.Controls.Add(this.tableLayoutPanel1);
             this.tabDlcGen.Name = "tabDlcGen";
             this.tabDlcGen.UseVisualStyleBackColor = true;
             // 
@@ -197,27 +197,27 @@
             // 
             // dlcGenCharacterComboBox
             // 
-            this.dlcGenCharacterComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.dlcGenCharacterComboBox, "dlcGenCharacterComboBox");
+            this.dlcGenCharacterComboBox.FormattingEnabled = true;
             this.dlcGenCharacterComboBox.Name = "dlcGenCharacterComboBox";
             this.dlcGenCharacterComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenCharacterComboBox_SelectedIndexChanged);
             // 
             // dlcGenCostumeSlotComboBox
             // 
-            this.dlcGenCostumeSlotComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.dlcGenCostumeSlotComboBox, "dlcGenCostumeSlotComboBox");
+            this.dlcGenCostumeSlotComboBox.FormattingEnabled = true;
             this.dlcGenCostumeSlotComboBox.Name = "dlcGenCostumeSlotComboBox";
             // 
             // dlcGenPlayerDlcSlotComboBox
             // 
-            this.dlcGenPlayerDlcSlotComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.dlcGenPlayerDlcSlotComboBox, "dlcGenPlayerDlcSlotComboBox");
+            this.dlcGenPlayerDlcSlotComboBox.FormattingEnabled = true;
             this.dlcGenPlayerDlcSlotComboBox.Name = "dlcGenPlayerDlcSlotComboBox";
             // 
             // dlcGenAssistDlcSlotComboBox
             // 
-            this.dlcGenAssistDlcSlotComboBox.FormattingEnabled = true;
             resources.ApplyResources(this.dlcGenAssistDlcSlotComboBox, "dlcGenAssistDlcSlotComboBox");
+            this.dlcGenAssistDlcSlotComboBox.FormattingEnabled = true;
             this.dlcGenAssistDlcSlotComboBox.Name = "dlcGenAssistDlcSlotComboBox";
             // 
             // dlcGenPlayerGmoFileTextBox
@@ -249,6 +249,7 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -289,8 +290,8 @@
             // 
             // tabExex
             // 
-            this.tabExex.Controls.Add(this.tableLayoutPanel2);
             resources.ApplyResources(this.tabExex, "tabExex");
+            this.tabExex.Controls.Add(this.tableLayoutPanel2);
             this.tabExex.Name = "tabExex";
             this.tabExex.UseVisualStyleBackColor = true;
             // 
@@ -429,9 +430,9 @@
             // 
             // panel2
             // 
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.exexBoltsInvertCheckBox);
             this.panel2.Controls.Add(this.exexBoltsTextBox);
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -458,9 +459,9 @@
             // 
             // panel3
             // 
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.exexSmoke1InvertCheckBox);
             this.panel3.Controls.Add(this.exexSmoke1TextBox);
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // exexSmoke1InvertCheckBox
@@ -476,9 +477,9 @@
             // 
             // panel4
             // 
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.exexSmoke2InvertCheckBox);
             this.panel4.Controls.Add(this.exexSmoke2TextBox);
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // exexSmoke2InvertCheckBox
@@ -494,8 +495,8 @@
             // 
             // tabReporter
             // 
-            this.tabReporter.Controls.Add(this.tableLayoutPanel3);
             resources.ApplyResources(this.tabReporter, "tabReporter");
+            this.tabReporter.Controls.Add(this.tableLayoutPanel3);
             this.tabReporter.Name = "tabReporter";
             this.tabReporter.UseVisualStyleBackColor = true;
             // 
@@ -515,17 +516,17 @@
             // 
             // reporterDataTextBox
             // 
+            resources.ApplyResources(this.reporterDataTextBox, "reporterDataTextBox");
             this.reporterDataTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel3.SetColumnSpan(this.reporterDataTextBox, 3);
-            resources.ApplyResources(this.reporterDataTextBox, "reporterDataTextBox");
             this.reporterDataTextBox.Name = "reporterDataTextBox";
             this.reporterDataTextBox.ReadOnly = true;
             // 
             // panel1
             // 
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.reporterSaveToTextButton);
             this.panel1.Controls.Add(this.reporterSaveToExcelButton);
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // reporterSaveToTextButton
