@@ -63,6 +63,16 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap color_bg {
+            get {
+                object obj = ResourceManager.GetObject("color_bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_big {
             get {
                 object obj = ResourceManager.GetObject("icon_big", resourceCulture);

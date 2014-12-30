@@ -71,6 +71,8 @@
     </Compile>
     <Compile Include="GlobalData.cs" />
     <Compile Include="Models\CharacterData.cs" />
+    <Compile Include="Models\ExexEntry.cs" />
+    <Compile Include="Models\ExexTable.cs" />
     <Compile Include="Models\ObjectEntry.cs" />
     <Compile Include="Models\ObjectTable.cs" />
     <Compile Include="Program.cs" />
@@ -239,6 +241,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ArgbColorDialog.dll" />
+    <None Include="Resources\color_bg.png" />
     <None Include="Resources\icon_big.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

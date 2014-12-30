@@ -57,6 +57,15 @@
             this.dlcGenGenerateButton = new System.Windows.Forms.Button();
             this.tabExex = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.exexBoltsLabel = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.exexSmoke2Label = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.exexSmoke1Label = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.exexAuraSlotComboBox = new System.Windows.Forms.ComboBox();
             this.exexInnerGlowTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,12 +77,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.exexSaveButton = new System.Windows.Forms.Button();
             this.exexLoadButton = new System.Windows.Forms.Button();
-            this.exexParticleColorPictureBox = new System.Windows.Forms.PictureBox();
-            this.exexOuterGlowPictureBox = new System.Windows.Forms.PictureBox();
-            this.exexInnerGlowPictureBox = new System.Windows.Forms.PictureBox();
-            this.exexSmoke1PictureBox = new System.Windows.Forms.PictureBox();
-            this.exexSmoke2PictureBox = new System.Windows.Forms.PictureBox();
-            this.exexBoltsPictureBox = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.exexBoltsInvertCheckBox = new System.Windows.Forms.CheckBox();
             this.exexBoltsTextBox = new System.Windows.Forms.TextBox();
@@ -85,6 +88,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.exexSmoke2InvertCheckBox = new System.Windows.Forms.CheckBox();
             this.exexSmoke2TextBox = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.exexParticleColorLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.exexOuterGlowLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.exexInnerGlowLabel = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabReporter = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.reporterLoadFolderButton = new System.Windows.Forms.Button();
@@ -92,21 +104,28 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.reporterSaveToTextButton = new System.Windows.Forms.Button();
             this.reporterSaveToExcelButton = new System.Windows.Forms.Button();
+            this.exexFileLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.tabHostMain.SuspendLayout();
             this.tabDlcGen.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabExex.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exexParticleColorPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexOuterGlowPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexInnerGlowPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexSmoke1PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexSmoke2PictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexBoltsPictureBox)).BeginInit();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabReporter.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -114,30 +133,30 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // aboutToolStripMenuItem
             // 
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tabHostMain
             // 
-            resources.ApplyResources(this.tabHostMain, "tabHostMain");
             this.tabHostMain.Controls.Add(this.tabDlcGen);
             this.tabHostMain.Controls.Add(this.tabExex);
             this.tabHostMain.Controls.Add(this.tabReporter);
+            resources.ApplyResources(this.tabHostMain, "tabHostMain");
             this.tabHostMain.Name = "tabHostMain";
             this.tabHostMain.SelectedIndex = 0;
             // 
             // tabDlcGen
             // 
-            resources.ApplyResources(this.tabDlcGen, "tabDlcGen");
             this.tabDlcGen.Controls.Add(this.tableLayoutPanel1);
+            resources.ApplyResources(this.tabDlcGen, "tabDlcGen");
             this.tabDlcGen.Name = "tabDlcGen";
             this.tabDlcGen.UseVisualStyleBackColor = true;
             // 
@@ -197,27 +216,27 @@
             // 
             // dlcGenCharacterComboBox
             // 
-            resources.ApplyResources(this.dlcGenCharacterComboBox, "dlcGenCharacterComboBox");
             this.dlcGenCharacterComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.dlcGenCharacterComboBox, "dlcGenCharacterComboBox");
             this.dlcGenCharacterComboBox.Name = "dlcGenCharacterComboBox";
             this.dlcGenCharacterComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenCharacterComboBox_SelectedIndexChanged);
             // 
             // dlcGenCostumeSlotComboBox
             // 
-            resources.ApplyResources(this.dlcGenCostumeSlotComboBox, "dlcGenCostumeSlotComboBox");
             this.dlcGenCostumeSlotComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.dlcGenCostumeSlotComboBox, "dlcGenCostumeSlotComboBox");
             this.dlcGenCostumeSlotComboBox.Name = "dlcGenCostumeSlotComboBox";
             // 
             // dlcGenPlayerDlcSlotComboBox
             // 
-            resources.ApplyResources(this.dlcGenPlayerDlcSlotComboBox, "dlcGenPlayerDlcSlotComboBox");
             this.dlcGenPlayerDlcSlotComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.dlcGenPlayerDlcSlotComboBox, "dlcGenPlayerDlcSlotComboBox");
             this.dlcGenPlayerDlcSlotComboBox.Name = "dlcGenPlayerDlcSlotComboBox";
             // 
             // dlcGenAssistDlcSlotComboBox
             // 
-            resources.ApplyResources(this.dlcGenAssistDlcSlotComboBox, "dlcGenAssistDlcSlotComboBox");
             this.dlcGenAssistDlcSlotComboBox.FormattingEnabled = true;
+            resources.ApplyResources(this.dlcGenAssistDlcSlotComboBox, "dlcGenAssistDlcSlotComboBox");
             this.dlcGenAssistDlcSlotComboBox.Name = "dlcGenAssistDlcSlotComboBox";
             // 
             // dlcGenPlayerGmoFileTextBox
@@ -290,14 +309,17 @@
             // 
             // tabExex
             // 
-            resources.ApplyResources(this.tabExex, "tabExex");
             this.tabExex.Controls.Add(this.tableLayoutPanel2);
+            resources.ApplyResources(this.tabExex, "tabExex");
             this.tabExex.Name = "tabExex";
             this.tabExex.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
+            this.tableLayoutPanel2.Controls.Add(this.panel10, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.panel9, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.panel8, 2, 5);
             this.tableLayoutPanel2.Controls.Add(this.exexAuraSlotComboBox, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.exexInnerGlowTextBox, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
@@ -309,24 +331,86 @@
             this.tableLayoutPanel2.Controls.Add(this.label16, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.exexSaveButton, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.exexLoadButton, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.exexParticleColorPictureBox, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.exexOuterGlowPictureBox, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.exexInnerGlowPictureBox, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.exexSmoke1PictureBox, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.exexSmoke2PictureBox, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.exexBoltsPictureBox, 2, 7);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.exexOuterGlowTextBox, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.exexParticleColorTextBox, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.panel4, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.panel7, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.exexFileLabel, 1, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.exexBoltsLabel);
+            this.panel10.Controls.Add(this.pictureBox6);
+            resources.ApplyResources(this.panel10, "panel10");
+            this.panel10.Name = "panel10";
+            // 
+            // exexBoltsLabel
+            // 
+            resources.ApplyResources(this.exexBoltsLabel, "exexBoltsLabel");
+            this.exexBoltsLabel.Name = "exexBoltsLabel";
+            this.exexBoltsLabel.Click += new System.EventHandler(this.exexBoltsLabel_Click);
+            // 
+            // pictureBox6
+            // 
+            resources.ApplyResources(this.pictureBox6, "pictureBox6");
+            this.pictureBox6.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.exexSmoke2Label);
+            this.panel9.Controls.Add(this.pictureBox5);
+            resources.ApplyResources(this.panel9, "panel9");
+            this.panel9.Name = "panel9";
+            // 
+            // exexSmoke2Label
+            // 
+            resources.ApplyResources(this.exexSmoke2Label, "exexSmoke2Label");
+            this.exexSmoke2Label.Name = "exexSmoke2Label";
+            this.exexSmoke2Label.Click += new System.EventHandler(this.exexSmoke2Label_Click);
+            // 
+            // pictureBox5
+            // 
+            resources.ApplyResources(this.pictureBox5, "pictureBox5");
+            this.pictureBox5.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.exexSmoke1Label);
+            this.panel8.Controls.Add(this.pictureBox4);
+            resources.ApplyResources(this.panel8, "panel8");
+            this.panel8.Name = "panel8";
+            // 
+            // exexSmoke1Label
+            // 
+            resources.ApplyResources(this.exexSmoke1Label, "exexSmoke1Label");
+            this.exexSmoke1Label.Name = "exexSmoke1Label";
+            this.exexSmoke1Label.Click += new System.EventHandler(this.exexSmoke1Label_Click);
+            // 
+            // pictureBox4
+            // 
+            resources.ApplyResources(this.pictureBox4, "pictureBox4");
+            this.pictureBox4.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.TabStop = false;
             // 
             // exexAuraSlotComboBox
             // 
             resources.ApplyResources(this.exexAuraSlotComboBox, "exexAuraSlotComboBox");
             this.exexAuraSlotComboBox.FormattingEnabled = true;
             this.exexAuraSlotComboBox.Name = "exexAuraSlotComboBox";
+            this.exexAuraSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.exexAuraSlotComboBox_SelectedIndexChanged);
             // 
             // exexInnerGlowTextBox
             // 
@@ -373,66 +457,20 @@
             resources.ApplyResources(this.exexSaveButton, "exexSaveButton");
             this.exexSaveButton.Name = "exexSaveButton";
             this.exexSaveButton.UseVisualStyleBackColor = true;
+            this.exexSaveButton.Click += new System.EventHandler(this.exexSaveButton_Click);
             // 
             // exexLoadButton
             // 
             resources.ApplyResources(this.exexLoadButton, "exexLoadButton");
             this.exexLoadButton.Name = "exexLoadButton";
             this.exexLoadButton.UseVisualStyleBackColor = true;
-            // 
-            // exexParticleColorPictureBox
-            // 
-            resources.ApplyResources(this.exexParticleColorPictureBox, "exexParticleColorPictureBox");
-            this.exexParticleColorPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexParticleColorPictureBox.Name = "exexParticleColorPictureBox";
-            this.exexParticleColorPictureBox.TabStop = false;
-            this.exexParticleColorPictureBox.Click += new System.EventHandler(this.exexParticleColorPictureBox_Click);
-            // 
-            // exexOuterGlowPictureBox
-            // 
-            resources.ApplyResources(this.exexOuterGlowPictureBox, "exexOuterGlowPictureBox");
-            this.exexOuterGlowPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexOuterGlowPictureBox.Name = "exexOuterGlowPictureBox";
-            this.exexOuterGlowPictureBox.TabStop = false;
-            this.exexOuterGlowPictureBox.Click += new System.EventHandler(this.exexOuterGlowPictureBox_Click);
-            // 
-            // exexInnerGlowPictureBox
-            // 
-            resources.ApplyResources(this.exexInnerGlowPictureBox, "exexInnerGlowPictureBox");
-            this.exexInnerGlowPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexInnerGlowPictureBox.Name = "exexInnerGlowPictureBox";
-            this.exexInnerGlowPictureBox.TabStop = false;
-            this.exexInnerGlowPictureBox.Click += new System.EventHandler(this.exexInnerGlowPictureBox_Click);
-            // 
-            // exexSmoke1PictureBox
-            // 
-            resources.ApplyResources(this.exexSmoke1PictureBox, "exexSmoke1PictureBox");
-            this.exexSmoke1PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexSmoke1PictureBox.Name = "exexSmoke1PictureBox";
-            this.exexSmoke1PictureBox.TabStop = false;
-            this.exexSmoke1PictureBox.Click += new System.EventHandler(this.exexSmoke1PictureBox_Click);
-            // 
-            // exexSmoke2PictureBox
-            // 
-            resources.ApplyResources(this.exexSmoke2PictureBox, "exexSmoke2PictureBox");
-            this.exexSmoke2PictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexSmoke2PictureBox.Name = "exexSmoke2PictureBox";
-            this.exexSmoke2PictureBox.TabStop = false;
-            this.exexSmoke2PictureBox.Click += new System.EventHandler(this.exexSmoke2PictureBox_Click);
-            // 
-            // exexBoltsPictureBox
-            // 
-            resources.ApplyResources(this.exexBoltsPictureBox, "exexBoltsPictureBox");
-            this.exexBoltsPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.exexBoltsPictureBox.Name = "exexBoltsPictureBox";
-            this.exexBoltsPictureBox.TabStop = false;
-            this.exexBoltsPictureBox.Click += new System.EventHandler(this.exexBoltsPictureBox_Click);
+            this.exexLoadButton.Click += new System.EventHandler(this.exexLoadButton_Click);
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.exexBoltsInvertCheckBox);
             this.panel2.Controls.Add(this.exexBoltsTextBox);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -441,6 +479,7 @@
             resources.ApplyResources(this.exexBoltsInvertCheckBox, "exexBoltsInvertCheckBox");
             this.exexBoltsInvertCheckBox.Name = "exexBoltsInvertCheckBox";
             this.exexBoltsInvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexBoltsInvertCheckBox.CheckedChanged += new System.EventHandler(this.exexBoltsInvertCheckBox_CheckedChanged);
             // 
             // exexBoltsTextBox
             // 
@@ -459,9 +498,9 @@
             // 
             // panel3
             // 
-            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Controls.Add(this.exexSmoke1InvertCheckBox);
             this.panel3.Controls.Add(this.exexSmoke1TextBox);
+            resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
             // 
             // exexSmoke1InvertCheckBox
@@ -469,6 +508,7 @@
             resources.ApplyResources(this.exexSmoke1InvertCheckBox, "exexSmoke1InvertCheckBox");
             this.exexSmoke1InvertCheckBox.Name = "exexSmoke1InvertCheckBox";
             this.exexSmoke1InvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexSmoke1InvertCheckBox.CheckedChanged += new System.EventHandler(this.exexSmoke1InvertCheckBox_CheckedChanged);
             // 
             // exexSmoke1TextBox
             // 
@@ -477,9 +517,9 @@
             // 
             // panel4
             // 
-            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Controls.Add(this.exexSmoke2InvertCheckBox);
             this.panel4.Controls.Add(this.exexSmoke2TextBox);
+            resources.ApplyResources(this.panel4, "panel4");
             this.panel4.Name = "panel4";
             // 
             // exexSmoke2InvertCheckBox
@@ -487,16 +527,80 @@
             resources.ApplyResources(this.exexSmoke2InvertCheckBox, "exexSmoke2InvertCheckBox");
             this.exexSmoke2InvertCheckBox.Name = "exexSmoke2InvertCheckBox";
             this.exexSmoke2InvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexSmoke2InvertCheckBox.CheckedChanged += new System.EventHandler(this.exexSmoke2InvertCheckBox_CheckedChanged);
             // 
             // exexSmoke2TextBox
             // 
             resources.ApplyResources(this.exexSmoke2TextBox, "exexSmoke2TextBox");
             this.exexSmoke2TextBox.Name = "exexSmoke2TextBox";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.exexParticleColorLabel);
+            this.panel5.Controls.Add(this.pictureBox1);
+            resources.ApplyResources(this.panel5, "panel5");
+            this.panel5.Name = "panel5";
+            // 
+            // exexParticleColorLabel
+            // 
+            resources.ApplyResources(this.exexParticleColorLabel, "exexParticleColorLabel");
+            this.exexParticleColorLabel.Name = "exexParticleColorLabel";
+            this.exexParticleColorLabel.Click += new System.EventHandler(this.exexParticleColorLabel_Click);
+            // 
+            // pictureBox1
+            // 
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
+            this.pictureBox1.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.exexOuterGlowLabel);
+            this.panel6.Controls.Add(this.pictureBox2);
+            resources.ApplyResources(this.panel6, "panel6");
+            this.panel6.Name = "panel6";
+            // 
+            // exexOuterGlowLabel
+            // 
+            resources.ApplyResources(this.exexOuterGlowLabel, "exexOuterGlowLabel");
+            this.exexOuterGlowLabel.Name = "exexOuterGlowLabel";
+            this.exexOuterGlowLabel.Click += new System.EventHandler(this.exexOuterGlowLabel_Click);
+            // 
+            // pictureBox2
+            // 
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
+            this.pictureBox2.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.exexInnerGlowLabel);
+            this.panel7.Controls.Add(this.pictureBox3);
+            resources.ApplyResources(this.panel7, "panel7");
+            this.panel7.Name = "panel7";
+            // 
+            // exexInnerGlowLabel
+            // 
+            resources.ApplyResources(this.exexInnerGlowLabel, "exexInnerGlowLabel");
+            this.exexInnerGlowLabel.Name = "exexInnerGlowLabel";
+            this.exexInnerGlowLabel.Click += new System.EventHandler(this.exexInnerGlowLabel_Click);
+            // 
+            // pictureBox3
+            // 
+            resources.ApplyResources(this.pictureBox3, "pictureBox3");
+            this.pictureBox3.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.TabStop = false;
+            // 
             // tabReporter
             // 
-            resources.ApplyResources(this.tabReporter, "tabReporter");
             this.tabReporter.Controls.Add(this.tableLayoutPanel3);
+            resources.ApplyResources(this.tabReporter, "tabReporter");
             this.tabReporter.Name = "tabReporter";
             this.tabReporter.UseVisualStyleBackColor = true;
             // 
@@ -516,17 +620,17 @@
             // 
             // reporterDataTextBox
             // 
-            resources.ApplyResources(this.reporterDataTextBox, "reporterDataTextBox");
             this.reporterDataTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel3.SetColumnSpan(this.reporterDataTextBox, 3);
+            resources.ApplyResources(this.reporterDataTextBox, "reporterDataTextBox");
             this.reporterDataTextBox.Name = "reporterDataTextBox";
             this.reporterDataTextBox.ReadOnly = true;
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.reporterSaveToTextButton);
             this.panel1.Controls.Add(this.reporterSaveToExcelButton);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // reporterSaveToTextButton
@@ -540,6 +644,13 @@
             resources.ApplyResources(this.reporterSaveToExcelButton, "reporterSaveToExcelButton");
             this.reporterSaveToExcelButton.Name = "reporterSaveToExcelButton";
             this.reporterSaveToExcelButton.UseVisualStyleBackColor = true;
+            // 
+            // exexFileLabel
+            // 
+            resources.ApplyResources(this.exexFileLabel, "exexFileLabel");
+            this.exexFileLabel.AutoEllipsis = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.exexFileLabel, 2);
+            this.exexFileLabel.Name = "exexFileLabel";
             // 
             // MainForm
             // 
@@ -561,18 +672,24 @@
             this.tabExex.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exexParticleColorPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexOuterGlowPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexInnerGlowPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexSmoke1PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexSmoke2PictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exexBoltsPictureBox)).EndInit();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabReporter.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
@@ -626,12 +743,6 @@
         private System.Windows.Forms.Button exexSaveButton;
         private System.Windows.Forms.Button exexLoadButton;
         private System.Windows.Forms.TextBox exexParticleColorTextBox;
-        private System.Windows.Forms.PictureBox exexParticleColorPictureBox;
-        private System.Windows.Forms.PictureBox exexOuterGlowPictureBox;
-        private System.Windows.Forms.PictureBox exexInnerGlowPictureBox;
-        private System.Windows.Forms.PictureBox exexSmoke1PictureBox;
-        private System.Windows.Forms.PictureBox exexSmoke2PictureBox;
-        private System.Windows.Forms.PictureBox exexBoltsPictureBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button reporterLoadFolderButton;
         private System.Windows.Forms.TextBox reporterDataTextBox;
@@ -647,6 +758,25 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.CheckBox exexSmoke2InvertCheckBox;
         private System.Windows.Forms.TextBox exexSmoke2TextBox;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label exexParticleColorLabel;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label exexBoltsLabel;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label exexSmoke2Label;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label exexSmoke1Label;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label exexOuterGlowLabel;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label exexInnerGlowLabel;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label exexFileLabel;
 
     }
 }

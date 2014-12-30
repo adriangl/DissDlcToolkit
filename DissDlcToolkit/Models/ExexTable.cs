@@ -8,29 +8,21 @@ using System.Threading.Tasks;
 
 namespace DissDlcToolkit.Models
 {
-    class ObjectTable
+    class ExexTable
     {
-        public static UInt32 OBJECT_TABLE_HEADER_VALUE = 0x0C;
+        public static UInt32 EXEX_TABLE_HEADER_VALUE = 0x02;
 
         public UInt32 header {get; set;}
         public ArrayList entries { get; set; }
 
-        public ObjectTable()
+        public ExexTable()
         {
             entries = new ArrayList();
         }
 
-        public ObjectTable(byte[] file) : this()
+        public ExexTable(String file): this()
         {
-            using (MemoryStream stream = new MemoryStream(file))
-            {
-                createFromStream(stream);
-            }
-        }
-
-        public ObjectTable(String path) : this()
-        {
-            using (FileStream stream = new FileStream(path, FileMode.Open))
+            using (FileStream stream = new FileStream(file, FileMode.Open))
             {
                 createFromStream(stream);
             }
@@ -41,7 +33,7 @@ namespace DissDlcToolkit.Models
             using (BinaryReader reader = new BinaryReader(stream))
             {
                 header = reader.ReadUInt32();
-                if (header != OBJECT_TABLE_HEADER_VALUE)
+                if (header != EXEX_TABLE_HEADER_VALUE)
                 {
                     // Throw exception if needed
                     throw new Exception("Not a valid Object table file");
@@ -49,7 +41,7 @@ namespace DissDlcToolkit.Models
                 UInt32 entryNumber = reader.ReadUInt32();
                 for (int i = 0; i < entryNumber; i++)
                 {
-                    ObjectEntry entry = new ObjectEntry(reader);
+                    ExexEntry entry = new ExexEntry(reader);
                     entries.Add(entry);
                 }
             }
@@ -61,14 +53,14 @@ namespace DissDlcToolkit.Models
             {
                 using (BinaryWriter writer = new BinaryWriter(stream))
                 {
-                    writer.Write(OBJECT_TABLE_HEADER_VALUE);
+                    writer.Write(EXEX_TABLE_HEADER_VALUE);
                     writer.Write(entries.Count);
-                    foreach (ObjectEntry entry in entries){
+                    foreach (ExexEntry entry in entries)
+                    {
                         entry.write(writer);
                     }
                 }
             }
         }
-
     }
 }
