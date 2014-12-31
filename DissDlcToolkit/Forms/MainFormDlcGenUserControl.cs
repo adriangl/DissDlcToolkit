@@ -27,23 +27,13 @@ namespace DissDlcToolkit.Forms
         // Variable which controls whether we selected a character suitable for 
         // extra GIM file
         private Boolean dlcGenPlayerGimFileExtraEnabled = false;
+        // Variable which controls if assist data is enabled
         private Boolean dlcGenAssistEnabled = true;
+        // Variable which controls if player data is enabled
+        private Boolean dlcGenPlayerGmoGimEnabled = true;
 
         private void InitializeDlcGenTab()
         {
-            // Config costume slot keys & values
-            ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();            
-            // Add "DLC x" Slots
-            for (Byte i = 1; i <= 9; i++)
-            {
-                KeyValuePair<Byte, String> data = new KeyValuePair<Byte, String>((byte)(i + (byte)3), "DLC " + i);
-                dlcGenCostumeSlotKeyValues.Add(data);
-            }
-            dlcGenCostumeSlotComboBox.DataSource = dlcGenCostumeSlotKeyValues;
-            dlcGenCostumeSlotComboBox.DisplayMember = "Value";
-            dlcGenCostumeSlotComboBox.ValueMember = "Key";
-
-
             // Config player & assist DLC slots
             ArrayList dlcGenDlcSlotsKeyValues = new ArrayList();
             for (UInt16 i = 1; i <= 255; i++)
@@ -70,14 +60,31 @@ namespace DissDlcToolkit.Forms
 
         private void dlcGenCharacterComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if we have selected Cecil (p_for100); if we did, then enable second GIM box
-            dlcGenPlayerGimFileExtraEnabled = ((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_for100");
-            dlcGenBrowsePlayerGimFileExtraButton.Enabled = dlcGenPlayerGimFileExtraEnabled;
-            // Clear extra GIM box if we select anything other than Cecil
-            if (!dlcGenPlayerGimFileExtraEnabled)
+            configCostumeSlots();
+            configPlayerEnabled();
+            configAssistEnabled();
+            configGimExtraEnabled();
+            
+        }
+
+        private void configPlayerEnabled()
+        {
+            // Check if we're creating a DLC for Aerith (p_sev120), as it won't have player GMOs and GIMs
+            dlcGenPlayerGmoGimEnabled = !((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_sev120");
+            dlcGenBrowsePlayerGmoButton.Enabled = dlcGenPlayerGmoGimEnabled;
+            dlcGenBrowsePlayerGimFileMainButton.Enabled = dlcGenPlayerGmoGimEnabled;
+            dlcGenBrowsePlayerGimFileExtraButton.Enabled = dlcGenPlayerGmoGimEnabled;
+            // Clear assist data if it's not enabled
+            if (!dlcGenPlayerGmoGimEnabled)
             {
+                dlcGenPlayerGmoFileTextBox.Text = "";
+                dlcGenPlayerGimFileMainTextBox.Text = "";
                 dlcGenPlayerGimFileExtraTextBox.Text = "";
             }
+        }
+
+        private void configAssistEnabled()
+        {
             // Also check if we're creating a DLC for Feral Chaos (p_org210), as it can't have an assist
             dlcGenAssistEnabled = !((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_org210");
             dlcGenAssistDlcSlotComboBox.Enabled = dlcGenAssistEnabled;
@@ -87,6 +94,45 @@ namespace DissDlcToolkit.Forms
             {
                 dlcGenAssistGmoFileTextBox.Text = "";
             }
+        }
+
+        private void configGimExtraEnabled()
+        {
+            // Check if we have selected Cecil (p_for100); if we did, then enable second GIM box
+            dlcGenPlayerGimFileExtraEnabled = ((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_for100");
+            dlcGenBrowsePlayerGimFileExtraButton.Enabled = dlcGenPlayerGimFileExtraEnabled;
+            // Clear extra GIM box if we select anything other than Cecil
+            if (!dlcGenPlayerGimFileExtraEnabled)
+            {
+                dlcGenPlayerGimFileExtraTextBox.Text = "";
+            }
+        }
+
+        private void configCostumeSlots()
+        {
+            // Config costume slot keys & values depending on which can be used for characters
+            ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();
+            // Add "Normal", "Alt. 1" & "Alt. 2" Slots
+            dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x01, "Normal"));
+            dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x02, "Alt. 1"));
+            // Feral Chaos doesn't have an "Alt. 2" costume, don't add it
+            if (!((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_org210"))
+            {
+                dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x03, "Alt. 2"));
+            }
+            // Add "DLC x" Slots
+            // Aerith can't use DLC x Slots (yet), don't add them in this case
+            if (!((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_sev120"))
+            {
+                for (Byte i = 1; i <= 9; i++)
+                {
+                    KeyValuePair<Byte, String> data = new KeyValuePair<Byte, String>((byte)(i + (byte)3), "DLC " + i);
+                    dlcGenCostumeSlotKeyValues.Add(data);
+                }
+            }
+            dlcGenCostumeSlotComboBox.DataSource = dlcGenCostumeSlotKeyValues;
+            dlcGenCostumeSlotComboBox.DisplayMember = "Value";
+            dlcGenCostumeSlotComboBox.ValueMember = "Key";
         }
 
         private void dlcGenBrowsePlayerGmoButton_Click(object sender, EventArgs e)
@@ -132,12 +178,38 @@ namespace DissDlcToolkit.Forms
             String assistGmoFile = dlcGenAssistGmoFileTextBox.Text;
 
             // Checks for consistency
-            if (playerGmoFile.Equals("") || playerGimMainFile.Equals(""))
+            if (dlcGenPlayerGmoGimEnabled)
             {
-                MessageBox.Show("You need to select at least a player GMO & GIM");
-                return;
+                if (playerGmoFile.Equals("") || playerGimMainFile.Equals(""))
+                {
+                    if (dlcGenPlayerGimFileExtraEnabled && playerGimExtraFile.Equals(""))
+                    {
+                        // Cecil Only
+                        MessageBox.Show("You need to select at least a player GMO & GIMs (main and extra)");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("You need to select at least a player GMO & GIM");
+                        return;
+                    }
+                }                
+            }
+            else
+            {
+                // No player files enabled (Aerith only)
+                if (dlcGenAssistEnabled)
+                {
+                    if (assistGmoFile.Equals(""))
+                    {
+                        MessageBox.Show("You need to select an assist GMO");
+                        return;
+                    }
+                }
             }
 
+            // Check that we're not trying to use the same DLC slots for player and assist (if they both need
+            // to be generated)
             if (dlcGenAssistEnabled)
             {
                 if (!assistGmoFile.Equals(""))
@@ -152,8 +224,7 @@ namespace DissDlcToolkit.Forms
 
             // TODO: clone this object
             CharacterData characterData = (CharacterData)dlcGenCharacterComboBox.SelectedValue;
-
-            // Generate player DLC (it must always be generated)
+            
             // Create needed folders
             String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
             String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
@@ -163,13 +234,30 @@ namespace DissDlcToolkit.Forms
                 Directory.Delete(dlcFolder, true);
             }
             Directory.CreateDirectory(dlcFolder);
+            String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
 
+            // Generate player DLC (it must always be generated)            
             // Compose DLC data
             ObjectTable playerObjectTable = characterData.characterObjectTable;
             ObjectEntry playerObjectEntry = (ObjectEntry)playerObjectTable.entries[0];
 
             playerObjectEntry.costumeId = costumeDlcSlot;
-            playerObjectEntry.id = playerDlcSlotId;
+            // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
+            switch (costumeDlcSlot)
+            {
+                case 0x01: // Normal
+                    playerObjectEntry.id = characterData.normalPlayerID;
+                    break;
+                case 0x02: // Alt. 1
+                    playerObjectEntry.id = characterData.alt1PlayerID;
+                    break;
+                case 0x03: // Alt. 2
+                    playerObjectEntry.id = characterData.alt2PlayerID;
+                    break;
+                default: // DLC X
+                    playerObjectEntry.id = playerDlcSlotId;
+                    break;
+            }
             playerObjectEntry.objectEntrySlot = Convert.ToByte(playerDlcSlotNumber);
             playerObjectEntry.modelName = characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P";
 
@@ -181,8 +269,7 @@ namespace DissDlcToolkit.Forms
             String gimMainHashFileName = Hasher.hash(("menu/JP/battle/chara_image/" + playerObjectEntry.modelName + ".gim").ToLower()) + ".edat";
             String gimExtraHashFileName = Hasher.hash(("menu/JP/battle/chara_image/" + playerObjectEntry.modelName + "_2.gim").ToLower()) + ".edat";
 
-            // Write player files in DLC folder            
-            String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+            // Write player files in DLC folder
             using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
             {
                 ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
@@ -190,22 +277,33 @@ namespace DissDlcToolkit.Forms
                 readmeFileWriter.WriteLine(dlcGenCharacterComboBox.Text + " " + dlcGenCostumeSlotComboBox.Text);
                 readmeFileWriter.WriteLine("-----------------------");
                 readmeFileWriter.WriteLine("Player object entry slot: " + playerDlcSlotNumber.ToString());
-                readmeFileWriter.WriteLine("Player object entry ID: " + MiscUtils.swapEndianness(playerDlcSlotId).ToString("X4"));
+                readmeFileWriter.WriteLine("Player object entry ID: " + MiscUtils.swapEndianness(playerObjectEntry.id).ToString("X4"));
                 readmeFileWriter.WriteLine("-----------------------");
 
                 playerObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
                 readmeFileWriter.WriteLine("Player object entry (BIN):\t" + objectTableHashFileName);
 
-                File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, playerGmoHashFileName));
-                readmeFileWriter.WriteLine("Player model (GMO):\t\t" + playerGmoHashFileName);
-
-                File.Copy(playerGimMainFile, System.IO.Path.Combine(dlcFolder, gimMainHashFileName));
-                readmeFileWriter.WriteLine("Player portrait (GIM):\t\t" + gimMainHashFileName);
-
-                if (dlcGenPlayerGimFileExtraEnabled)
+                // If selected character is other than Aerith, add player models, portraits and exex file
+                if (dlcGenPlayerGmoGimEnabled)
                 {
-                    File.Copy(playerGimExtraFile, System.IO.Path.Combine(dlcFolder, gimExtraHashFileName));
-                    readmeFileWriter.WriteLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
+                    File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, playerGmoHashFileName));
+                    readmeFileWriter.WriteLine("Player model (GMO):\t\t" + playerGmoHashFileName);
+
+                    File.Copy(playerGimMainFile, System.IO.Path.Combine(dlcFolder, gimMainHashFileName));
+                    readmeFileWriter.WriteLine("Player portrait (GIM):\t\t" + gimMainHashFileName);
+
+                    if (dlcGenPlayerGimFileExtraEnabled)
+                    {
+                        File.Copy(playerGimExtraFile, System.IO.Path.Combine(dlcFolder, gimExtraHashFileName));
+                        readmeFileWriter.WriteLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
+                    }
+
+                    byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX");
+                    if (exexBuffer != null)
+                    {
+                        File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, exexHashFileName), exexBuffer);
+                        readmeFileWriter.WriteLine("Player EX Mode effects (EXEX):\t" + exexHashFileName);
+                    }
                 }
 
                 byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX");
@@ -213,20 +311,12 @@ namespace DissDlcToolkit.Forms
                 {
                     File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, cosxHashFileName), cosxBuffer);
                     readmeFileWriter.WriteLine("Player costume effects (COSX):\t" + cosxHashFileName);
-                }
-
-                byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX");
-                if (exexBuffer != null)
-                {
-                    File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, exexHashFileName), exexBuffer);
-                    readmeFileWriter.WriteLine("Player EX Mode effects (EXEX):\t" + exexHashFileName);
-                }
+                }               
 
                 readmeFileWriter.WriteLine("-----------------------");
             }
 
             // Generate assist DLC (if needed)
-
             if (dlcGenAssistEnabled && !dlcGenAssistGmoFileTextBox.Text.Equals(""))
             {
                 // Compose DLC data
@@ -234,7 +324,22 @@ namespace DissDlcToolkit.Forms
                 ObjectEntry assistObjectEntry = (ObjectEntry)assistObjectTable.entries[0];
 
                 assistObjectEntry.costumeId = costumeDlcSlot;
-                assistObjectEntry.id = assistDlcSlotId;
+                // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
+                switch (costumeDlcSlot)
+                {
+                    case 0x01: // Normal
+                        assistObjectEntry.id = characterData.normalAssistID;
+                        break;
+                    case 0x02: // Alt. 1
+                        assistObjectEntry.id = characterData.alt1AssistID;
+                        break;
+                    case 0x03: // Alt. 2
+                        assistObjectEntry.id = characterData.alt2AssistID;
+                        break;
+                    default:
+                        assistObjectEntry.id = assistDlcSlotId;
+                        break;
+                }
                 assistObjectEntry.objectEntrySlot = Convert.ToByte(assistDlcSlotNumber);
                 assistObjectEntry.modelName = characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P_A";
 
@@ -248,13 +353,13 @@ namespace DissDlcToolkit.Forms
                     ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
 
                     readmeFileWriter.WriteLine("Assist object entry slot: " + assistDlcSlotNumber.ToString());
-                    readmeFileWriter.WriteLine("Assist object entry ID: " + MiscUtils.swapEndianness(assistDlcSlotId).ToString("X4"));
+                    readmeFileWriter.WriteLine("Assist object entry ID: " + MiscUtils.swapEndianness(assistObjectEntry.id).ToString("X4"));
                     readmeFileWriter.WriteLine("-----------------------");
 
                     assistObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, assistObjectTableHashFileName));
                     readmeFileWriter.WriteLine("Assist object entry (BIN):\t" + assistObjectTableHashFileName);
 
-                    File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, assistGmoHashFileName));
+                    File.Copy(assistGmoFile, System.IO.Path.Combine(dlcFolder, assistGmoHashFileName));
                     readmeFileWriter.WriteLine("Assist model (GMO):\t\t" + assistGmoHashFileName);
 
                     readmeFileWriter.WriteLine("-----------------------");

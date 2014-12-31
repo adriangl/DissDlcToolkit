@@ -94,8 +94,8 @@ namespace DissDlcToolkit.Forms
             ws.Cells["H1"].Value = "GMO";
             ws.Cells["I1"].Value = "GIM";
             ws.Cells["J1"].Value = "GIM Extra";
-            ws.Cells["K1"].Value = "COSX";
-            ws.Cells["L1"].Value = "EXEX";
+            ws.Cells["K1"].Value = "EXEX";
+            ws.Cells["L1"].Value = "COSX";
             ws.Cells["M1"].Value = "OBJX";
             ws.Cells["A1:M1"].Style.Font.Bold = true;
             return ws;
@@ -116,8 +116,8 @@ namespace DissDlcToolkit.Forms
             addFileNameToStringBuilderIfExists("\tGMO File:", folder, Hasher.hash(("obj/" + entry.modelName + ".gmo").ToLower()) + ".edat", builder);
             addFileNameToStringBuilderIfExists("\tGIM File:", folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + ".gim").ToLower()) + ".edat", builder);
             addFileNameToStringBuilderIfExists("\tGIM Extra File:", folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + "_2.gim").ToLower()) + ".edat", builder);
-            addFileNameToStringBuilderIfExists("\tCOSX File:", folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat", builder);
             addFileNameToStringBuilderIfExists("\tEXEX File:", folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat", builder);
+            addFileNameToStringBuilderIfExists("\tCOSX File:", folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat", builder);
             addFileNameToStringBuilderIfExists("\tOBJX File:", folder, Hasher.hash(("obj/" + entry.modelName + ".objx").ToLower()) + ".edat", builder);
             builder.AppendLine("--------------------------------------");
             return builder.ToString();
@@ -136,8 +136,8 @@ namespace DissDlcToolkit.Forms
             ws.Cells["H"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".gmo").ToLower()) + ".edat");
             ws.Cells["I"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + ".gim").ToLower()) + ".edat");
             ws.Cells["J"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + "_2.gim").ToLower()) + ".edat");
-            ws.Cells["K"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat");
-            ws.Cells["L"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat");
+            ws.Cells["K"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat");
+            ws.Cells["L" + excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat");
             ws.Cells["M"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".objx").ToLower()) + ".edat");
         
         }
