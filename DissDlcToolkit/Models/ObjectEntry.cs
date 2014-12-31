@@ -30,6 +30,10 @@ namespace DissDlcToolkit.Models
         public const byte DLC_TYPE_MANIKIN_PLAYER = 0x05;
         public const byte DLC_TYPE_MANIKIN_ASSIST = 0x0D;
 
+        public const byte COSTUME_SLOT_NORMAL = 0x01;
+        public const byte COSTUME_SLOT_ALT1 = 0x02;
+        public const byte COSTUME_SLOT_ALT2 = 0x03;
+
         public ObjectEntry()
         {
             modelData = new Byte[MODEL_DATA_BYTES];
@@ -107,6 +111,21 @@ namespace DissDlcToolkit.Models
                     return "Manikin Assist";
                 default:
                     return "Unknown";
+            }
+        }
+
+        public String getFormattedCostumeSlot()
+        {
+            switch (this.costumeId)
+            {
+                case COSTUME_SLOT_NORMAL:
+                    return "Normal";
+                case COSTUME_SLOT_ALT1:
+                    return "Alt. 1";
+                case COSTUME_SLOT_ALT2:
+                    return "Alt. 2";
+                default:
+                    return "DLC "+(costumeId-3);
             }
         }
     }

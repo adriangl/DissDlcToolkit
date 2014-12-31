@@ -336,7 +336,7 @@ namespace DissDlcToolkit.Forms
                     case 0x03: // Alt. 2
                         assistObjectEntry.id = characterData.alt2AssistID;
                         break;
-                    default:
+                    default: // DLC X
                         assistObjectEntry.id = assistDlcSlotId;
                         break;
                 }

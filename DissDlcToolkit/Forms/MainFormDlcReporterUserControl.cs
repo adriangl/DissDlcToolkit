@@ -61,6 +61,7 @@ namespace DissDlcToolkit.Forms
                         reporterDataTextBox.AppendText(textData);
                         // And add them to Excel sheet
                         addExcelDataForEntry(folder, i, objectTableHashFileName, entry, ws, excelRow);
+                        ws.Cells[ws.Dimension.Address].AutoFitColumns();
                         excelRow++;
                     }                    
                 }
@@ -68,7 +69,7 @@ namespace DissDlcToolkit.Forms
             if (!reporterDataTextBox.Text.Trim().Equals(""))
             {
                 reporterSaveToTextButton.Enabled = true;
-                reporterSaveToExcelButton.Enabled = true;
+                reporterSaveToExcelButton.Enabled = true;                
                 MessageBox.Show("DLC read OK!!");
             }
             else
@@ -88,16 +89,17 @@ namespace DissDlcToolkit.Forms
             ws.Cells["B1"].Value = "Character";
             ws.Cells["C1"].Value = "Type";
             ws.Cells["D1"].Value = "DLC ID";
-            ws.Cells["E1"].Value = "DLC Model name";
-            ws.Cells["F1"].Value = "DLC .objx name";
-            ws.Cells["G1"].Value = "Controller";
-            ws.Cells["H1"].Value = "GMO";
-            ws.Cells["I1"].Value = "GIM";
-            ws.Cells["J1"].Value = "GIM Extra";
-            ws.Cells["K1"].Value = "EXEX";
-            ws.Cells["L1"].Value = "COSX";
-            ws.Cells["M1"].Value = "OBJX";
-            ws.Cells["A1:M1"].Style.Font.Bold = true;
+            ws.Cells["E1"].Value = "Costume Slot";
+            ws.Cells["F1"].Value = "DLC Model name";
+            ws.Cells["G1"].Value = "DLC .objx name";
+            ws.Cells["H1"].Value = "Controller";
+            ws.Cells["I1"].Value = "GMO";
+            ws.Cells["J1"].Value = "GIM";
+            ws.Cells["K1"].Value = "GIM Extra";
+            ws.Cells["L1"].Value = "EXEX";
+            ws.Cells["M1"].Value = "COSX";
+            ws.Cells["N1"].Value = "OBJX";
+            ws.Cells["A1:N1"].Style.Font.Bold = true;
             return ws;
         }
 
@@ -108,6 +110,7 @@ namespace DissDlcToolkit.Forms
             builder.AppendLine("Character: " + GlobalData.getInstance().getCharacterNameFromId(entry.characterId));
             builder.AppendLine("Type: " + entry.getFormattedObjectEntryType());
             builder.AppendLine("DLC ID: " + MiscUtils.swapEndianness(entry.id).ToString("X4"));
+            builder.AppendLine("Costume slot: " + entry.getFormattedCostumeSlot());
             builder.AppendLine("DLC Model name: " + entry.modelName);
             builder.AppendLine("DLC .objx name: " + entry.objxName);
             builder.AppendLine("Files:");
@@ -129,16 +132,17 @@ namespace DissDlcToolkit.Forms
             ws.Cells["B"+excelRow].Value = GlobalData.getInstance().getCharacterNameFromId(entry.characterId);
             ws.Cells["C"+excelRow].Value = entry.getFormattedObjectEntryType();
             ws.Cells["D"+excelRow].Value = MiscUtils.swapEndianness(entry.id).ToString("X4");
-            ws.Cells["E"+excelRow].Value = entry.modelName;
-            ws.Cells["F"+excelRow].Value = entry.objxName;
-            ws.Cells["G"+excelRow].Value = objectTableHashFileName;
+            ws.Cells["E"+excelRow].Value = entry.getFormattedCostumeSlot();
+            ws.Cells["F"+excelRow].Value = entry.modelName;
+            ws.Cells["G"+excelRow].Value = entry.objxName;
+            ws.Cells["H"+excelRow].Value = objectTableHashFileName;
             // Check if extra data exist, and print it
-            ws.Cells["H"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".gmo").ToLower()) + ".edat");
-            ws.Cells["I"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + ".gim").ToLower()) + ".edat");
-            ws.Cells["J"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + "_2.gim").ToLower()) + ".edat");
-            ws.Cells["K"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat");
-            ws.Cells["L" + excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat");
-            ws.Cells["M"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".objx").ToLower()) + ".edat");
+            ws.Cells["I"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".gmo").ToLower()) + ".edat");
+            ws.Cells["J"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + ".gim").ToLower()) + ".edat");
+            ws.Cells["K"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("menu/JP/battle/chara_image/" + entry.modelName + "_2.gim").ToLower()) + ".edat");
+            ws.Cells["L"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat");
+            ws.Cells["M" + excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat");
+            ws.Cells["N"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".objx").ToLower()) + ".edat");
         
         }
 
