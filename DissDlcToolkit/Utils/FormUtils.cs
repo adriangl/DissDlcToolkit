@@ -53,5 +53,36 @@ namespace DissDlcToolkit.Utils
             string filter = "EXEX files (*.exex)|*.exex|All Files (*.*)|*.*";
             return openFileDialog(filter);
         }
+
+        internal static string openTxtSaveDialog()
+        {
+            string filter = "TXT files (*.txt)|*.txt";
+            string title = "Save report to text file...";
+            return openFileSaveDialog(filter, title);
+        }
+
+        internal static string openExcelSaveDialog()
+        {
+            string filter = "XLSX files (*.xlsx)|*.xlsx";
+            string title = "Save report to Excel spreadsheet...";
+            return openFileSaveDialog(filter, title);
+        }
+
+        private static string openFileSaveDialog(string filter, string title)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = filter;
+            saveFileDialog.Title = title;
+            saveFileDialog.ShowDialog();
+
+            if (saveFileDialog.FileName != "")
+            {
+                return saveFileDialog.FileName;
+            }
+            else 
+            {
+                return null;
+            }
+        }
     }
 }

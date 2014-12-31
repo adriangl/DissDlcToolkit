@@ -105,6 +105,7 @@
             this.reporterSaveToTextButton.TabIndex = 1;
             this.reporterSaveToTextButton.Text = "Export to text";
             this.reporterSaveToTextButton.UseVisualStyleBackColor = true;
+            this.reporterSaveToTextButton.Click += new System.EventHandler(this.reporterSaveToTextButton_Click);
             // 
             // reporterSaveToExcelButton
             // 
@@ -117,6 +118,7 @@
             this.reporterSaveToExcelButton.TabIndex = 0;
             this.reporterSaveToExcelButton.Text = "Export to Excel";
             this.reporterSaveToExcelButton.UseVisualStyleBackColor = true;
+            this.reporterSaveToExcelButton.Click += new System.EventHandler(this.reporterSaveToExcelButton_Click);
             // 
             // reporterFolderLabel
             // 

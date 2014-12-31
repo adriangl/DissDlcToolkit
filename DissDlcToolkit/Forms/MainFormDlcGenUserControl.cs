@@ -32,7 +32,8 @@ namespace DissDlcToolkit.Forms
         private void InitializeDlcGenTab()
         {
             // Config costume slot keys & values
-            ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();
+            ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();            
+            // Add "DLC x" Slots
             for (Byte i = 1; i <= 9; i++)
             {
                 KeyValuePair<Byte, String> data = new KeyValuePair<Byte, String>((byte)(i + (byte)3), "DLC " + i);
