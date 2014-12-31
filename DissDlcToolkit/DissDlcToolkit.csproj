@@ -59,6 +59,12 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainFormAttachmentsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormAttachmentsUserControl.Designer.cs">
+      <DependentUpon>MainFormAttachmentsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainFormDlcGenUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormAttachmentsUserControl.resx">
+      <DependentUpon>MainFormAttachmentsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainFormDlcGenUserControl.resx">
       <DependentUpon>MainFormDlcGenUserControl.cs</DependentUpon>
