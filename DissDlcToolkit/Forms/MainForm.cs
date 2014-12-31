@@ -18,8 +18,6 @@ namespace DissDlcToolkit
         {
             InitializeComponent();
             GlobalData data = GlobalData.getInstance();
-            InitializeDlcGenTab();
-            InitializeExexTab();
         }        
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)

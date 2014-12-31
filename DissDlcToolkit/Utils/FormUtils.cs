@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DissDlcToolkit
+namespace DissDlcToolkit.Utils
 {
-    public partial class MainForm
-    {   
+    class FormUtils
+    {
         /**
          * Generic file dialog procedure
          */
-        private string openFileDialog(string fileFilter)
+        public static string openFileDialog(string fileFilter)
         {
             // Create an instance of the open file dialog box.
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
@@ -36,21 +36,21 @@ namespace DissDlcToolkit
             return null;
         }
 
-        private string openGmoFileDialog()
+        public static string openGmoFileDialog()
         {
-            string filter = "GMO files (.gmo)|*.gmo|All Files (*.*)|*.*";
+            string filter = "GMO files (*.gmo)|*.gmo|All Files (*.*)|*.*";
             return openFileDialog(filter);
         }
 
-        private string openGimFileDialog()
+        public static string openGimFileDialog()
         {
-            string filter = "GIM files (.gim)|*.gim|All Files (*.*)|*.*";
+            string filter = "GIM files (*.gim)|*.gim|All Files (*.*)|*.*";
             return openFileDialog(filter);
         }
 
-        private string openExexFileDialog()
+        public static string openExexFileDialog()
         {
-            string filter = "EXEX files (.exex)|*.exex|All Files (*.*)|*.*";
+            string filter = "EXEX files (*.exex)|*.exex|All Files (*.*)|*.*";
             return openFileDialog(filter);
         }
     }

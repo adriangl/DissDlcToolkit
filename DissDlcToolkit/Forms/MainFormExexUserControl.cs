@@ -1,20 +1,28 @@
-﻿using CutoutPro.Winforms;
-using DissDlcToolkit.Models;
-using DissDlcToolkit.Utils;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
-using System.IO;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DissDlcToolkit.Models;
+using DissDlcToolkit.Utils;
+using System.IO;
+using CutoutPro.Winforms;
+using System.Collections;
 
-namespace DissDlcToolkit
+namespace DissDlcToolkit.Forms
 {
-    public partial class MainForm
+    public partial class MainFormExexUserControl : UserControl
     {
+        public MainFormExexUserControl()
+        {
+            InitializeComponent();
+            InitializeExexTab();
+        }
+
         /**
          * This partial class handles all callbacks from the
          * ".exex editing" tab
@@ -36,7 +44,7 @@ namespace DissDlcToolkit
 
         private void exexLoadButton_Click(object sender, EventArgs e)
         {
-            exexFile = openExexFileDialog();
+            exexFile = FormUtils.openExexFileDialog();
             if (exexFile != null && !exexFile.Trim().Equals(""))
             {
                 exexFileLabel.Text = exexFile;
@@ -59,7 +67,7 @@ namespace DissDlcToolkit
         {
             Color backColor = openColorDialog(exexParticleColorLabel.BackColor, false);
             updateColorData(backColor, exexParticleColorLabel, exexParticleColorTextBox, false, true);
-        }        
+        }
 
         private void exexOuterGlowLabel_Click(object sender, EventArgs e)
         {
@@ -115,9 +123,9 @@ namespace DissDlcToolkit
             File.Copy(@exexFile, @exexFile + ".bak");
             exexTable.writeToFile(@exexFile);
             MessageBox.Show("Success!!");
-        } 
+        }
 
-        private void updateColorData(Color backColor, Label colorLabel, TextBox colorTextBox, 
+        private void updateColorData(Color backColor, Label colorLabel, TextBox colorTextBox,
             Boolean invert, Boolean applyAlpha)
         {
             Color colorToApply = invert ? MiscUtils.invertColor(backColor) : backColor;
@@ -144,8 +152,9 @@ namespace DissDlcToolkit
         {
             // Config aura slots
             ArrayList exexAuraSlots = new ArrayList();
-            for (Byte i = 0; i < table.entries.Count; i++){
-                exexAuraSlots.Add(i+1);
+            for (Byte i = 0; i < table.entries.Count; i++)
+            {
+                exexAuraSlots.Add(i + 1);
             }
             exexAuraSlotComboBox.DataSource = exexAuraSlots;
             exexAuraSlotComboBox.Enabled = true;
@@ -161,16 +170,16 @@ namespace DissDlcToolkit
             updateColorData(entry.particleColor, exexParticleColorLabel, exexParticleColorTextBox, false, true);
             updateColorData(entry.outerGlowColor, exexOuterGlowLabel, exexOuterGlowTextBox, false, true);
             updateColorData(entry.innerGlowColor, exexInnerGlowLabel, exexInnerGlowTextBox, false, true);
-            
+
             exexSmoke1InvertCheckBox.Checked = entry.smoke1Invert;
             exexSmoke2InvertCheckBox.Checked = entry.smoke2Invert;
             exexBoltsInvertCheckBox.Checked = entry.boltsInvert;
-            
+
             updateColorData(entry.smoke1Color, exexSmoke1Label, exexSmoke1TextBox, entry.smoke1Invert, false);
             updateColorData(entry.smoke2Color, exexSmoke2Label, exexSmoke2TextBox, entry.smoke2Invert, false);
             updateColorData(entry.boltsColor, exexBoltsLabel, exexBoltsTextBox, entry.boltsInvert, false);
 
-            
+
         }
 
         private void saveValuesToAuraSlot(int auraSlotIndex)
@@ -180,8 +189,8 @@ namespace DissDlcToolkit
             entry.outerGlowColor = exexOuterGlowLabel.BackColor;
             entry.innerGlowColor = exexInnerGlowLabel.BackColor;
 
-            entry.smoke1Color = exexSmoke1InvertCheckBox.Checked 
-                ? MiscUtils.invertColor(exexSmoke1Label.BackColor) 
+            entry.smoke1Color = exexSmoke1InvertCheckBox.Checked
+                ? MiscUtils.invertColor(exexSmoke1Label.BackColor)
                 : exexSmoke1Label.BackColor;
             entry.smoke1Invert = exexSmoke1InvertCheckBox.Checked;
 
@@ -195,6 +204,5 @@ namespace DissDlcToolkit
                 : exexBoltsLabel.BackColor;
             entry.boltsInvert = exexBoltsInvertCheckBox.Checked;
         }
-
     }
 }

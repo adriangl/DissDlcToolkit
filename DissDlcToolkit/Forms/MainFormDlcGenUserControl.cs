@@ -1,35 +1,40 @@
-﻿using DissDlcToolkit.Models;
-using DissDlcToolkit.Utils;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
 using System.Linq;
-using System.Reflection;
-using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using DissDlcToolkit.Models;
+using System.IO;
+using DissDlcToolkit.Utils;
+using System.Resources;
+using System.Reflection;
 
-namespace DissDlcToolkit
+namespace DissDlcToolkit.Forms
 {
-    /**
-     * This partial class handles all callbacks from the
-     * "DLC Generation" tab
-     */
-
-    public partial class MainForm
+    public partial class MainFormDlcGenUserControl : UserControl
     {
+        public MainFormDlcGenUserControl()
+        {
+            InitializeComponent();
+            InitializeDlcGenTab();
+        }
+
         // Variable which controls whether we selected a character suitable for 
         // extra GIM file
         private Boolean dlcGenPlayerGimFileExtraEnabled = false;
         private Boolean dlcGenAssistEnabled = true;
-        
+
         private void InitializeDlcGenTab()
         {
             // Config costume slot keys & values
             ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();
-            for (Byte i = 1; i <= 9; i++){
+            for (Byte i = 1; i <= 9; i++)
+            {
                 KeyValuePair<Byte, String> data = new KeyValuePair<Byte, String>((byte)(i + (byte)3), "DLC " + i);
                 dlcGenCostumeSlotKeyValues.Add(data);
             }
@@ -42,7 +47,7 @@ namespace DissDlcToolkit
             ArrayList dlcGenDlcSlotsKeyValues = new ArrayList();
             for (UInt16 i = 1; i <= 255; i++)
             {
-                KeyValuePair<UInt16, int> data = new KeyValuePair<UInt16, int>((UInt16)(0x2C0+(i-1)), i);
+                KeyValuePair<UInt16, int> data = new KeyValuePair<UInt16, int>((UInt16)(0x2C0 + (i - 1)), i);
                 dlcGenDlcSlotsKeyValues.Add(data);
             }
             dlcGenPlayerDlcSlotComboBox.DataSource = dlcGenDlcSlotsKeyValues;
@@ -85,22 +90,22 @@ namespace DissDlcToolkit
 
         private void dlcGenBrowsePlayerGmoButton_Click(object sender, EventArgs e)
         {
-            dlcGenPlayerGmoFileTextBox.Text = openGmoFileDialog();
+            dlcGenPlayerGmoFileTextBox.Text = FormUtils.openGmoFileDialog();
         }
 
         private void dlcGenBrowsePlayerGimFileMainButton_Click(object sender, EventArgs e)
         {
-            dlcGenPlayerGimFileMainTextBox.Text = openGimFileDialog();
+            dlcGenPlayerGimFileMainTextBox.Text = FormUtils.openGimFileDialog();
         }
 
         private void dlcGenBrowsePlayerGimFileExtraButton_Click(object sender, EventArgs e)
         {
-            dlcGenPlayerGimFileExtraTextBox.Text = openGimFileDialog();
+            dlcGenPlayerGimFileExtraTextBox.Text = FormUtils.openGimFileDialog();
         }
 
         private void dlcGenBrowseAssistGmoButton_Click(object sender, EventArgs e)
         {
-            dlcGenAssistGmoFileTextBox.Text = openGmoFileDialog();
+            dlcGenAssistGmoFileTextBox.Text = FormUtils.openGmoFileDialog();
         }
 
         private void dlcGenGenerateButton_Click(object sender, EventArgs e)
@@ -114,10 +119,10 @@ namespace DissDlcToolkit
             // Get needed data for generating the DLC
             Byte costumeDlcSlot = (Byte)dlcGenCostumeSlotComboBox.SelectedValue;
 
-            int playerDlcSlotNumber = (int)dlcGenPlayerDlcSlotComboBox.SelectedIndex+1;
+            int playerDlcSlotNumber = (int)dlcGenPlayerDlcSlotComboBox.SelectedIndex + 1;
             UInt16 playerDlcSlotId = (UInt16)dlcGenPlayerDlcSlotComboBox.SelectedValue;
             int assistDlcSlotNumber = (int)dlcGenAssistDlcSlotComboBox.SelectedIndex + 1;
-            UInt16 assistDlcSlotId = (UInt16)dlcGenAssistDlcSlotComboBox.SelectedValue;            
+            UInt16 assistDlcSlotId = (UInt16)dlcGenAssistDlcSlotComboBox.SelectedValue;
 
             String playerGmoFile = dlcGenPlayerGmoFileTextBox.Text;
             String playerGimMainFile = dlcGenPlayerGimFileMainTextBox.Text;
@@ -134,7 +139,7 @@ namespace DissDlcToolkit
 
             if (dlcGenAssistEnabled)
             {
-                if (!assistGmoFile.Equals(""))                
+                if (!assistGmoFile.Equals(""))
                 {
                     if (playerDlcSlotNumber == assistDlcSlotNumber)
                     {
@@ -168,13 +173,13 @@ namespace DissDlcToolkit
             playerObjectEntry.modelName = characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P";
 
             // Get hashed filenames, so the game can read them
-            String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + playerDlcSlotNumber.ToString("d3") + "oe.bin") +".edat";
+            String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + playerDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
             String playerGmoHashFileName = Hasher.hash(("obj/" + playerObjectEntry.modelName + ".gmo").ToLower()) + ".edat";
             String cosxHashFileName = Hasher.hash(("obj/" + playerObjectEntry.modelName + ".cosx").ToLower()) + ".edat";
             String exexHashFileName = Hasher.hash(("obj/" + playerObjectEntry.modelName + ".exex").ToLower()) + ".edat";
             String gimMainHashFileName = Hasher.hash(("menu/JP/battle/chara_image/" + playerObjectEntry.modelName + ".gim").ToLower()) + ".edat";
             String gimExtraHashFileName = Hasher.hash(("menu/JP/battle/chara_image/" + playerObjectEntry.modelName + "_2.gim").ToLower()) + ".edat";
-            
+
             // Write player files in DLC folder            
             String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
             using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
@@ -185,14 +190,14 @@ namespace DissDlcToolkit
                 readmeFileWriter.WriteLine("-----------------------");
                 readmeFileWriter.WriteLine("Player object entry slot: " + playerDlcSlotNumber.ToString());
                 readmeFileWriter.WriteLine("Player object entry ID: " + MiscUtils.swapEndianness(playerDlcSlotId).ToString("X4"));
-                readmeFileWriter.WriteLine("-----------------------");                
-                
+                readmeFileWriter.WriteLine("-----------------------");
+
                 playerObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
-                readmeFileWriter.WriteLine("Player object entry (BIN):\t"+objectTableHashFileName);
-                
+                readmeFileWriter.WriteLine("Player object entry (BIN):\t" + objectTableHashFileName);
+
                 File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, playerGmoHashFileName));
                 readmeFileWriter.WriteLine("Player model (GMO):\t\t" + playerGmoHashFileName);
-                
+
                 File.Copy(playerGimMainFile, System.IO.Path.Combine(dlcFolder, gimMainHashFileName));
                 readmeFileWriter.WriteLine("Player portrait (GIM):\t\t" + gimMainHashFileName);
 
@@ -201,7 +206,7 @@ namespace DissDlcToolkit
                     File.Copy(playerGimExtraFile, System.IO.Path.Combine(dlcFolder, gimExtraHashFileName));
                     readmeFileWriter.WriteLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
                 }
-                
+
                 byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX");
                 if (cosxBuffer != null)
                 {
