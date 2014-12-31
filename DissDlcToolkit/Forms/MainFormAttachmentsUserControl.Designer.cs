@@ -161,6 +161,7 @@
             this.attachmentLinkIdRadioButton.TabStop = true;
             this.attachmentLinkIdRadioButton.Text = "Attachment ID";
             this.attachmentLinkIdRadioButton.UseVisualStyleBackColor = true;
+            this.attachmentLinkIdRadioButton.CheckedChanged += new System.EventHandler(this.attachmentLinkIdRadioButton_CheckedChanged);
             // 
             // attachmentLinkControllerRadioButton
             // 
@@ -171,9 +172,9 @@
             this.attachmentLinkControllerRadioButton.Name = "attachmentLinkControllerRadioButton";
             this.attachmentLinkControllerRadioButton.Size = new System.Drawing.Size(125, 17);
             this.attachmentLinkControllerRadioButton.TabIndex = 0;
-            this.attachmentLinkControllerRadioButton.TabStop = true;
             this.attachmentLinkControllerRadioButton.Text = "Attachment controller";
             this.attachmentLinkControllerRadioButton.UseVisualStyleBackColor = true;
+            this.attachmentLinkControllerRadioButton.CheckedChanged += new System.EventHandler(this.attachmentLinkControllerRadioButton_CheckedChanged);
             // 
             // attachmentLinkDataLabel
             // 
