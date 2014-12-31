@@ -32,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ArgbColorDialog, Version=1.0.4683.31652, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\ArgbColorDialog.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -96,7 +92,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -240,9 +235,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ArgbColorDialog.dll" />
     <None Include="Resources\color_bg.png" />
     <None Include="Resources\icon_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArgbColorDialog\ArgbColorDialog.csproj">
+      <Project>{e3082b43-feef-4ded-b29f-39932e824dff}</Project>
+      <Name>ArgbColorDialog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
