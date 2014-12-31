@@ -20,10 +20,12 @@ namespace DissDlcToolkit
         private static GlobalData instance;
 
         public ArrayList characterDataList { get; set; }
+        public Dictionary<byte, String> characterIdNameMap { get; set; }
 
         private GlobalData()
         {
             characterDataList = new ArrayList();
+            characterIdNameMap = new Dictionary<byte, string>();
             loadCharacterData();
         }       
 
@@ -73,6 +75,17 @@ namespace DissDlcToolkit
             characterDataList.Add(new CharacterData("Feral Chaos", "p_org210"));
 
             characterDataList.Sort();
+
+            foreach (CharacterData data in characterDataList)
+            {
+                characterIdNameMap.Add(((ObjectEntry)data.characterObjectTable.entries[0]).characterId, 
+                    data.characterName);
+            }
+        }
+
+        public String getCharacterNameFromId(byte id)
+        {
+            return characterIdNameMap.ContainsKey(id) ? characterIdNameMap[id] : "Unknown";
         }
     }
 }

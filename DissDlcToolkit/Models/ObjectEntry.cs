@@ -22,7 +22,13 @@ namespace DissDlcToolkit.Models
         public Byte[] modelData { get; set; } // 0x0A
         public UInt16[] attachmentIds { get; set; } // 0x18
         public String modelName { get; set; } // 0x24, 16 bytes (15 + \0)
-        public String effectsName { get; set; } // 0x34, 16 bytes (15 + \0)
+        public String objxName { get; set; } // 0x34, 16 bytes (15 + \0)
+
+        // Constants
+        public const byte DLC_TYPE_PLAYER_OR_ATTACHMENT = 0x00;
+        public const byte DLC_TYPE_ASSIST = 0x08;
+        public const byte DLC_TYPE_MANIKIN_PLAYER = 0x05;
+        public const byte DLC_TYPE_MANIKIN_ASSIST = 0x0D;
 
         public ObjectEntry()
         {
@@ -55,7 +61,7 @@ namespace DissDlcToolkit.Models
 
             buffer = new byte[16];
             reader.Read(buffer, 0, 16);
-            effectsName = Encoding.ASCII.GetString(buffer).TrimEnd('\0');           
+            objxName = Encoding.ASCII.GetString(buffer).TrimEnd('\0');           
         }
 
         public void write(BinaryWriter writer)
@@ -83,8 +89,25 @@ namespace DissDlcToolkit.Models
             writer.Write(buffer);
 
             buffer = new byte[16];
-            Encoding.ASCII.GetBytes(effectsName, 0, effectsName.Length, buffer, 0);
+            Encoding.ASCII.GetBytes(objxName, 0, objxName.Length, buffer, 0);
             writer.Write(buffer);
+        }
+
+        public String getFormattedObjectEntryType()
+        {
+            switch (this.objectEntryType)
+            {
+                case DLC_TYPE_PLAYER_OR_ATTACHMENT:
+                    return "Player/Attachment";
+                case DLC_TYPE_ASSIST:
+                    return "Assist";
+                case DLC_TYPE_MANIKIN_PLAYER:
+                    return "Manikin Player";
+                case DLC_TYPE_MANIKIN_ASSIST:
+                    return "Manikin Assist";
+                default:
+                    return "Unknown";
+            }
         }
     }
 }

@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.reporterSaveToTextButton = new System.Windows.Forms.Button();
             this.reporterSaveToExcelButton = new System.Windows.Forms.Button();
+            this.reporterFolderLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             this.tableLayoutPanel3.Controls.Add(this.reporterLoadFolderButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.reporterDataTextBox, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.reporterFolderLabel, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
@@ -66,16 +68,19 @@
             this.reporterLoadFolderButton.TabIndex = 21;
             this.reporterLoadFolderButton.Text = "Load DLC folder";
             this.reporterLoadFolderButton.UseVisualStyleBackColor = true;
+            this.reporterLoadFolderButton.Click += new System.EventHandler(this.reporterLoadFolderButton_Click);
             // 
             // reporterDataTextBox
             // 
             this.reporterDataTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.tableLayoutPanel3.SetColumnSpan(this.reporterDataTextBox, 3);
             this.reporterDataTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reporterDataTextBox.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reporterDataTextBox.Location = new System.Drawing.Point(3, 33);
             this.reporterDataTextBox.Multiline = true;
             this.reporterDataTextBox.Name = "reporterDataTextBox";
             this.reporterDataTextBox.ReadOnly = true;
+            this.reporterDataTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.reporterDataTextBox.Size = new System.Drawing.Size(395, 205);
             this.reporterDataTextBox.TabIndex = 22;
             // 
@@ -113,6 +118,16 @@
             this.reporterSaveToExcelButton.Text = "Export to Excel";
             this.reporterSaveToExcelButton.UseVisualStyleBackColor = true;
             // 
+            // reporterFolderLabel
+            // 
+            this.reporterFolderLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.reporterFolderLabel.AutoEllipsis = true;
+            this.tableLayoutPanel3.SetColumnSpan(this.reporterFolderLabel, 2);
+            this.reporterFolderLabel.Location = new System.Drawing.Point(107, 8);
+            this.reporterFolderLabel.Name = "reporterFolderLabel";
+            this.reporterFolderLabel.Size = new System.Drawing.Size(291, 13);
+            this.reporterFolderLabel.TabIndex = 24;
+            // 
             // MainFormDlcReporterUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -135,5 +150,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button reporterSaveToTextButton;
         private System.Windows.Forms.Button reporterSaveToExcelButton;
+        private System.Windows.Forms.Label reporterFolderLabel;
     }
 }
