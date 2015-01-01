@@ -13,6 +13,7 @@ using DissDlcToolkit.Models;
 using System.IO;
 using System.Resources;
 using System.Reflection;
+using System.Globalization;
 
 namespace DissDlcToolkit.Forms
 {
@@ -55,6 +56,7 @@ namespace DissDlcToolkit.Forms
         {
             attachmentLinkDataLabel.Text = "Controller to link";
             attachmentLinkDataTextBox.Text = "";
+            attachmentLinkDataTextBox.MaxLength = 0;
             attachmentLinkDataTextBox.Enabled = false;
             attachmentLinkBrowseLinkedControllerButton.Visible = true;
         }
@@ -63,6 +65,7 @@ namespace DissDlcToolkit.Forms
         {
             attachmentLinkDataLabel.Text = "ID to link";
             attachmentLinkDataTextBox.Text = "";
+            attachmentLinkDataTextBox.MaxLength = 4;
             attachmentLinkDataTextBox.Enabled = true;
             attachmentLinkBrowseLinkedControllerButton.Visible = false;
         }
@@ -153,6 +156,67 @@ namespace DissDlcToolkit.Forms
                 }
 
                 MessageBox.Show("Success!!");
+            }
+        }
+
+        private void attachmentLinkGenerateButton_Click(object sender, EventArgs e)
+        {
+            String data = attachmentLinkDataTextBox.Text;
+            String baseControllerFile = attachmentLinkBaseControllerTextBox.Text;
+            if (!baseControllerFile.Equals(""))
+            {
+                if (attachmentLinkControllerRadioButton.Checked)
+                {
+                    // Attach base controller to attachment controller
+                    ObjectTable attachmentTable = new ObjectTable(data);
+                    ObjectEntry entry = (ObjectEntry)attachmentTable.entries[0];
+                    attachControllerToId(baseControllerFile, entry.id);
+                }
+                else if (attachmentLinkIdRadioButton.Checked)
+                {
+                    // Attach base controller to entered ID
+                    UInt16 id;
+                    Boolean result = UInt16.TryParse(data.ToUpper(), NumberStyles.HexNumber, 
+                        CultureInfo.InvariantCulture, out id);
+                    attachControllerToId(baseControllerFile, MiscUtils.swapEndianness(id));
+                }
+            }
+            else
+            {
+                MessageBox.Show("You need to select a base controller in order to link an attachment");
+            }
+        }
+
+        private void attachControllerToId(String baseControllerFile, UInt16 attachmentId)
+        {
+            // Set attachment ID to chosen base controller
+            ObjectTable baseTable = new ObjectTable(baseControllerFile);
+            ObjectEntry entry = (ObjectEntry)baseTable.entries[0];
+
+            if (entry.addAttachment(attachmentId))
+            {
+                File.Copy(baseControllerFile, baseControllerFile + ".bak", true);
+                baseTable.writeToFile(baseControllerFile);
+                MessageBox.Show("Success!!");
+            }
+            else
+            {
+                MessageBox.Show("You have surpassed the limit of attachments to add to this controller");
+            }
+        }        
+
+        private void attachmentLinkDataTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (attachmentLinkIdRadioButton.Checked)
+            {
+                // Check input as hex only when in ID mode
+                if (e.KeyChar != '\b')
+                    e.Handled = !System.Uri.IsHexDigit(e.KeyChar);
+                // Play standard error sound when the input is not valid hex
+                if (e.Handled)
+                {
+                    System.Media.SystemSounds.Beep.Play();
+                }
             }
         }
     }

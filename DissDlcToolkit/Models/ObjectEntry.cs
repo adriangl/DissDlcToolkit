@@ -128,5 +128,21 @@ namespace DissDlcToolkit.Models
                     return "DLC "+(costumeId-3);
             }
         }
+
+        public bool addAttachment(UInt16 attachmentIdToInsert)
+        {
+            // First, check if there is any free attachment slot available
+            for (int i = 0; i < ATTACHMENT_IDS_ARRAY_SIZE; i++)
+            {
+                UInt16 attachmentId = attachmentIds[i];
+                if (attachmentId == 0xFFFF)
+                {
+                    // We found a free attachment slot; add our new id
+                    attachmentIds[i] = attachmentIdToInsert;
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

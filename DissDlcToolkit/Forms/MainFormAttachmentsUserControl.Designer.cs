@@ -196,6 +196,7 @@
             this.attachmentLinkDataTextBox.Name = "attachmentLinkDataTextBox";
             this.attachmentLinkDataTextBox.Size = new System.Drawing.Size(148, 20);
             this.attachmentLinkDataTextBox.TabIndex = 11;
+            this.attachmentLinkDataTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.attachmentLinkDataTextBox_KeyPress);
             // 
             // attachmentLinkBrowseLinkedControllerButton
             // 
@@ -220,6 +221,7 @@
             this.attachmentLinkGenerateButton.TabIndex = 13;
             this.attachmentLinkGenerateButton.Text = "Link!";
             this.attachmentLinkGenerateButton.UseVisualStyleBackColor = true;
+            this.attachmentLinkGenerateButton.Click += new System.EventHandler(this.attachmentLinkGenerateButton_Click);
             // 
             // groupBox1
             // 
