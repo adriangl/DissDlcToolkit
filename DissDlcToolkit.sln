@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DissDlcToolkit", "DissDlcTo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArgbColorDialog", "ArgbColorDialog\ArgbColorDialog.csproj", "{E3082B43-FEEF-4DED-B29F-39932E824DFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSelect", "FolderSelectDialog\FolderSelect.csproj", "{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,16 @@ Global
 		{E3082B43-FEEF-4DED-B29F-39932E824DFF}.Release|Mixed Platforms.Build.0 = Release|x86
 		{E3082B43-FEEF-4DED-B29F-39932E824DFF}.Release|x86.ActiveCfg = Release|x86
 		{E3082B43-FEEF-4DED-B29F-39932E824DFF}.Release|x86.Build.0 = Release|x86
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F4A7CCFF-3855-4F01-A146-4BE677B5FC4A}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

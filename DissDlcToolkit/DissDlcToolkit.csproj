@@ -290,6 +290,10 @@
       <Project>{e3082b43-feef-4ded-b29f-39932e824dff}</Project>
       <Name>ArgbColorDialog</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FolderSelectDialog\FolderSelect.csproj">
+      <Project>{f4a7ccff-3855-4f01-a146-4be677b5fc4a}</Project>
+      <Name>FolderSelect</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

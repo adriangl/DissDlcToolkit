@@ -11,6 +11,7 @@ using System.IO;
 using DissDlcToolkit.Utils;
 using DissDlcToolkit.Models;
 using OfficeOpenXml;
+using FolderSelect;
 
 namespace DissDlcToolkit.Forms
 {
@@ -26,17 +27,12 @@ namespace DissDlcToolkit.Forms
 
         private void reporterLoadFolderButton_Click(object sender, EventArgs e)
         {
-            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
-            {
-                dialog.Description = "Open the folder where the DLC are located.";
-                dialog.ShowNewFolderButton = false;
-                if (dialog.ShowDialog() == DialogResult.OK)
-                {
-                    string folder = dialog.SelectedPath;
-                    reporterFolderLabel.Text = folder;
-                    reportSelectedFolder(folder);
-                }
-            }
+            FolderSelectDialog dialog = new FolderSelectDialog();
+            dialog.ShowDialog();
+            string folder = dialog.FileName;
+            reporterFolderLabel.Text = folder;
+            if (!folder.Equals(""))
+                reportSelectedFolder(folder);
         }
 
         private void reportSelectedFolder(String folder)

@@ -139,11 +139,11 @@ namespace DissDlcToolkit.Forms
                     readmeFileWriter.WriteLine("-----------------------");
 
                     attachmentObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
-                    readmeFileWriter.WriteLine("Player object entry (BIN):\t" + objectTableHashFileName);
+                    readmeFileWriter.WriteLine("Player object entry (BIN):\t\t" + objectTableHashFileName);
 
                     // If selected character is other than Aerith, add player models, portraits and exex file                    
                     File.Copy(attachmentGmoFile, System.IO.Path.Combine(dlcFolder, attachmentGmoHashFileName));
-                    readmeFileWriter.WriteLine("Attachment model (GMO):\t\t" + attachmentGmoHashFileName);
+                    readmeFileWriter.WriteLine("Attachment model (GMO):\t\t\t" + attachmentGmoHashFileName);
 
                     byte[] objxBuffer = (byte[])rm.GetObject(selectedAttachmentData.internalName.ToUpper() + "_OBJX");
                     if (objxBuffer != null)
