@@ -71,6 +71,146 @@ namespace DissDlcToolkit.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_NIN101 {
+            get {
+                object obj = ResourceManager.GetObject("G_NIN101", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_NIN101_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_NIN101_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV101 {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV101", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV101_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV101_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV102 {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV102", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV102_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV102_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV103 {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV103", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV103_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV103_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV201 {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV201", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_SEV201_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_SEV201_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_TEN111 {
+            get {
+                object obj = ResourceManager.GetObject("G_TEN111", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_TEN111_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_TEN111_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_TWO201 {
+            get {
+                object obj = ResourceManager.GetObject("G_TWO201", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] G_TWO201_OBJX {
+            get {
+                object obj = ResourceManager.GetObject("G_TWO201_OBJX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap icon_big {

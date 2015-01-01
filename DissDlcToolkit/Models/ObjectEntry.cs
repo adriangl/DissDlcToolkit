@@ -9,8 +9,8 @@ namespace DissDlcToolkit.Models
 {
     class ObjectEntry
     {
-        public static int MODEL_DATA_BYTES = 14;
-        public static int ATTACHMENT_IDS_ARRAY_SIZE = 6;
+        public static int MODEL_DATA_BYTES = 18;
+        public static int ATTACHMENT_IDS_ARRAY_SIZE = 4;
 
         public UInt16 id { get; set; } // 0x00
         public UInt16 data1 { get; set; } // 0x02 

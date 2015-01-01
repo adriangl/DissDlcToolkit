@@ -84,5 +84,11 @@ namespace DissDlcToolkit.Utils
                 return null;
             }
         }
+
+        internal static string openGenericFileDialog()
+        {
+            string filter = "All Files (*.*)|*.*";
+            return openFileDialog(filter);
+        }
     }
 }

@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="GlobalData.cs" />
     <Compile Include="Models\CharacterData.cs" />
+    <Compile Include="Models\AttachmentData.cs" />
     <Compile Include="Models\ExexEntry.cs" />
     <Compile Include="Models\ExexTable.cs" />
     <Compile Include="Models\ObjectEntry.cs" />
@@ -133,6 +134,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\G_NIN101" />
+    <None Include="Resources\G_NIN101_OBJX" />
+    <None Include="Resources\G_SEV101" />
+    <None Include="Resources\G_SEV101_OBJX" />
+    <None Include="Resources\G_SEV102" />
+    <None Include="Resources\G_SEV102_OBJX" />
+    <None Include="Resources\G_SEV103" />
+    <None Include="Resources\G_SEV103_OBJX" />
+    <None Include="Resources\G_SEV201" />
+    <None Include="Resources\G_SEV201_OBJX" />
+    <None Include="Resources\G_TEN111" />
+    <None Include="Resources\G_TEN111_OBJX" />
+    <None Include="Resources\G_TWO201" />
+    <None Include="Resources\G_TWO201_OBJX" />
     <None Include="Resources\P_EHT100_1P" />
     <None Include="Resources\P_EHT100_1P_A" />
     <None Include="Resources\P_EHT100_COSX" />

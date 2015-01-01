@@ -32,7 +32,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.attachmentLinkingCharacterControllerTextBox = new System.Windows.Forms.TextBox();
+            this.attachmentLinkBaseControllerTextBox = new System.Windows.Forms.TextBox();
             this.attachmentLinkBrowseCharacterControllerButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.attachmentLinkIdRadioButton = new System.Windows.Forms.RadioButton();
@@ -89,7 +89,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.attachmentLinkingCharacterControllerTextBox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.attachmentLinkBaseControllerTextBox, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.attachmentLinkBrowseCharacterControllerButton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.attachmentLinkDataLabel, 0, 2);
@@ -115,16 +115,16 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 26);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Character controller";
+            this.label4.Text = "Base controller";
             // 
-            // attachmentLinkingCharacterControllerTextBox
+            // attachmentLinkBaseControllerTextBox
             // 
-            this.attachmentLinkingCharacterControllerTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.SetColumnSpan(this.attachmentLinkingCharacterControllerTextBox, 2);
-            this.attachmentLinkingCharacterControllerTextBox.Location = new System.Drawing.Point(80, 5);
-            this.attachmentLinkingCharacterControllerTextBox.Name = "attachmentLinkingCharacterControllerTextBox";
-            this.attachmentLinkingCharacterControllerTextBox.Size = new System.Drawing.Size(148, 20);
-            this.attachmentLinkingCharacterControllerTextBox.TabIndex = 8;
+            this.attachmentLinkBaseControllerTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.SetColumnSpan(this.attachmentLinkBaseControllerTextBox, 2);
+            this.attachmentLinkBaseControllerTextBox.Location = new System.Drawing.Point(80, 5);
+            this.attachmentLinkBaseControllerTextBox.Name = "attachmentLinkBaseControllerTextBox";
+            this.attachmentLinkBaseControllerTextBox.Size = new System.Drawing.Size(148, 20);
+            this.attachmentLinkBaseControllerTextBox.TabIndex = 8;
             // 
             // attachmentLinkBrowseCharacterControllerButton
             // 
@@ -136,6 +136,7 @@
             this.attachmentLinkBrowseCharacterControllerButton.TabIndex = 6;
             this.attachmentLinkBrowseCharacterControllerButton.Text = "Browse...";
             this.attachmentLinkBrowseCharacterControllerButton.UseVisualStyleBackColor = true;
+            this.attachmentLinkBrowseCharacterControllerButton.Click += new System.EventHandler(this.attachmentLinkBrowseCharacterControllerButton_Click);
             // 
             // panel2
             // 
@@ -206,6 +207,7 @@
             this.attachmentLinkBrowseLinkedControllerButton.TabIndex = 12;
             this.attachmentLinkBrowseLinkedControllerButton.Text = "Browse...";
             this.attachmentLinkBrowseLinkedControllerButton.UseVisualStyleBackColor = true;
+            this.attachmentLinkBrowseLinkedControllerButton.Click += new System.EventHandler(this.attachmentLinkBrowseLinkedControllerButton_Click);
             // 
             // attachmentLinkGenerateButton
             // 
@@ -330,6 +332,7 @@
             this.attachmentCreationGenerateButton.TabIndex = 7;
             this.attachmentCreationGenerateButton.Text = "Generate!";
             this.attachmentCreationGenerateButton.UseVisualStyleBackColor = true;
+            this.attachmentCreationGenerateButton.Click += new System.EventHandler(this.attachmentCreationGenerateButton_Click);
             // 
             // panel3
             // 
@@ -352,6 +355,7 @@
             this.attachmentCreationBrowseGmoFileButton.TabIndex = 6;
             this.attachmentCreationBrowseGmoFileButton.Text = "Browse...";
             this.attachmentCreationBrowseGmoFileButton.UseVisualStyleBackColor = true;
+            this.attachmentCreationBrowseGmoFileButton.Click += new System.EventHandler(this.attachmentCreationBrowseGmoFileButton_Click);
             // 
             // MainFormAttachmentsUserControl
             // 
@@ -380,7 +384,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox attachmentLinkingCharacterControllerTextBox;
+        private System.Windows.Forms.TextBox attachmentLinkBaseControllerTextBox;
         private System.Windows.Forms.Button attachmentLinkBrowseCharacterControllerButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton attachmentLinkIdRadioButton;

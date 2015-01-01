@@ -22,11 +22,15 @@ namespace DissDlcToolkit
         public ArrayList characterDataList { get; set; }
         public Dictionary<byte, String> characterIdNameMap { get; set; }
 
+        public ArrayList attachmentDataList { get; set; }
+
         private GlobalData()
         {
             characterDataList = new ArrayList();
             characterIdNameMap = new Dictionary<byte, string>();
+            attachmentDataList = new ArrayList();
             loadCharacterData();
+            loadAttachmentData();
         }       
 
         public static GlobalData getInstance()
@@ -86,6 +90,20 @@ namespace DissDlcToolkit
         public String getCharacterNameFromId(byte id)
         {
             return characterIdNameMap.ContainsKey(id) ? characterIdNameMap[id] : "Unknown";
+        }
+
+        // Loads character controllers into memory
+        private void loadAttachmentData()
+        {
+            attachmentDataList.Add(new AttachmentData("DLC Cloud's Cape", "g_sev101"));
+            attachmentDataList.Add(new AttachmentData("DLC Cloud's Wing", "g_sev102"));
+            attachmentDataList.Add(new AttachmentData("DLC Cloud's Sword Band", "g_sev103"));
+            attachmentDataList.Add(new AttachmentData("DLC Sephiroth Coat", "g_sev201"));
+            attachmentDataList.Add(new AttachmentData("DLC Zidane's Cape", "g_nin101"));
+            attachmentDataList.Add(new AttachmentData("DLC Yuna's Parts", "g_ten111"));
+            attachmentDataList.Add(new AttachmentData("DLC Emperor Parts", "g_two201"));
+
+            attachmentDataList.Sort();
         }
     }
 }
