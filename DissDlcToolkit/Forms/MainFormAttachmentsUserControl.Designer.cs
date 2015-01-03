@@ -319,6 +319,7 @@
             // 
             this.attachmentCreationGmoFileTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.attachmentCreationGmoFileTextBox, 2);
+            this.attachmentCreationGmoFileTextBox.Enabled = false;
             this.attachmentCreationGmoFileTextBox.Location = new System.Drawing.Point(80, 67);
             this.attachmentCreationGmoFileTextBox.Name = "attachmentCreationGmoFileTextBox";
             this.attachmentCreationGmoFileTextBox.Size = new System.Drawing.Size(148, 20);
