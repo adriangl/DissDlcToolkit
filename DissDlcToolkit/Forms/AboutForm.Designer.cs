@@ -111,11 +111,6 @@ namespace DissDlcToolkit.Forms
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-
-            Version appVersion = Assembly.GetExecutingAssembly().GetName().Version;
-            String appVersionString = String.Format("{0}.{1}.{2}", appVersion.Major, appVersion.Minor, appVersion.Build);
-            label2.Text = String.Format("Version {0}", appVersionString);
-
         }
 
         #endregion

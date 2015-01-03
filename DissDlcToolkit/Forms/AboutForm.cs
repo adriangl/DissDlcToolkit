@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,10 @@ namespace DissDlcToolkit.Forms
         public AboutForm()
         {
             InitializeComponent();
+
+            Version appVersion = Assembly.GetExecutingAssembly().GetName().Version;
+            String appVersionString = String.Format("{0}.{1}.{2}", appVersion.Major, appVersion.Minor, appVersion.Build);
+            label2.Text = String.Format("Version {0}", appVersionString);
         }
 
         private void AboutForm_Load(object sender, EventArgs e)

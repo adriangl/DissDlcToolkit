@@ -33,13 +33,13 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabHostMain = new System.Windows.Forms.TabControl();
             this.tabDlcGen = new System.Windows.Forms.TabPage();
-            this.tabExex = new System.Windows.Forms.TabPage();
-            this.attachmentsTab = new System.Windows.Forms.TabPage();
-            this.tabReporter = new System.Windows.Forms.TabPage();
             this.mainFormDlcGenUserControl1 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
+            this.tabExex = new System.Windows.Forms.TabPage();
             this.mainFormExexUserControl1 = new DissDlcToolkit.Forms.MainFormExexUserControl();
-            this.mainFormDlcReporterUserControl1 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
+            this.attachmentsTab = new System.Windows.Forms.TabPage();
             this.mainFormAttachmentsUserControl1 = new DissDlcToolkit.Forms.MainFormAttachmentsUserControl();
+            this.tabReporter = new System.Windows.Forms.TabPage();
+            this.mainFormDlcReporterUserControl1 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabHostMain.SuspendLayout();
             this.tabDlcGen.SuspendLayout();
@@ -78,12 +78,22 @@
             this.tabDlcGen.Name = "tabDlcGen";
             this.tabDlcGen.UseVisualStyleBackColor = true;
             // 
+            // mainFormDlcGenUserControl1
+            // 
+            resources.ApplyResources(this.mainFormDlcGenUserControl1, "mainFormDlcGenUserControl1");
+            this.mainFormDlcGenUserControl1.Name = "mainFormDlcGenUserControl1";
+            // 
             // tabExex
             // 
             this.tabExex.Controls.Add(this.mainFormExexUserControl1);
             resources.ApplyResources(this.tabExex, "tabExex");
             this.tabExex.Name = "tabExex";
             this.tabExex.UseVisualStyleBackColor = true;
+            // 
+            // mainFormExexUserControl1
+            // 
+            resources.ApplyResources(this.mainFormExexUserControl1, "mainFormExexUserControl1");
+            this.mainFormExexUserControl1.Name = "mainFormExexUserControl1";
             // 
             // attachmentsTab
             // 
@@ -92,6 +102,11 @@
             this.attachmentsTab.Name = "attachmentsTab";
             this.attachmentsTab.UseVisualStyleBackColor = true;
             // 
+            // mainFormAttachmentsUserControl1
+            // 
+            resources.ApplyResources(this.mainFormAttachmentsUserControl1, "mainFormAttachmentsUserControl1");
+            this.mainFormAttachmentsUserControl1.Name = "mainFormAttachmentsUserControl1";
+            // 
             // tabReporter
             // 
             this.tabReporter.Controls.Add(this.mainFormDlcReporterUserControl1);
@@ -99,25 +114,10 @@
             this.tabReporter.Name = "tabReporter";
             this.tabReporter.UseVisualStyleBackColor = true;
             // 
-            // mainFormDlcGenUserControl1
-            // 
-            resources.ApplyResources(this.mainFormDlcGenUserControl1, "mainFormDlcGenUserControl1");
-            this.mainFormDlcGenUserControl1.Name = "mainFormDlcGenUserControl1";
-            // 
-            // mainFormExexUserControl1
-            // 
-            resources.ApplyResources(this.mainFormExexUserControl1, "mainFormExexUserControl1");
-            this.mainFormExexUserControl1.Name = "mainFormExexUserControl1";
-            // 
             // mainFormDlcReporterUserControl1
             // 
             resources.ApplyResources(this.mainFormDlcReporterUserControl1, "mainFormDlcReporterUserControl1");
             this.mainFormDlcReporterUserControl1.Name = "mainFormDlcReporterUserControl1";
-            // 
-            // mainFormAttachmentsUserControl1
-            // 
-            resources.ApplyResources(this.mainFormAttachmentsUserControl1, "mainFormAttachmentsUserControl1");
-            this.mainFormAttachmentsUserControl1.Name = "mainFormAttachmentsUserControl1";
             // 
             // MainForm
             // 
