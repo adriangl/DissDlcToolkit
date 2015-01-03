@@ -36,7 +36,7 @@ namespace DissDlcToolkit.Models
                 if (header != EXEX_TABLE_HEADER_VALUE)
                 {
                     // Throw exception if needed
-                    throw new Exception("Not a valid Object table file");
+                    throw new Exception("Not a valid exex table file");
                 }
                 UInt32 entryNumber = reader.ReadUInt32();
                 for (int i = 0; i < entryNumber; i++)

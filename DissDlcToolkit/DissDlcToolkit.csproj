@@ -95,6 +95,7 @@
     <Compile Include="Utils\CRC.cs" />
     <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Utils\Hasher.cs" />
+    <Compile Include="Utils\Logger.cs" />
     <Compile Include="Utils\MiscUtils.cs" />
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>

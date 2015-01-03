@@ -17,20 +17,21 @@ namespace DissDlcToolkit.Forms
 {
     public partial class MainFormExexUserControl : UserControl
     {
-        public MainFormExexUserControl()
-        {
-            InitializeComponent();
-            InitializeExexTab();
-        }
-
         /**
          * This partial class handles all callbacks from the
          * ".exex editing" tab
          */
-
+        private const string TAG = "MainFormExexUserControl";
         private String exexFile;
         private ExexTable exexTable;
         private int currentAuraSlotIndex = 0;
+
+
+        public MainFormExexUserControl()
+        {
+            InitializeComponent();
+            InitializeExexTab();
+        }      
 
         public void InitializeExexTab()
         {
@@ -47,9 +48,17 @@ namespace DissDlcToolkit.Forms
             exexFile = FormUtils.openExexFileDialog();
             if (exexFile != null && !exexFile.Trim().Equals(""))
             {
-                exexFileLabel.Text = exexFile;
-                exexTable = new ExexTable(exexFile);
-                populateFields(exexTable);
+                try
+                {
+                    exexFileLabel.Text = exexFile;
+                    exexTable = new ExexTable(exexFile);
+                    populateFields(exexTable);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The .exex file you tried to load is not a vaild .exex");
+                    Logger.Log(TAG, ex);
+                }
             }
         }
 
@@ -120,8 +129,21 @@ namespace DissDlcToolkit.Forms
         private void exexSaveButton_Click(object sender, EventArgs e)
         {
             saveValuesToAuraSlot(currentAuraSlotIndex);
-            File.Copy(@exexFile, @exexFile + ".bak");
-            exexTable.writeToFile(@exexFile);
+            // Backup existing file if it exists
+            if (File.Exists(@exexFile))
+            {
+                File.Copy(@exexFile, @exexFile + ".bak");
+            }
+            // Write .exex to disk
+            try
+            {
+                exexTable.writeToFile(@exexFile);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was a problem writing the .exex file");
+                Logger.Log(TAG, ex);
+            }
             MessageBox.Show("Success!!");
         }
 

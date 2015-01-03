@@ -17,7 +17,7 @@ namespace DissDlcToolkit.Forms
 {
     public partial class MainFormDlcReporterUserControl : UserControl
     {
-
+        private const String TAG = "MainFormDlcReporterUserControl";
         private ExcelPackage pck;
 
         public MainFormDlcReporterUserControl()
@@ -30,42 +30,68 @@ namespace DissDlcToolkit.Forms
             FolderSelectDialog dialog = new FolderSelectDialog();
             dialog.ShowDialog();
             string folder = dialog.FileName;
-            reporterFolderLabel.Text = folder;
             if (!folder.Equals(""))
                 reportSelectedFolder(folder);
         }
 
         private void reportSelectedFolder(String folder)
         {
-            // Get a wroksheet to write excel values
+            // First check: check if there are files in the folder, and check if the folder exists, just in case
+            DirectoryInfo dirInfo = new DirectoryInfo(folder);
+            if (!dirInfo.Exists)
+            {
+                MessageBox.Show("The selected folder does not exist");
+                return;
+            }
+            else if (dirInfo.GetFiles().Length == 0)
+            {
+                MessageBox.Show("The selected folder hasn't got any files");
+                return;
+            }
+
+            // Clean TextBox
+            reporterDataTextBox.Text = "";
+
+            // Get a worksheet to write excel values
             ExcelWorksheet ws = initExcelWorkbook();
             int excelRow = 2;
 
             // Iterate through all possible DLC Object Table names
-            for (int i = 1; i <= 999; i++)
+            try
             {
-                String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + i.ToString("d3") + "oe.bin") + ".edat";
-                String pathToSearch = System.IO.Path.Combine(folder, objectTableHashFileName);
-                if (File.Exists(pathToSearch))
+                for (int i = 1; i <= 999; i++)
                 {
-                    // We have found an object table inside the folder; scan it
-                    ObjectTable hashedFileObjectTable = new ObjectTable(pathToSearch);
-                    foreach (ObjectEntry entry in hashedFileObjectTable.entries)
+                    String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + i.ToString("d3") + "oe.bin") + ".edat";
+                    String pathToSearch = System.IO.Path.Combine(folder, objectTableHashFileName);
+                    if (File.Exists(pathToSearch))
                     {
-                        // Print results in TextBox
-                        String textData = getTextDataForEntry(folder, i, objectTableHashFileName, entry);
-                        reporterDataTextBox.AppendText(textData);
-                        // And add them to Excel sheet
-                        addExcelDataForEntry(folder, i, objectTableHashFileName, entry, ws, excelRow);
-                        ws.Cells[ws.Dimension.Address].AutoFitColumns();
-                        excelRow++;
-                    }                    
+                        // We have found an object table inside the folder; scan it
+                        ObjectTable hashedFileObjectTable = new ObjectTable(pathToSearch);
+                        foreach (ObjectEntry entry in hashedFileObjectTable.entries)
+                        {
+                            // Print results in TextBox
+                            String textData = getTextDataForEntry(folder, i, objectTableHashFileName, entry);
+                            reporterDataTextBox.AppendText(textData);
+                            // And add them to Excel sheet
+                            addExcelDataForEntry(folder, i, objectTableHashFileName, entry, ws, excelRow);
+                            ws.Cells[ws.Dimension.Address].AutoFitColumns();
+                            excelRow++;
+                        }
+                    }
                 }
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("There was a problem with one or some of the files in the selected folder");
+                Logger.Log(TAG, e);
+                return;
+            }
+            // If the reporter text box has any data, then that means that there's data in the folder
             if (!reporterDataTextBox.Text.Trim().Equals(""))
             {
                 reporterSaveToTextButton.Enabled = true;
-                reporterSaveToExcelButton.Enabled = true;                
+                reporterSaveToExcelButton.Enabled = true;
+                reporterFolderLabel.Text = folder;
                 MessageBox.Show("DLC read OK!!");
             }
             else
@@ -168,12 +194,20 @@ namespace DissDlcToolkit.Forms
             String fileToSave = FormUtils.openTxtSaveDialog();
             if (fileToSave != null)
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(fileToSave, FileMode.Create)))
+                try
                 {
-                    writer.Write(reporterDataTextBox.Text);
+                    using (StreamWriter writer = new StreamWriter(new FileStream(fileToSave, FileMode.Create)))
+                    {
+                        writer.Write(reporterDataTextBox.Text);
+                    }
+                    reporterSaveToTextButton.Enabled = false;
+                    MessageBox.Show("Text file exported OK!");
                 }
-                reporterSaveToTextButton.Enabled = false;
-                MessageBox.Show("Text file exported OK!");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The text file could not be exported.");
+                    Logger.Log(TAG, ex);
+                }
             }
         }
 
@@ -182,10 +216,18 @@ namespace DissDlcToolkit.Forms
             String fileToSave = FormUtils.openExcelSaveDialog();
             if (fileToSave != null)
             {
-                pck.File = new FileInfo(@fileToSave);
-                pck.Save();
-                reporterSaveToExcelButton.Enabled = false;
-                MessageBox.Show("Excel spreadsheet exported OK!");
+                try
+                {
+                    pck.File = new FileInfo(@fileToSave);
+                    pck.Save();
+                    reporterSaveToExcelButton.Enabled = false;
+                    MessageBox.Show("Excel spreadsheet exported OK!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("The Excel file could not be exported.");
+                    Logger.Log(TAG, ex);
+                }
             }
         }   
     }

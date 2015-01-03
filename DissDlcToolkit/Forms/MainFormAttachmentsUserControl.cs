@@ -19,6 +19,9 @@ namespace DissDlcToolkit.Forms
 {
     public partial class MainFormAttachmentsUserControl : UserControl
     {
+
+        private const String TAG = "MainFormAttachmentsUserControl";
+
         public MainFormAttachmentsUserControl()
         {
             InitializeComponent();
@@ -90,100 +93,116 @@ namespace DissDlcToolkit.Forms
             String attachmentGmoFile = attachmentCreationGmoFileTextBox.Text;
             if (attachmentGmoFile.Equals(""))
             {
-                MessageBox.Show("Select a GMO file");
+                MessageBox.Show("Select a valid GMO file");
                 return;
             }
             else
             {
-                // Ready for Attachment creation
-                // TODO: clone this object
-                AttachmentData selectedAttachmentData = (AttachmentData)attachmentCreationBaseComboBox.SelectedValue;
-                int attachmentDlcSlotNumber = (int)attachmentCreationDlcSlotComboBox.SelectedIndex + 1;
-                UInt16 attachmentDlcSlotId = (UInt16)attachmentCreationDlcSlotComboBox.SelectedValue;
-
-                // Create needed folders
-                String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-                String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
-                String dlcFolder = System.IO.Path.Combine(dlcDirectoryFolder, "[Slot " + attachmentCreationDlcSlotComboBox.Text + "][Attachment]");
-                if (Directory.Exists(dlcFolder))
+                try
                 {
-                    Directory.Delete(dlcFolder, true);
-                }
-                Directory.CreateDirectory(dlcFolder);
-                String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+                    // Ready for Attachment creation
+                    // TODO: clone this object
+                    AttachmentData selectedAttachmentData = (AttachmentData)attachmentCreationBaseComboBox.SelectedValue;
+                    int attachmentDlcSlotNumber = (int)attachmentCreationDlcSlotComboBox.SelectedIndex + 1;
+                    UInt16 attachmentDlcSlotId = (UInt16)attachmentCreationDlcSlotComboBox.SelectedValue;
 
-                // Generate player DLC (it must always be generated)            
-                // Compose DLC data
-                ObjectTable attachmentObjectTable = selectedAttachmentData.attachmentObjectTable;
-                ObjectEntry attachmentObjectEntry = (ObjectEntry)attachmentObjectTable.entries[0];
-
-                attachmentObjectEntry.id = attachmentDlcSlotId;
-                attachmentObjectEntry.objectEntrySlot = Convert.ToByte(attachmentDlcSlotNumber);
-                attachmentObjectEntry.modelName = "G_"+Hasher.hash(DateTime.Now.ToString("yyyyMMddHHmmss")).ToUpper(); // Ensure unique file name: use hash of current date
-                attachmentObjectEntry.objxName = attachmentObjectEntry.modelName.ToLower(); // Ensure unique file name: use hash of current date
-
-                // Get hashed filenames, so the game can read them
-                String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + attachmentDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
-                String attachmentGmoHashFileName = Hasher.hash(("obj/" + attachmentObjectEntry.modelName + ".gmo").ToLower()) + ".edat";
-                String objxHashFileName = Hasher.hash(("obj/" + attachmentObjectEntry.objxName + ".objx").ToLower()) + ".edat";
-
-                // Write player files in DLC folder
-                using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
-                {
-                    ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
-
-                    readmeFileWriter.WriteLine("Attachment in slot " + attachmentDlcSlotNumber);
-                    readmeFileWriter.WriteLine("-----------------------");
-                    readmeFileWriter.WriteLine("Attachment object entry slot: " + attachmentDlcSlotNumber.ToString());
-                    readmeFileWriter.WriteLine("Attachment object entry ID: " + MiscUtils.swapEndianness(attachmentObjectEntry.id).ToString("X4"));
-                    readmeFileWriter.WriteLine("-----------------------");
-
-                    attachmentObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
-                    readmeFileWriter.WriteLine("Player object entry (BIN):\t\t" + objectTableHashFileName);
-
-                    // If selected character is other than Aerith, add player models, portraits and exex file                    
-                    File.Copy(attachmentGmoFile, System.IO.Path.Combine(dlcFolder, attachmentGmoHashFileName));
-                    readmeFileWriter.WriteLine("Attachment model (GMO):\t\t\t" + attachmentGmoHashFileName);
-
-                    byte[] objxBuffer = (byte[])rm.GetObject(selectedAttachmentData.internalName.ToUpper() + "_OBJX");
-                    if (objxBuffer != null)
+                    // Create needed folders
+                    String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+                    String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
+                    String dlcFolder = System.IO.Path.Combine(dlcDirectoryFolder, "[Slot " + attachmentCreationDlcSlotComboBox.Text + "][Attachment]");
+                    if (Directory.Exists(dlcFolder))
                     {
-                        File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, objxHashFileName), objxBuffer);
-                        readmeFileWriter.WriteLine("Attachment object effects (OBJX):\t" + objxHashFileName);
+                        Directory.Delete(dlcFolder, true);
+                    }
+                    Directory.CreateDirectory(dlcFolder);
+                    String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+
+                    // Generate player DLC (it must always be generated)            
+                    // Compose DLC data
+                    ObjectTable attachmentObjectTable = selectedAttachmentData.attachmentObjectTable;
+                    ObjectEntry attachmentObjectEntry = (ObjectEntry)attachmentObjectTable.entries[0];
+
+                    attachmentObjectEntry.id = attachmentDlcSlotId;
+                    attachmentObjectEntry.objectEntrySlot = Convert.ToByte(attachmentDlcSlotNumber);
+                    attachmentObjectEntry.modelName = "G_" + Hasher.hash(DateTime.Now.ToString("yyyyMMddHHmmss")).ToUpper(); // Ensure unique file name: use hash of current date
+                    attachmentObjectEntry.objxName = attachmentObjectEntry.modelName.ToLower(); // Ensure unique file name: use hash of current date
+
+                    // Get hashed filenames, so the game can read them
+                    String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + attachmentDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
+                    String attachmentGmoHashFileName = Hasher.hash(("obj/" + attachmentObjectEntry.modelName + ".gmo").ToLower()) + ".edat";
+                    String objxHashFileName = Hasher.hash(("obj/" + attachmentObjectEntry.objxName + ".objx").ToLower()) + ".edat";
+
+                    // Write player files in DLC folder
+                    using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                    {
+                        ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+
+                        readmeFileWriter.WriteLine("Attachment in slot " + attachmentDlcSlotNumber);
+                        readmeFileWriter.WriteLine("-----------------------");
+                        readmeFileWriter.WriteLine("Attachment object entry slot: " + attachmentDlcSlotNumber.ToString());
+                        readmeFileWriter.WriteLine("Attachment object entry ID: " + MiscUtils.swapEndianness(attachmentObjectEntry.id).ToString("X4"));
+                        readmeFileWriter.WriteLine("-----------------------");
+
+                        attachmentObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
+                        readmeFileWriter.WriteLine("Player object entry (BIN):\t\t" + objectTableHashFileName);
+
+                        // If selected character is other than Aerith, add player models, portraits and exex file                    
+                        File.Copy(attachmentGmoFile, System.IO.Path.Combine(dlcFolder, attachmentGmoHashFileName));
+                        readmeFileWriter.WriteLine("Attachment model (GMO):\t\t\t" + attachmentGmoHashFileName);
+
+                        byte[] objxBuffer = (byte[])rm.GetObject(selectedAttachmentData.internalName.ToUpper() + "_OBJX");
+                        if (objxBuffer != null)
+                        {
+                            File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, objxHashFileName), objxBuffer);
+                            readmeFileWriter.WriteLine("Attachment object effects (OBJX):\t" + objxHashFileName);
+                        }
+
+                        readmeFileWriter.WriteLine("-----------------------");
                     }
 
-                    readmeFileWriter.WriteLine("-----------------------");
+                    MessageBox.Show("Success!!");
                 }
-
-                MessageBox.Show("Success!!");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("There was a problem saving the attachment files.");
+                    Logger.Log(TAG, ex);
+                }
             }
         }
 
         private void attachmentLinkGenerateButton_Click(object sender, EventArgs e)
         {
-            String data = attachmentLinkDataTextBox.Text;
-            String baseControllerFile = attachmentLinkBaseControllerTextBox.Text;
-            if (!baseControllerFile.Equals(""))
+            try
             {
-                if (attachmentLinkControllerRadioButton.Checked)
+                String data = attachmentLinkDataTextBox.Text;
+                String baseControllerFile = attachmentLinkBaseControllerTextBox.Text;
+                if (!baseControllerFile.Equals(""))
                 {
-                    // Attach base controller to attachment controller
-                    ObjectTable attachmentTable = new ObjectTable(data);
-                    ObjectEntry entry = (ObjectEntry)attachmentTable.entries[0];
-                    attachControllerToId(baseControllerFile, entry.id);
+                    if (attachmentLinkControllerRadioButton.Checked)
+                    {
+                        // Attach base controller to attachment controller
+                        ObjectTable attachmentTable = new ObjectTable(data);
+                        ObjectEntry entry = (ObjectEntry)attachmentTable.entries[0];
+                        attachControllerToId(baseControllerFile, entry.id);
+                    }
+                    else if (attachmentLinkIdRadioButton.Checked)
+                    {
+                        // Attach base controller to entered ID
+                        UInt16 id;
+                        Boolean result = UInt16.TryParse(data.ToUpper(), NumberStyles.HexNumber,
+                            CultureInfo.InvariantCulture, out id);
+                        attachControllerToId(baseControllerFile, MiscUtils.swapEndianness(id));
+                    }
                 }
-                else if (attachmentLinkIdRadioButton.Checked)
+                else
                 {
-                    // Attach base controller to entered ID
-                    UInt16 id;
-                    Boolean result = UInt16.TryParse(data.ToUpper(), NumberStyles.HexNumber, 
-                        CultureInfo.InvariantCulture, out id);
-                    attachControllerToId(baseControllerFile, MiscUtils.swapEndianness(id));
+                    MessageBox.Show("You need to select a base controller in order to link an attachment");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("You need to select a base controller in order to link an attachment");
+                MessageBox.Show("There was an error linking the attachment");
+                Logger.Log(TAG, ex);
             }
         }
 
