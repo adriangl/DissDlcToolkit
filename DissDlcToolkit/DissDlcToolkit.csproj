@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="EPPlus">
       <HintPath>..\packages\EPPlus.4.0.1.1\lib\net20\EPPlus.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -290,10 +291,12 @@
     <ProjectReference Include="..\ArgbColorDialog\ArgbColorDialog.csproj">
       <Project>{e3082b43-feef-4ded-b29f-39932e824dff}</Project>
       <Name>ArgbColorDialog</Name>
+      <Private>True</Private>
     </ProjectReference>
     <ProjectReference Include="..\FolderSelectDialog\FolderSelect.csproj">
       <Project>{f4a7ccff-3855-4f01-a146-4be677b5fc4a}</Project>
       <Name>FolderSelect</Name>
+      <Private>True</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
