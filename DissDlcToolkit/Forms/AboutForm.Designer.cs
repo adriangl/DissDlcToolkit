@@ -1,4 +1,6 @@
-﻿namespace DissDlcToolkit.Forms
+﻿using System;
+using System.Reflection;
+namespace DissDlcToolkit.Forms
 {
     partial class AboutForm
     {
@@ -93,6 +95,11 @@
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
+            // Set version label
+            Version appVersion = Assembly.GetExecutingAssembly().GetName().Version;
+            String apVersion = String.Format("{0}.{1}.{2}", appVersion.Major, appVersion.Minor, appVersion.Build);
+            label2.Text = String.Format("Version {0}", apVersion);
 
         }
 
