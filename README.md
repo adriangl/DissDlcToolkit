@@ -21,3 +21,8 @@ Changelog:
         - Minor improvements in Excel spreadsheet formatting
     - Added log file for easier bug reporting
     - Code uploaded to GitHub
+
+Contains code from the following projects:
+- SharpCompress BZip2 CRC routine: http://sharpcompress.codeplex.com/
+- csharp-ArgbColorDialog: https://github.com/bvssvni/csharp-ArgbColorDialog
+- EPPlus: http://epplus.codeplex.com/
