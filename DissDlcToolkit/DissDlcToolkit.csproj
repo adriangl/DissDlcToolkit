@@ -36,10 +36,6 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EPPlus">
-      <HintPath>..\packages\EPPlus.4.0.1.1\lib\net20\EPPlus.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -298,6 +294,10 @@
       <Name>ArgbColorDialog</Name>
       <Private>True</Private>
     </ProjectReference>
+    <ProjectReference Include="..\EPPlus\EPPlus.csproj">
+      <Project>{7b288026-5502-4a39-bf41-77e086f3e4a3}</Project>
+      <Name>EPPlus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FolderSelectDialog\FolderSelect.csproj">
       <Project>{f4a7ccff-3855-4f01-a146-4be677b5fc4a}</Project>
       <Name>FolderSelect</Name>
@@ -308,6 +308,9 @@
     <None Include="Resources\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Microsoft\ILMerge\ILMerge.exe" /target:winexe /targetplatform:"v4,C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0" /out:$(TargetDir)DissDlcToolkit-merged.exe $(TargetDir)DissDlcToolkit.exe $(TargetDir)ArgbColorDialog.dll $(TargetDir)EPPlus.dll $(TargetDir)FolderSelect.dll</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

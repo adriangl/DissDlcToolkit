@@ -124,7 +124,7 @@ namespace DissDlcToolkit.Forms
 
                     attachmentObjectEntry.id = attachmentDlcSlotId;
                     attachmentObjectEntry.objectEntrySlot = Convert.ToByte(attachmentDlcSlotNumber);
-                    attachmentObjectEntry.modelName = "G_" + Hasher.hash(DateTime.Now.ToString("yyyyMMddHHmmss")).ToUpper(); // Ensure unique file name: use hash of current date
+                    attachmentObjectEntry.modelName = ("G_" + "att_" + attachmentDlcSlotNumber.ToString("d3")).ToUpper(); // Ensure unique file name
                     attachmentObjectEntry.objxName = attachmentObjectEntry.modelName.ToLower(); // Ensure unique file name: use hash of current date
 
                     // Get hashed filenames, so the game can read them
