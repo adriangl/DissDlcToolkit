@@ -50,6 +50,7 @@
             this.bgmGenUpButton = new System.Windows.Forms.Button();
             this.bgmGenDownButton = new System.Windows.Forms.Button();
             this.bgmGenBgmListBox = new System.Windows.Forms.ListBox();
+            this.bgmGenSaveButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.bgmGenSaveButton);
             this.panel1.Controls.Add(this.tableLayoutPanel4);
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Controls.Add(this.groupBox1);
@@ -88,6 +90,7 @@
             // bgmGenDlcSlotComboBox
             // 
             this.bgmGenDlcSlotComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenDlcSlotComboBox.Enabled = false;
             this.bgmGenDlcSlotComboBox.FormattingEnabled = true;
             this.bgmGenDlcSlotComboBox.Items.AddRange(new object[] {
             "1",
@@ -150,6 +153,7 @@
             this.bgmGenNewButton.TabIndex = 21;
             this.bgmGenNewButton.Text = "New";
             this.bgmGenNewButton.UseVisualStyleBackColor = true;
+            this.bgmGenNewButton.Click += new System.EventHandler(this.bgmGenNewButton_Click);
             // 
             // bgmGenLoadButton
             // 
@@ -199,6 +203,7 @@
             // bgmGenBrowseAt3Button
             // 
             this.bgmGenBrowseAt3Button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenBrowseAt3Button.Enabled = false;
             this.bgmGenBrowseAt3Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenBrowseAt3Button.Location = new System.Drawing.Point(193, 33);
             this.bgmGenBrowseAt3Button.Name = "bgmGenBrowseAt3Button";
@@ -254,6 +259,7 @@
             // 
             this.bgmGenGameValueComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.bgmGenGameValueComboBox, 2);
+            this.bgmGenGameValueComboBox.Enabled = false;
             this.bgmGenGameValueComboBox.FormattingEnabled = true;
             this.bgmGenGameValueComboBox.Location = new System.Drawing.Point(55, 65);
             this.bgmGenGameValueComboBox.Name = "bgmGenGameValueComboBox";
@@ -264,6 +270,7 @@
             // 
             this.bgmGenBgmTitleTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.bgmGenBgmTitleTextBox, 3);
+            this.bgmGenBgmTitleTextBox.Enabled = false;
             this.bgmGenBgmTitleTextBox.Location = new System.Drawing.Point(55, 5);
             this.bgmGenBgmTitleTextBox.MaxLength = 36;
             this.bgmGenBgmTitleTextBox.Name = "bgmGenBgmTitleTextBox";
@@ -291,6 +298,7 @@
             // bgmGenAddButton
             // 
             this.bgmGenAddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenAddButton.Enabled = false;
             this.bgmGenAddButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenAddButton.Location = new System.Drawing.Point(3, 33);
             this.bgmGenAddButton.Name = "bgmGenAddButton";
@@ -303,6 +311,7 @@
             // bgmGenRemoveButton
             // 
             this.bgmGenRemoveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenRemoveButton.Enabled = false;
             this.bgmGenRemoveButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenRemoveButton.Location = new System.Drawing.Point(64, 33);
             this.bgmGenRemoveButton.Name = "bgmGenRemoveButton";
@@ -315,6 +324,7 @@
             // bgmGenUpButton
             // 
             this.bgmGenUpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenUpButton.Enabled = false;
             this.bgmGenUpButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenUpButton.Location = new System.Drawing.Point(3, 3);
             this.bgmGenUpButton.Name = "bgmGenUpButton";
@@ -327,6 +337,7 @@
             // bgmGenDownButton
             // 
             this.bgmGenDownButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenDownButton.Enabled = false;
             this.bgmGenDownButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenDownButton.Location = new System.Drawing.Point(64, 3);
             this.bgmGenDownButton.Name = "bgmGenDownButton";
@@ -338,12 +349,23 @@
             // 
             // bgmGenBgmListBox
             // 
+            this.bgmGenBgmListBox.Enabled = false;
             this.bgmGenBgmListBox.FormattingEnabled = true;
             this.bgmGenBgmListBox.Location = new System.Drawing.Point(6, 45);
             this.bgmGenBgmListBox.Name = "bgmGenBgmListBox";
             this.bgmGenBgmListBox.Size = new System.Drawing.Size(124, 160);
             this.bgmGenBgmListBox.TabIndex = 0;
             this.bgmGenBgmListBox.SelectedIndexChanged += new System.EventHandler(this.bgmGenBgmListBox_SelectedIndexChanged);
+            // 
+            // bgmGenSaveButton
+            // 
+            this.bgmGenSaveButton.Location = new System.Drawing.Point(235, 230);
+            this.bgmGenSaveButton.Name = "bgmGenSaveButton";
+            this.bgmGenSaveButton.Size = new System.Drawing.Size(75, 23);
+            this.bgmGenSaveButton.TabIndex = 27;
+            this.bgmGenSaveButton.Text = "Save";
+            this.bgmGenSaveButton.UseVisualStyleBackColor = true;
+            this.bgmGenSaveButton.Click += new System.EventHandler(this.bgmGenSaveButton_Click);
             // 
             // MainFormBgmGenUserControl
             // 
@@ -388,5 +410,6 @@
         private System.Windows.Forms.Button bgmGenUpButton;
         private System.Windows.Forms.Button bgmGenDownButton;
         private System.Windows.Forms.ListBox bgmGenBgmListBox;
+        private System.Windows.Forms.Button bgmGenSaveButton;
     }
 }
