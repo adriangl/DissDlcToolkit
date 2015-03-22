@@ -228,9 +228,8 @@ namespace DissDlcToolkit.Forms
             CharacterData characterData = (CharacterData)dlcGenCharacterComboBox.SelectedValue;
             
             // Create needed folders; base folder by default will be in the same path as the executable
-            String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-            String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
-            String dlcFolder = System.IO.Path.Combine(dlcDirectoryFolder, "[" + dlcGenCostumeSlotComboBox.Text + "]" + "[" + dlcGenCharacterComboBox.Text + "]");
+            String baseFolder = GlobalData.getInstance().getDlcMainFolder();
+            String dlcFolder = System.IO.Path.Combine(baseFolder, "[" + dlcGenCostumeSlotComboBox.Text + "]" + "[" + dlcGenCharacterComboBox.Text + "]");
             deleteNewDlcFolder(dlcFolder);
             Directory.CreateDirectory(dlcFolder);
 

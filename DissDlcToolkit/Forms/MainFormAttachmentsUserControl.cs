@@ -107,9 +107,8 @@ namespace DissDlcToolkit.Forms
                     UInt16 attachmentDlcSlotId = (UInt16)attachmentCreationDlcSlotComboBox.SelectedValue;
 
                     // Create needed folders
-                    String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-                    String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
-                    String dlcFolder = System.IO.Path.Combine(dlcDirectoryFolder, "[Slot " + attachmentCreationDlcSlotComboBox.Text + "][Attachment]");
+                    String baseFolder = GlobalData.getInstance().getDlcMainFolder();
+                    String dlcFolder = System.IO.Path.Combine(baseFolder, "[Slot " + attachmentCreationDlcSlotComboBox.Text + "][Attachment]");
                     if (Directory.Exists(dlcFolder))
                     {
                         Directory.Delete(dlcFolder, true);

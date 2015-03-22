@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabHostMain = new System.Windows.Forms.TabControl();
             this.tabDlcGen = new System.Windows.Forms.TabPage();
             this.mainFormDlcGenUserControl1 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
             this.tabExex = new System.Windows.Forms.TabPage();
+            this.mainFormExexUserControl2 = new DissDlcToolkit.Forms.MainFormExexUserControl();
             this.mainFormExexUserControl1 = new DissDlcToolkit.Forms.MainFormExexUserControl();
             this.tabAttachments = new System.Windows.Forms.TabPage();
             this.mainFormAttachmentsUserControl1 = new DissDlcToolkit.Forms.MainFormAttachmentsUserControl();
@@ -42,7 +43,8 @@
             this.mainFormBgmGenUserControl1 = new DissDlcToolkit.Forms.MainFormBgmGenUserControl();
             this.tabReporter = new System.Windows.Forms.TabPage();
             this.mainFormDlcReporterUserControl1 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
-            this.mainFormExexUserControl2 = new DissDlcToolkit.Forms.MainFormExexUserControl();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabHostMain.SuspendLayout();
             this.tabDlcGen.SuspendLayout();
@@ -55,15 +57,18 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.fileToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // aboutToolStripMenuItem
+            // fileToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            resources.ApplyResources(this.aboutToolStripMenuItem, "aboutToolStripMenuItem");
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.aboutToolStripMenuItem1});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
+            this.fileToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // tabHostMain
             // 
@@ -95,6 +100,11 @@
             resources.ApplyResources(this.tabExex, "tabExex");
             this.tabExex.Name = "tabExex";
             this.tabExex.UseVisualStyleBackColor = true;
+            // 
+            // mainFormExexUserControl2
+            // 
+            resources.ApplyResources(this.mainFormExexUserControl2, "mainFormExexUserControl2");
+            this.mainFormExexUserControl2.Name = "mainFormExexUserControl2";
             // 
             // mainFormExexUserControl1
             // 
@@ -137,10 +147,17 @@
             resources.ApplyResources(this.mainFormDlcReporterUserControl1, "mainFormDlcReporterUserControl1");
             this.mainFormDlcReporterUserControl1.Name = "mainFormDlcReporterUserControl1";
             // 
-            // mainFormExexUserControl2
+            // settingsToolStripMenuItem
             // 
-            resources.ApplyResources(this.mainFormExexUserControl2, "mainFormExexUserControl2");
-            this.mainFormExexUserControl2.Name = "mainFormExexUserControl2";
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            resources.ApplyResources(this.aboutToolStripMenuItem1, "aboutToolStripMenuItem1");
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // MainForm
             // 
@@ -169,7 +186,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.TabControl tabHostMain;
         private System.Windows.Forms.TabPage tabDlcGen;
         private System.Windows.Forms.TabPage tabExex;
@@ -182,6 +199,8 @@
         private System.Windows.Forms.TabPage tabBgmGen;
         private Forms.MainFormBgmGenUserControl mainFormBgmGenUserControl1;
         private Forms.MainFormExexUserControl mainFormExexUserControl2;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
 
     }
 }

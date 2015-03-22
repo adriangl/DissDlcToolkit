@@ -39,13 +39,24 @@ namespace DissDlcToolkit
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AboutForm frmAbout = new AboutForm();
-            frmAbout.ShowDialog(this);
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AboutForm frmAbout = new AboutForm();
+            frmAbout.ShowDialog(this);
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm frmAbout = new SettingsForm();
+            frmAbout.ShowDialog(this);
         }                    
 
     }

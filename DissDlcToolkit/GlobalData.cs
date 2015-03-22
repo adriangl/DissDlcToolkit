@@ -31,6 +31,7 @@ namespace DissDlcToolkit
             attachmentDataList = new ArrayList();
             loadCharacterData();
             loadAttachmentData();
+            loadDlcMainFolder();
         }       
 
         public static GlobalData getInstance()
@@ -104,6 +105,28 @@ namespace DissDlcToolkit
             attachmentDataList.Add(new AttachmentData("DLC Emperor Parts", "g_two201"));
 
             attachmentDataList.Sort();
+        }
+
+        private void loadDlcMainFolder()
+        {
+            // First, check if there is any saved data
+            String dlcMainFolder = Properties.Settings.Default.dlcMainFolder;
+            // Then load the value
+            if (dlcMainFolder == null || dlcMainFolder.Trim().Equals(""))
+            {
+                setDlcMainFolder(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "dlc"));
+            }
+        }
+
+        public void setDlcMainFolder(string folder)
+        {
+            Properties.Settings.Default.dlcMainFolder = folder;
+            Properties.Settings.Default.Save();
+        }
+
+        public String getDlcMainFolder()
+        {
+            return Properties.Settings.Default.dlcMainFolder;
         }
     }
 }

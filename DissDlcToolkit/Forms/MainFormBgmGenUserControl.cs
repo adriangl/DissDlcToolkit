@@ -198,9 +198,8 @@ namespace DissDlcToolkit.Forms
             // TODO Validate data
             int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
             // Get DLC folder
-            String baseFolder = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
-            String dlcDirectoryFolder = System.IO.Path.Combine(baseFolder, "dlc");
-            String dlcFolder = System.IO.Path.Combine(dlcDirectoryFolder, "[Slot " + bgmGenDlcSlotComboBox.Text + "][BGM]");
+            String baseFolder = GlobalData.getInstance().getDlcMainFolder();
+            String dlcFolder = System.IO.Path.Combine(baseFolder, "[Slot " + bgmGenDlcSlotComboBox.Text + "][BGM]");
         }
     }
 }
