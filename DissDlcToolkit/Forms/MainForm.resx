@@ -204,11 +204,32 @@
   <data name="&gt;&gt;tabDlcGen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="mainFormExexUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormExexUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormExexUserControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.Name" xml:space="preserve">
+    <value>mainFormExexUserControl2</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.Parent" xml:space="preserve">
+    <value>tabExex</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="mainFormExexUserControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
   </data>
   <data name="mainFormExexUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>-547, -522</value>
   </data>
   <data name="mainFormExexUserControl1.Size" type="System.Drawing.Size, System.Drawing">
     <value>407, 278</value>
@@ -226,7 +247,7 @@
     <value>tabExex</value>
   </data>
   <data name="&gt;&gt;mainFormExexUserControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabExex.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -271,37 +292,85 @@
     <value>DissDlcToolkit.Forms.MainFormAttachmentsUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;mainFormAttachmentsUserControl1.Parent" xml:space="preserve">
-    <value>attachmentsTab</value>
+    <value>tabAttachments</value>
   </data>
   <data name="&gt;&gt;mainFormAttachmentsUserControl1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="attachmentsTab.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabAttachments.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
-  <data name="attachmentsTab.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="tabAttachments.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
-  <data name="attachmentsTab.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabAttachments.Size" type="System.Drawing.Size, System.Drawing">
     <value>413, 284</value>
   </data>
-  <data name="attachmentsTab.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabAttachments.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="attachmentsTab.Text" xml:space="preserve">
+  <data name="tabAttachments.Text" xml:space="preserve">
     <value>Attachments</value>
   </data>
-  <data name="&gt;&gt;attachmentsTab.Name" xml:space="preserve">
-    <value>attachmentsTab</value>
+  <data name="&gt;&gt;tabAttachments.Name" xml:space="preserve">
+    <value>tabAttachments</value>
   </data>
-  <data name="&gt;&gt;attachmentsTab.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabAttachments.Type" xml:space="preserve">
     <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;attachmentsTab.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabAttachments.Parent" xml:space="preserve">
     <value>tabHostMain</value>
   </data>
-  <data name="&gt;&gt;attachmentsTab.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabAttachments.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.Name" xml:space="preserve">
+    <value>mainFormBgmGenUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormBgmGenUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.Parent" xml:space="preserve">
+    <value>tabBgmGen</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabBgmGen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabBgmGen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabBgmGen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 284</value>
+  </data>
+  <data name="tabBgmGen.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tabBgmGen.Text" xml:space="preserve">
+    <value>BGM Generation</value>
+  </data>
+  <data name="&gt;&gt;tabBgmGen.Name" xml:space="preserve">
+    <value>tabBgmGen</value>
+  </data>
+  <data name="&gt;&gt;tabBgmGen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabBgmGen.Parent" xml:space="preserve">
+    <value>tabHostMain</value>
+  </data>
+  <data name="&gt;&gt;tabBgmGen.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="mainFormDlcReporterUserControl1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -346,7 +415,7 @@
     <value>tabHostMain</value>
   </data>
   <data name="&gt;&gt;tabReporter.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabHostMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>

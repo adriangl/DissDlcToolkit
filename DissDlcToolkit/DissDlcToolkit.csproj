@@ -66,6 +66,12 @@
     <Compile Include="Forms\MainFormAttachmentsUserControl.Designer.cs">
       <DependentUpon>MainFormAttachmentsUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainFormBgmGenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormBgmGenUserControl.Designer.cs">
+      <DependentUpon>MainFormBgmGenUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MainFormDlcGenUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,10 +91,13 @@
       <DependentUpon>MainFormExexUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalData.cs" />
+    <Compile Include="Models\BgmEntry.cs" />
+    <Compile Include="Models\BgmTable.cs" />
     <Compile Include="Models\CharacterData.cs" />
     <Compile Include="Models\AttachmentData.cs" />
     <Compile Include="Models\ExexEntry.cs" />
     <Compile Include="Models\ExexTable.cs" />
+    <Compile Include="Models\FormBgmEntry.cs" />
     <Compile Include="Models\ObjectEntry.cs" />
     <Compile Include="Models\ObjectTable.cs" />
     <Compile Include="Program.cs" />
@@ -97,7 +106,12 @@
     <Compile Include="Utils\FormUtils.cs" />
     <Compile Include="Utils\Hasher.cs" />
     <Compile Include="Utils\Logger.cs" />
+    <Compile Include="Utils\MessFileReader.cs" />
     <Compile Include="Utils\MiscUtils.cs" />
+    <Compile Include="Utils\UnicodeCodec.cs" />
+    <Compile Include="Widgets\RefreshableListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -107,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainFormAttachmentsUserControl.resx">
       <DependentUpon>MainFormAttachmentsUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormBgmGenUserControl.resx">
+      <DependentUpon>MainFormBgmGenUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainFormDlcGenUserControl.resx">
       <DependentUpon>MainFormDlcGenUserControl.cs</DependentUpon>

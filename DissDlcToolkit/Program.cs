@@ -18,11 +18,13 @@ namespace DissDlcToolkit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            #if RELEASE
             // Setup UnhandledException handler
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             AppDomain.CurrentDomain.UnhandledException += new
               UnhandledExceptionEventHandler(Application_UnhandledException);
+            #endif
             // Run the app
             Application.Run(new MainForm());
         }
