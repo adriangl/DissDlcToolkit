@@ -41,6 +41,7 @@ namespace DissDlcToolkit.Forms
             exexSmoke1Label.Parent = pictureBox4;
             exexSmoke2Label.Parent = pictureBox5;
             exexBoltsLabel.Parent = pictureBox6;
+            exexEditLayoutPanel.Enabled = false;
         }
 
         private void exexLoadButton_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace DissDlcToolkit.Forms
                 {
                     exexFileLabel.Text = exexFile;
                     exexTable = new ExexTable(exexFile);
+                    exexEditLayoutPanel.Enabled = true;
                     populateFields(exexTable);
                 }
                 catch (Exception ex)
