@@ -337,6 +337,7 @@
             // exexSaveButton
             // 
             this.exexSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.exexSaveButton.Enabled = false;
             this.exexSaveButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.exexSaveButton.Location = new System.Drawing.Point(164, 243);
             this.exexSaveButton.Name = "exexSaveButton";

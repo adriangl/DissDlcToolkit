@@ -198,6 +198,7 @@ namespace DissDlcToolkit.Forms
             exexSmoke1InvertCheckBox.Enabled = true;
             exexSmoke2InvertCheckBox.Enabled = true;
             exexBoltsInvertCheckBox.Enabled = true;
+            exexSaveButton.Enabled = true;
             labelBoxesEnabled = true;
 
             // Populate colors for index 0

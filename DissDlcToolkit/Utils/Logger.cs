@@ -28,7 +28,7 @@ namespace DissDlcToolkit.Utils
                 Directory.CreateDirectory(Directory.GetParent(logFilePath).FullName);
                 using (StreamWriter writer = new StreamWriter(new FileStream(logFilePath, FileMode.Append)))
                 {
-                    writer.WriteLine(DateTime.Now.ToString() + " " + tag + ": " + message);
+                    writer.WriteLine(DateTime.Now.ToString("mm/dd/yyyy HH:mm:ss") + " " + tag + ": " + message);
                     writer.WriteLine();
                 }
             }
