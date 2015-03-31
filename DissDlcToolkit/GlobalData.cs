@@ -31,8 +31,6 @@ namespace DissDlcToolkit
             attachmentDataList = new ArrayList();
             loadCharacterData();
             loadAttachmentData();
-            // Load settings
-            loadSettings();
         }     
 
         public static GlobalData getInstance()
@@ -106,44 +104,6 @@ namespace DissDlcToolkit
             attachmentDataList.Add(new AttachmentData("DLC Emperor Parts", "g_two201"));
 
             attachmentDataList.Sort();
-        }
-
-        private void loadSettings()
-        {
-            loadDlcMainFolder();
-        } 
-
-        private void loadDlcMainFolder()
-        {
-            // First, check if there is any saved data
-            String dlcMainFolder = Properties.Settings.Default.dlcMainFolder;
-            // Then load the value
-            if (dlcMainFolder == null || dlcMainFolder.Trim().Equals(""))
-            {
-                setDlcMainFolder(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location), "dlc"));
-            }
-        }
-
-        public void setDlcMainFolder(string folder)
-        {
-            Properties.Settings.Default.dlcMainFolder = folder;
-            Properties.Settings.Default.Save();
-        }
-
-        public String getDlcMainFolder()
-        {
-            return Properties.Settings.Default.dlcMainFolder;
-        }
-
-        public bool getBackupExexSetting()
-        {
-            return Properties.Settings.Default.createExexBackupWhenSaving;
-        }
-
-        public void setBackupExexSetting(bool enabled)
-        {
-            Properties.Settings.Default.createExexBackupWhenSaving = enabled;
-            Properties.Settings.Default.Save();
-        }
+        }        
     }
 }
