@@ -26,6 +26,8 @@ namespace DissDlcToolkit.Forms
         private ExexTable exexTable;
         private int currentAuraSlotIndex = 0;
 
+        private bool labelBoxesEnabled = false;
+
 
         public MainFormExexUserControl()
         {
@@ -74,41 +76,32 @@ namespace DissDlcToolkit.Forms
 
         private void exexParticleColorLabel_Click(object sender, EventArgs e)
         {
-            Color backColor = openColorDialog(exexParticleColorLabel.BackColor, false);
-            updateColorData(backColor, exexParticleColorLabel, exexParticleColorTextBox, false, true);
+            selectColorAndUpdate(exexParticleColorLabel, exexParticleColorTextBox, false, true);
         }
 
         private void exexOuterGlowLabel_Click(object sender, EventArgs e)
         {
-            Color backColor = openColorDialog(exexOuterGlowLabel.BackColor, false);
-            updateColorData(backColor, exexOuterGlowLabel, exexOuterGlowTextBox, false, true);
+            selectColorAndUpdate(exexOuterGlowLabel, exexOuterGlowTextBox, false, true);
         }
 
         private void exexInnerGlowLabel_Click(object sender, EventArgs e)
         {
-            Color backColor = openColorDialog(exexInnerGlowLabel.BackColor, false);
-            updateColorData(backColor, exexInnerGlowLabel, exexInnerGlowTextBox, false, true);
+            selectColorAndUpdate(exexInnerGlowLabel, exexInnerGlowTextBox, false, true);
         }
 
         private void exexSmoke1Label_Click(object sender, EventArgs e)
         {
-            Boolean invertColor = exexSmoke1InvertCheckBox.Checked;
-            Color backColor = openColorDialog(exexSmoke1Label.BackColor, invertColor);
-            updateColorData(backColor, exexSmoke1Label, exexSmoke1TextBox, invertColor, false);
+            selectColorAndUpdate(exexSmoke1Label, exexSmoke1TextBox, exexSmoke1InvertCheckBox.Checked, false);
         }
 
         private void exexSmoke2Label_Click(object sender, EventArgs e)
         {
-            Boolean invertColor = exexSmoke2InvertCheckBox.Checked;
-            Color backColor = openColorDialog(exexSmoke2Label.BackColor, invertColor);
-            updateColorData(backColor, exexSmoke2Label, exexSmoke2TextBox, invertColor, false);
+            selectColorAndUpdate(exexSmoke2Label, exexSmoke2TextBox, exexSmoke2InvertCheckBox.Checked, false);
         }
 
         private void exexBoltsLabel_Click(object sender, EventArgs e)
-        {
-            Boolean invertColor = exexBoltsInvertCheckBox.Checked;
-            Color backColor = openColorDialog(exexBoltsLabel.BackColor, invertColor);
-            updateColorData(backColor, exexBoltsLabel, exexBoltsTextBox, invertColor, false);
+        {            
+            selectColorAndUpdate(exexBoltsLabel, exexBoltsTextBox, exexBoltsInvertCheckBox.Checked, false);
         }
 
         private void exexSmoke1InvertCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -125,6 +118,8 @@ namespace DissDlcToolkit.Forms
         {
             exexBoltsLabel.BackColor = MiscUtils.invertColor(exexBoltsLabel.BackColor);
         }
+
+
 
         private void exexSaveButton_Click(object sender, EventArgs e)
         {
@@ -147,6 +142,18 @@ namespace DissDlcToolkit.Forms
             MessageBox.Show("Success!!");
         }
 
+        /** 
+         * Opens a color dialog & updates the color if needed
+         */
+        private void selectColorAndUpdate(Label label, TextBox textBox, bool invertColor, bool applyAlpha)
+        {
+            if (labelBoxesEnabled)
+            {
+                Color backColor = openColorDialog(label.BackColor, invertColor);
+                updateColorData(backColor, label, textBox, invertColor, applyAlpha);
+            }
+        }
+
         private void updateColorData(Color backColor, Label colorLabel, TextBox colorTextBox,
             Boolean invert, Boolean applyAlpha)
         {
@@ -160,7 +167,7 @@ namespace DissDlcToolkit.Forms
         }
 
         private Color openColorDialog(Color currentColor, Boolean invertColor)
-        {
+        {            
             ArgbColorDialog dialog = new ArgbColorDialog();
             // Sets the initial color select to the current text color.
             dialog.Color = invertColor ? MiscUtils.invertColor(currentColor) : currentColor;
@@ -168,6 +175,7 @@ namespace DissDlcToolkit.Forms
 
             // Update the text box color
             return dialog.Color;
+
         }
 
         private void populateFields(ExexTable table)
@@ -179,7 +187,13 @@ namespace DissDlcToolkit.Forms
                 exexAuraSlots.Add(i + 1);
             }
             exexAuraSlotComboBox.DataSource = exexAuraSlots;
+
+            // Enable fields for editing
             exexAuraSlotComboBox.Enabled = true;
+            exexSmoke1InvertCheckBox.Enabled = true;
+            exexSmoke2InvertCheckBox.Enabled = true;
+            exexBoltsInvertCheckBox.Enabled = true;
+            labelBoxesEnabled = true;
 
             // Populate colors for index 0
             currentAuraSlotIndex = 0;
