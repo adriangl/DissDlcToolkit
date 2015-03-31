@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.exexLoadLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.exexLoadButton = new System.Windows.Forms.Button();
-            this.exexFileLabel = new System.Windows.Forms.Label();
-            this.exexEditLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.exexBoltsLabel = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.exexSmoke2Label = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.exexSmoke1Label = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.exexAuraSlotComboBox = new System.Windows.Forms.ComboBox();
             this.exexInnerGlowTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,6 +45,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.exexSaveButton = new System.Windows.Forms.Button();
+            this.exexLoadButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.exexBoltsInvertCheckBox = new System.Windows.Forms.CheckBox();
             this.exexBoltsTextBox = new System.Windows.Forms.TextBox();
@@ -64,125 +59,84 @@
             this.exexSmoke2TextBox = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.exexParticleColorLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.exexOuterGlowLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.exexInnerGlowLabel = new System.Windows.Forms.Label();
+            this.exexFileLabel = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.exexLoadLayoutPanel.SuspendLayout();
-            this.exexEditLayoutPanel.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // exexLoadLayoutPanel
+            // tableLayoutPanel2
             // 
-            this.exexLoadLayoutPanel.ColumnCount = 3;
-            this.exexLoadLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
-            this.exexLoadLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
-            this.exexLoadLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
-            this.exexLoadLayoutPanel.Controls.Add(this.exexLoadButton, 0, 0);
-            this.exexLoadLayoutPanel.Controls.Add(this.exexFileLabel, 1, 0);
-            this.exexLoadLayoutPanel.Location = new System.Drawing.Point(0, 0);
-            this.exexLoadLayoutPanel.Name = "exexLoadLayoutPanel";
-            this.exexLoadLayoutPanel.RowCount = 1;
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexLoadLayoutPanel.Size = new System.Drawing.Size(401, 33);
-            this.exexLoadLayoutPanel.TabIndex = 4;
-            // 
-            // exexLoadButton
-            // 
-            this.exexLoadButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.exexLoadButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exexLoadButton.Location = new System.Drawing.Point(3, 5);
-            this.exexLoadButton.Name = "exexLoadButton";
-            this.exexLoadButton.Size = new System.Drawing.Size(72, 23);
-            this.exexLoadButton.TabIndex = 21;
-            this.exexLoadButton.Text = "Load .exex";
-            this.exexLoadButton.UseVisualStyleBackColor = true;
-            this.exexLoadButton.Click += new System.EventHandler(this.exexLoadButton_Click);
-            // 
-            // exexFileLabel
-            // 
-            this.exexFileLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.exexFileLabel.AutoEllipsis = true;
-            this.exexLoadLayoutPanel.SetColumnSpan(this.exexFileLabel, 2);
-            this.exexFileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exexFileLabel.Location = new System.Drawing.Point(107, 10);
-            this.exexFileLabel.Name = "exexFileLabel";
-            this.exexFileLabel.Size = new System.Drawing.Size(291, 13);
-            this.exexFileLabel.TabIndex = 35;
-            // 
-            // exexEditLayoutPanel
-            // 
-            this.exexEditLayoutPanel.ColumnCount = 3;
-            this.exexEditLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
-            this.exexEditLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
-            this.exexEditLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
-            this.exexEditLayoutPanel.Controls.Add(this.panel10, 2, 6);
-            this.exexEditLayoutPanel.Controls.Add(this.panel9, 2, 5);
-            this.exexEditLayoutPanel.Controls.Add(this.panel8, 2, 4);
-            this.exexEditLayoutPanel.Controls.Add(this.exexAuraSlotComboBox, 1, 0);
-            this.exexEditLayoutPanel.Controls.Add(this.exexInnerGlowTextBox, 1, 3);
-            this.exexEditLayoutPanel.Controls.Add(this.label10, 0, 0);
-            this.exexEditLayoutPanel.Controls.Add(this.label11, 0, 1);
-            this.exexEditLayoutPanel.Controls.Add(this.label12, 0, 2);
-            this.exexEditLayoutPanel.Controls.Add(this.label13, 0, 3);
-            this.exexEditLayoutPanel.Controls.Add(this.label14, 0, 4);
-            this.exexEditLayoutPanel.Controls.Add(this.label15, 0, 5);
-            this.exexEditLayoutPanel.Controls.Add(this.label16, 0, 6);
-            this.exexEditLayoutPanel.Controls.Add(this.exexSaveButton, 1, 7);
-            this.exexEditLayoutPanel.Controls.Add(this.panel2, 1, 6);
-            this.exexEditLayoutPanel.Controls.Add(this.exexOuterGlowTextBox, 1, 2);
-            this.exexEditLayoutPanel.Controls.Add(this.exexParticleColorTextBox, 1, 1);
-            this.exexEditLayoutPanel.Controls.Add(this.panel3, 1, 4);
-            this.exexEditLayoutPanel.Controls.Add(this.panel4, 1, 5);
-            this.exexEditLayoutPanel.Controls.Add(this.panel5, 2, 1);
-            this.exexEditLayoutPanel.Controls.Add(this.panel6, 2, 2);
-            this.exexEditLayoutPanel.Controls.Add(this.panel7, 2, 3);
-            this.exexEditLayoutPanel.Location = new System.Drawing.Point(0, 34);
-            this.exexEditLayoutPanel.Name = "exexEditLayoutPanel";
-            this.exexEditLayoutPanel.RowCount = 8;
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.exexEditLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.exexEditLayoutPanel.Size = new System.Drawing.Size(401, 244);
-            this.exexEditLayoutPanel.TabIndex = 5;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26F));
+            this.tableLayoutPanel2.Controls.Add(this.panel10, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.panel9, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.panel8, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.exexAuraSlotComboBox, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.exexInnerGlowTextBox, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.exexSaveButton, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.exexLoadButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.exexOuterGlowTextBox, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.exexParticleColorTextBox, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel6, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.panel7, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.exexFileLabel, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 9;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(401, 272);
+            this.tableLayoutPanel2.TabIndex = 4;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.exexBoltsLabel);
             this.panel10.Controls.Add(this.pictureBox6);
-            this.panel10.Location = new System.Drawing.Point(296, 180);
+            this.panel10.Location = new System.Drawing.Point(296, 210);
             this.panel10.Margin = new System.Windows.Forms.Padding(0);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(105, 30);
@@ -196,25 +150,13 @@
             this.exexBoltsLabel.Name = "exexBoltsLabel";
             this.exexBoltsLabel.Size = new System.Drawing.Size(18, 18);
             this.exexBoltsLabel.TabIndex = 26;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox6.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox6.Location = new System.Drawing.Point(42, 5);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox6.TabIndex = 25;
-            this.pictureBox6.TabStop = false;
+            this.exexBoltsLabel.Click += new System.EventHandler(this.exexBoltsLabel_Click);
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.exexSmoke2Label);
             this.panel9.Controls.Add(this.pictureBox5);
-            this.panel9.Location = new System.Drawing.Point(296, 150);
+            this.panel9.Location = new System.Drawing.Point(296, 180);
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(105, 30);
@@ -228,25 +170,13 @@
             this.exexSmoke2Label.Name = "exexSmoke2Label";
             this.exexSmoke2Label.Size = new System.Drawing.Size(18, 18);
             this.exexSmoke2Label.TabIndex = 26;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox5.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox5.Location = new System.Drawing.Point(42, 5);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox5.TabIndex = 25;
-            this.pictureBox5.TabStop = false;
+            this.exexSmoke2Label.Click += new System.EventHandler(this.exexSmoke2Label_Click);
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.exexSmoke1Label);
             this.panel8.Controls.Add(this.pictureBox4);
-            this.panel8.Location = new System.Drawing.Point(296, 120);
+            this.panel8.Location = new System.Drawing.Point(296, 150);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(105, 30);
@@ -260,34 +190,23 @@
             this.exexSmoke1Label.Name = "exexSmoke1Label";
             this.exexSmoke1Label.Size = new System.Drawing.Size(18, 18);
             this.exexSmoke1Label.TabIndex = 26;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox4.Location = new System.Drawing.Point(42, 5);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox4.TabIndex = 25;
-            this.pictureBox4.TabStop = false;
+            this.exexSmoke1Label.Click += new System.EventHandler(this.exexSmoke1Label_Click);
             // 
             // exexAuraSlotComboBox
             // 
             this.exexAuraSlotComboBox.Enabled = false;
             this.exexAuraSlotComboBox.FormattingEnabled = true;
-            this.exexAuraSlotComboBox.Location = new System.Drawing.Point(107, 3);
+            this.exexAuraSlotComboBox.Location = new System.Drawing.Point(107, 33);
             this.exexAuraSlotComboBox.Name = "exexAuraSlotComboBox";
             this.exexAuraSlotComboBox.Size = new System.Drawing.Size(100, 21);
             this.exexAuraSlotComboBox.TabIndex = 5;
+            this.exexAuraSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.exexAuraSlotComboBox_SelectedIndexChanged);
             // 
             // exexInnerGlowTextBox
             // 
             this.exexInnerGlowTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.exexInnerGlowTextBox.Enabled = false;
-            this.exexInnerGlowTextBox.Location = new System.Drawing.Point(107, 95);
+            this.exexInnerGlowTextBox.Location = new System.Drawing.Point(107, 125);
             this.exexInnerGlowTextBox.Name = "exexInnerGlowTextBox";
             this.exexInnerGlowTextBox.Size = new System.Drawing.Size(100, 20);
             this.exexInnerGlowTextBox.TabIndex = 9;
@@ -297,7 +216,7 @@
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Location = new System.Drawing.Point(3, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 30);
             this.label10.TabIndex = 13;
@@ -309,7 +228,7 @@
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(3, 30);
+            this.label11.Location = new System.Drawing.Point(3, 60);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 30);
             this.label11.TabIndex = 14;
@@ -321,7 +240,7 @@
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(3, 60);
+            this.label12.Location = new System.Drawing.Point(3, 90);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 30);
             this.label12.TabIndex = 15;
@@ -333,7 +252,7 @@
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(3, 90);
+            this.label13.Location = new System.Drawing.Point(3, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 30);
             this.label13.TabIndex = 16;
@@ -345,7 +264,7 @@
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(3, 120);
+            this.label14.Location = new System.Drawing.Point(3, 150);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 30);
             this.label14.TabIndex = 17;
@@ -357,7 +276,7 @@
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(3, 150);
+            this.label15.Location = new System.Drawing.Point(3, 180);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(98, 30);
             this.label15.TabIndex = 18;
@@ -369,7 +288,7 @@
             this.label16.AutoSize = true;
             this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label16.Location = new System.Drawing.Point(3, 180);
+            this.label16.Location = new System.Drawing.Point(3, 210);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(98, 30);
             this.label16.TabIndex = 19;
@@ -380,19 +299,32 @@
             // 
             this.exexSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.exexSaveButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exexSaveButton.Location = new System.Drawing.Point(164, 213);
+            this.exexSaveButton.Location = new System.Drawing.Point(164, 243);
             this.exexSaveButton.Name = "exexSaveButton";
-            this.exexSaveButton.Size = new System.Drawing.Size(72, 28);
+            this.exexSaveButton.Size = new System.Drawing.Size(72, 26);
             this.exexSaveButton.TabIndex = 20;
             this.exexSaveButton.Text = "Save .exex!";
             this.exexSaveButton.UseVisualStyleBackColor = true;
+            this.exexSaveButton.Click += new System.EventHandler(this.exexSaveButton_Click);
+            // 
+            // exexLoadButton
+            // 
+            this.exexLoadButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.exexLoadButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.exexLoadButton.Location = new System.Drawing.Point(3, 3);
+            this.exexLoadButton.Name = "exexLoadButton";
+            this.exexLoadButton.Size = new System.Drawing.Size(72, 23);
+            this.exexLoadButton.TabIndex = 21;
+            this.exexLoadButton.Text = "Load .exex";
+            this.exexLoadButton.UseVisualStyleBackColor = true;
+            this.exexLoadButton.Click += new System.EventHandler(this.exexLoadButton_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.exexBoltsInvertCheckBox);
             this.panel2.Controls.Add(this.exexBoltsTextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(107, 183);
+            this.panel2.Location = new System.Drawing.Point(107, 213);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 24);
             this.panel2.TabIndex = 2;
@@ -407,6 +339,7 @@
             this.exexBoltsInvertCheckBox.TabIndex = 1;
             this.exexBoltsInvertCheckBox.Text = "Invert";
             this.exexBoltsInvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexBoltsInvertCheckBox.CheckedChanged += new System.EventHandler(this.exexBoltsInvertCheckBox_CheckedChanged);
             // 
             // exexBoltsTextBox
             // 
@@ -421,7 +354,7 @@
             // 
             this.exexOuterGlowTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.exexOuterGlowTextBox.Enabled = false;
-            this.exexOuterGlowTextBox.Location = new System.Drawing.Point(107, 65);
+            this.exexOuterGlowTextBox.Location = new System.Drawing.Point(107, 95);
             this.exexOuterGlowTextBox.Name = "exexOuterGlowTextBox";
             this.exexOuterGlowTextBox.Size = new System.Drawing.Size(100, 20);
             this.exexOuterGlowTextBox.TabIndex = 8;
@@ -430,7 +363,7 @@
             // 
             this.exexParticleColorTextBox.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.exexParticleColorTextBox.Enabled = false;
-            this.exexParticleColorTextBox.Location = new System.Drawing.Point(107, 35);
+            this.exexParticleColorTextBox.Location = new System.Drawing.Point(107, 65);
             this.exexParticleColorTextBox.Name = "exexParticleColorTextBox";
             this.exexParticleColorTextBox.Size = new System.Drawing.Size(100, 20);
             this.exexParticleColorTextBox.TabIndex = 22;
@@ -440,7 +373,7 @@
             this.panel3.Controls.Add(this.exexSmoke1InvertCheckBox);
             this.panel3.Controls.Add(this.exexSmoke1TextBox);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(107, 123);
+            this.panel3.Location = new System.Drawing.Point(107, 153);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(186, 24);
             this.panel3.TabIndex = 30;
@@ -455,6 +388,7 @@
             this.exexSmoke1InvertCheckBox.TabIndex = 1;
             this.exexSmoke1InvertCheckBox.Text = "Invert";
             this.exexSmoke1InvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexSmoke1InvertCheckBox.CheckedChanged += new System.EventHandler(this.exexSmoke1InvertCheckBox_CheckedChanged);
             // 
             // exexSmoke1TextBox
             // 
@@ -470,7 +404,7 @@
             this.panel4.Controls.Add(this.exexSmoke2InvertCheckBox);
             this.panel4.Controls.Add(this.exexSmoke2TextBox);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(107, 153);
+            this.panel4.Location = new System.Drawing.Point(107, 183);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(186, 24);
             this.panel4.TabIndex = 31;
@@ -485,6 +419,7 @@
             this.exexSmoke2InvertCheckBox.TabIndex = 1;
             this.exexSmoke2InvertCheckBox.Text = "Invert";
             this.exexSmoke2InvertCheckBox.UseVisualStyleBackColor = true;
+            this.exexSmoke2InvertCheckBox.CheckedChanged += new System.EventHandler(this.exexSmoke2InvertCheckBox_CheckedChanged);
             // 
             // exexSmoke2TextBox
             // 
@@ -499,7 +434,7 @@
             // 
             this.panel5.Controls.Add(this.exexParticleColorLabel);
             this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(296, 30);
+            this.panel5.Location = new System.Drawing.Point(296, 60);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(105, 30);
@@ -513,6 +448,97 @@
             this.exexParticleColorLabel.Name = "exexParticleColorLabel";
             this.exexParticleColorLabel.Size = new System.Drawing.Size(18, 18);
             this.exexParticleColorLabel.TabIndex = 26;
+            this.exexParticleColorLabel.Click += new System.EventHandler(this.exexParticleColorLabel_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.exexOuterGlowLabel);
+            this.panel6.Controls.Add(this.pictureBox2);
+            this.panel6.Location = new System.Drawing.Point(296, 90);
+            this.panel6.Margin = new System.Windows.Forms.Padding(0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(105, 30);
+            this.panel6.TabIndex = 33;
+            // 
+            // exexOuterGlowLabel
+            // 
+            this.exexOuterGlowLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.exexOuterGlowLabel.Location = new System.Drawing.Point(0, 0);
+            this.exexOuterGlowLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.exexOuterGlowLabel.Name = "exexOuterGlowLabel";
+            this.exexOuterGlowLabel.Size = new System.Drawing.Size(18, 18);
+            this.exexOuterGlowLabel.TabIndex = 26;
+            this.exexOuterGlowLabel.Click += new System.EventHandler(this.exexOuterGlowLabel_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.exexInnerGlowLabel);
+            this.panel7.Controls.Add(this.pictureBox3);
+            this.panel7.Location = new System.Drawing.Point(296, 120);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(105, 30);
+            this.panel7.TabIndex = 34;
+            // 
+            // exexInnerGlowLabel
+            // 
+            this.exexInnerGlowLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.exexInnerGlowLabel.Location = new System.Drawing.Point(0, 0);
+            this.exexInnerGlowLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.exexInnerGlowLabel.Name = "exexInnerGlowLabel";
+            this.exexInnerGlowLabel.Size = new System.Drawing.Size(18, 18);
+            this.exexInnerGlowLabel.TabIndex = 26;
+            this.exexInnerGlowLabel.Click += new System.EventHandler(this.exexInnerGlowLabel_Click);
+            // 
+            // exexFileLabel
+            // 
+            this.exexFileLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.exexFileLabel.AutoEllipsis = true;
+            this.tableLayoutPanel2.SetColumnSpan(this.exexFileLabel, 2);
+            this.exexFileLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.exexFileLabel.Location = new System.Drawing.Point(107, 8);
+            this.exexFileLabel.Name = "exexFileLabel";
+            this.exexFileLabel.Size = new System.Drawing.Size(291, 13);
+            this.exexFileLabel.TabIndex = 35;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox6.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox6.Location = new System.Drawing.Point(42, 5);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox6.TabIndex = 25;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox5.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox5.Location = new System.Drawing.Point(42, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox5.TabIndex = 25;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox4.BackgroundImage = global::DissDlcToolkit.Properties.Resources.color_bg;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.pictureBox4.Location = new System.Drawing.Point(42, 5);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -527,25 +553,6 @@
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.exexOuterGlowLabel);
-            this.panel6.Controls.Add(this.pictureBox2);
-            this.panel6.Location = new System.Drawing.Point(296, 60);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(105, 30);
-            this.panel6.TabIndex = 33;
-            // 
-            // exexOuterGlowLabel
-            // 
-            this.exexOuterGlowLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exexOuterGlowLabel.Location = new System.Drawing.Point(0, 0);
-            this.exexOuterGlowLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.exexOuterGlowLabel.Name = "exexOuterGlowLabel";
-            this.exexOuterGlowLabel.Size = new System.Drawing.Size(18, 18);
-            this.exexOuterGlowLabel.TabIndex = 26;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -558,25 +565,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.exexInnerGlowLabel);
-            this.panel7.Controls.Add(this.pictureBox3);
-            this.panel7.Location = new System.Drawing.Point(296, 90);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(105, 30);
-            this.panel7.TabIndex = 34;
-            // 
-            // exexInnerGlowLabel
-            // 
-            this.exexInnerGlowLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.exexInnerGlowLabel.Location = new System.Drawing.Point(0, 0);
-            this.exexInnerGlowLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.exexInnerGlowLabel.Name = "exexInnerGlowLabel";
-            this.exexInnerGlowLabel.Size = new System.Drawing.Size(18, 18);
-            this.exexInnerGlowLabel.TabIndex = 26;
             // 
             // pictureBox3
             // 
@@ -595,19 +583,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.exexEditLayoutPanel);
-            this.Controls.Add(this.exexLoadLayoutPanel);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Name = "MainFormExexUserControl";
             this.Size = new System.Drawing.Size(407, 278);
-            this.exexLoadLayoutPanel.ResumeLayout(false);
-            this.exexEditLayoutPanel.ResumeLayout(false);
-            this.exexEditLayoutPanel.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -615,10 +598,13 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -626,10 +612,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TableLayoutPanel exexLoadLayoutPanel;
-        private System.Windows.Forms.Button exexLoadButton;
-        private System.Windows.Forms.Label exexFileLabel;
-        private System.Windows.Forms.TableLayoutPanel exexEditLayoutPanel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label exexBoltsLabel;
         private System.Windows.Forms.PictureBox pictureBox6;
@@ -649,6 +632,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button exexSaveButton;
+        private System.Windows.Forms.Button exexLoadButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox exexBoltsInvertCheckBox;
         private System.Windows.Forms.TextBox exexBoltsTextBox;
@@ -669,5 +653,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label exexInnerGlowLabel;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label exexFileLabel;
     }
 }
