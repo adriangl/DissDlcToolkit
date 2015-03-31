@@ -52,9 +52,14 @@ namespace DissDlcToolkit.Forms
             {
                 try
                 {
+                    // Disable listener for aura combo box
+                    exexAuraSlotComboBox.SelectedIndexChanged -= new System.EventHandler(exexAuraSlotComboBox_SelectedIndexChanged);
                     exexFileLabel.Text = exexFile;
                     exexTable = new ExexTable(exexFile);
                     populateFields(exexTable);
+                    // Restore listener
+                    exexAuraSlotComboBox.SelectedIndexChanged += new System.EventHandler(exexAuraSlotComboBox_SelectedIndexChanged);
+                    
                 }
                 catch (Exception ex)
                 {
@@ -215,30 +220,32 @@ namespace DissDlcToolkit.Forms
             updateColorData(entry.smoke2Color, exexSmoke2Label, exexSmoke2TextBox, entry.smoke2Invert, false);
             updateColorData(entry.boltsColor, exexBoltsLabel, exexBoltsTextBox, entry.boltsInvert, false);
 
-
         }
 
         private void saveValuesToAuraSlot(int auraSlotIndex)
         {
-            ExexEntry entry = (ExexEntry)exexTable.entries[auraSlotIndex];
-            entry.particleColor = exexParticleColorLabel.BackColor;
-            entry.outerGlowColor = exexOuterGlowLabel.BackColor;
-            entry.innerGlowColor = exexInnerGlowLabel.BackColor;
+            if (auraSlotIndex >= 0 && auraSlotIndex < exexTable.entries.Count)
+            {
+                ExexEntry entry = (ExexEntry)exexTable.entries[auraSlotIndex];
+                entry.particleColor = exexParticleColorLabel.BackColor;
+                entry.outerGlowColor = exexOuterGlowLabel.BackColor;
+                entry.innerGlowColor = exexInnerGlowLabel.BackColor;
 
-            entry.smoke1Color = exexSmoke1InvertCheckBox.Checked
-                ? MiscUtils.invertColor(exexSmoke1Label.BackColor)
-                : exexSmoke1Label.BackColor;
-            entry.smoke1Invert = exexSmoke1InvertCheckBox.Checked;
+                entry.smoke1Color = exexSmoke1InvertCheckBox.Checked
+                    ? MiscUtils.invertColor(exexSmoke1Label.BackColor)
+                    : exexSmoke1Label.BackColor;
+                entry.smoke1Invert = exexSmoke1InvertCheckBox.Checked;
 
-            entry.smoke2Color = exexSmoke2InvertCheckBox.Checked
-                ? MiscUtils.invertColor(exexSmoke2Label.BackColor)
-                : exexSmoke2Label.BackColor;
-            entry.smoke2Invert = exexSmoke2InvertCheckBox.Checked;
+                entry.smoke2Color = exexSmoke2InvertCheckBox.Checked
+                    ? MiscUtils.invertColor(exexSmoke2Label.BackColor)
+                    : exexSmoke2Label.BackColor;
+                entry.smoke2Invert = exexSmoke2InvertCheckBox.Checked;
 
-            entry.boltsColor = exexBoltsInvertCheckBox.Checked
-                ? MiscUtils.invertColor(exexBoltsLabel.BackColor)
-                : exexBoltsLabel.BackColor;
-            entry.boltsInvert = exexBoltsInvertCheckBox.Checked;
+                entry.boltsColor = exexBoltsInvertCheckBox.Checked
+                    ? MiscUtils.invertColor(exexBoltsLabel.BackColor)
+                    : exexBoltsLabel.BackColor;
+                entry.boltsInvert = exexBoltsInvertCheckBox.Checked;
+            }
         }
     }
 }
