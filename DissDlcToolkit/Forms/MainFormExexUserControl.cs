@@ -124,10 +124,10 @@ namespace DissDlcToolkit.Forms
         private void exexSaveButton_Click(object sender, EventArgs e)
         {
             saveValuesToAuraSlot(currentAuraSlotIndex);
-            // Backup existing file if it exists
+            // Backup existing file if it exists, and overwrite old copies
             if (File.Exists(@exexFile))
             {
-                File.Copy(@exexFile, @exexFile + ".bak");
+                File.Copy(@exexFile, @exexFile + ".bak", true);
             }
             // Write .exex to disk
             try
