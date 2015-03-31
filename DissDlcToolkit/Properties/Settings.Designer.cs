@@ -34,5 +34,17 @@ namespace DissDlcToolkit.Properties {
                 this["dlcMainFolder"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool createExexBackupWhenSaving {
+            get {
+                return ((bool)(this["createExexBackupWhenSaving"]));
+            }
+            set {
+                this["createExexBackupWhenSaving"] = value;
+            }
+        }
     }
 }

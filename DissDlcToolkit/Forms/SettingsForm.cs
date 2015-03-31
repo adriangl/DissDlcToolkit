@@ -23,6 +23,8 @@ namespace DissDlcToolkit.Forms
             // Load DLC folder
             String mainDlcFolder = GlobalData.getInstance().getDlcMainFolder();
             settingsMainDlcFolderTextBox.Text = mainDlcFolder;
+            // Load exex backup data
+            settingsBackupExex.Checked = GlobalData.getInstance().getBackupExexSetting();
         }
 
         private void browseMainDlcFolderButton_Click(object sender, EventArgs e)
@@ -31,16 +33,16 @@ namespace DissDlcToolkit.Forms
             dialog.ShowDialog();
             string folder = dialog.FileName;
             if (!folder.Equals(""))
+                // Show new folder
                 settingsMainDlcFolderTextBox.Text = folder;
+                // Save data to settings
+                GlobalData.getInstance().setDlcMainFolder(settingsMainDlcFolderTextBox.Text);
         }
 
-        private void settingsSaveButton_Click(object sender, EventArgs e)
+        private void settingsBackupExex_CheckedChanged(object sender, EventArgs e)
         {
-            // Save data to settings
-            GlobalData.getInstance().setDlcMainFolder(settingsMainDlcFolderTextBox.Text);
-
-            // Dismiss dialog
-            Close();
+            // Save exex backup setting
+            GlobalData.getInstance().setBackupExexSetting(settingsBackupExex.Checked);
         }
     }
 }

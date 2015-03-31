@@ -31,8 +31,9 @@ namespace DissDlcToolkit
             attachmentDataList = new ArrayList();
             loadCharacterData();
             loadAttachmentData();
-            loadDlcMainFolder();
-        }       
+            // Load settings
+            loadSettings();
+        }     
 
         public static GlobalData getInstance()
         {
@@ -107,6 +108,11 @@ namespace DissDlcToolkit
             attachmentDataList.Sort();
         }
 
+        private void loadSettings()
+        {
+            loadDlcMainFolder();
+        } 
+
         private void loadDlcMainFolder()
         {
             // First, check if there is any saved data
@@ -127,6 +133,17 @@ namespace DissDlcToolkit
         public String getDlcMainFolder()
         {
             return Properties.Settings.Default.dlcMainFolder;
+        }
+
+        public bool getBackupExexSetting()
+        {
+            return Properties.Settings.Default.createExexBackupWhenSaving;
+        }
+
+        public void setBackupExexSetting(bool enabled)
+        {
+            Properties.Settings.Default.createExexBackupWhenSaving = enabled;
+            Properties.Settings.Default.Save();
         }
     }
 }
