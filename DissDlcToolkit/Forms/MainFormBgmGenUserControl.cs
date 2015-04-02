@@ -212,20 +212,20 @@ namespace DissDlcToolkit.Forms
 
         private void saveDataToFiles()
         {
-            // TODO Validate data
+            // Validate data
             int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
             if (selectedBgmSlotIndex < 0){
                 MessageBox.Show("You have to select a valid DLC slot");
                 return;
             }
+            int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
 
             if (bgmFormEntries.Count <= 0)
             {
                 MessageBox.Show("You have to add at least one BGM to the list");
                 return;
-            }
-
-            int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
+            }           
+            
             // Get DLC folder
             String baseFolder = Settings.getDlcMainFolder();
             String dlcFolder = System.IO.Path.Combine(baseFolder, 

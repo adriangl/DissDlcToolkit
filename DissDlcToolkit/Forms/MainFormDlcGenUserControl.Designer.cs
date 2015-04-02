@@ -199,6 +199,8 @@
             // 
             // dlcGenAssistDlcSlotComboBox
             // 
+            this.dlcGenAssistDlcSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dlcGenAssistDlcSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.dlcGenAssistDlcSlotComboBox.FormattingEnabled = true;
             this.dlcGenAssistDlcSlotComboBox.Location = new System.Drawing.Point(107, 183);
             this.dlcGenAssistDlcSlotComboBox.Name = "dlcGenAssistDlcSlotComboBox";
@@ -207,6 +209,8 @@
             // 
             // dlcGenPlayerDlcSlotComboBox
             // 
+            this.dlcGenPlayerDlcSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dlcGenPlayerDlcSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.dlcGenPlayerDlcSlotComboBox.FormattingEnabled = true;
             this.dlcGenPlayerDlcSlotComboBox.Location = new System.Drawing.Point(107, 63);
             this.dlcGenPlayerDlcSlotComboBox.Name = "dlcGenPlayerDlcSlotComboBox";
@@ -215,6 +219,8 @@
             // 
             // dlcGenCostumeSlotComboBox
             // 
+            this.dlcGenCostumeSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dlcGenCostumeSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.dlcGenCostumeSlotComboBox.FormattingEnabled = true;
             this.dlcGenCostumeSlotComboBox.Location = new System.Drawing.Point(107, 33);
             this.dlcGenCostumeSlotComboBox.Name = "dlcGenCostumeSlotComboBox";
@@ -223,6 +229,8 @@
             // 
             // dlcGenCharacterComboBox
             // 
+            this.dlcGenCharacterComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.dlcGenCharacterComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.dlcGenCharacterComboBox.FormattingEnabled = true;
             this.dlcGenCharacterComboBox.Location = new System.Drawing.Point(107, 3);
             this.dlcGenCharacterComboBox.Name = "dlcGenCharacterComboBox";

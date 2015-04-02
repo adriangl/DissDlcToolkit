@@ -298,6 +298,8 @@
             // attachmentCreationBaseComboBox
             // 
             this.attachmentCreationBaseComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.attachmentCreationBaseComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.attachmentCreationBaseComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.tableLayoutPanel1.SetColumnSpan(this.attachmentCreationBaseComboBox, 2);
             this.attachmentCreationBaseComboBox.FormattingEnabled = true;
             this.attachmentCreationBaseComboBox.Location = new System.Drawing.Point(80, 5);
@@ -308,6 +310,8 @@
             // attachmentCreationDlcSlotComboBox
             // 
             this.attachmentCreationDlcSlotComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.attachmentCreationDlcSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.attachmentCreationDlcSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.tableLayoutPanel1.SetColumnSpan(this.attachmentCreationDlcSlotComboBox, 2);
             this.attachmentCreationDlcSlotComboBox.FormattingEnabled = true;
             this.attachmentCreationDlcSlotComboBox.Location = new System.Drawing.Point(80, 36);

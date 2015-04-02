@@ -107,6 +107,8 @@
             // bgmGenDlcSlotComboBox
             // 
             this.bgmGenDlcSlotComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.bgmGenDlcSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.bgmGenDlcSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.bgmGenDlcSlotComboBox.Enabled = false;
             this.bgmGenDlcSlotComboBox.FormattingEnabled = true;
             this.bgmGenDlcSlotComboBox.Items.AddRange(new object[] {

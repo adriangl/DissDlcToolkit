@@ -233,6 +233,8 @@
             // 
             // exexAuraSlotComboBox
             // 
+            this.exexAuraSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.exexAuraSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.exexAuraSlotComboBox.Enabled = false;
             this.exexAuraSlotComboBox.FormattingEnabled = true;
             this.exexAuraSlotComboBox.Location = new System.Drawing.Point(107, 33);
