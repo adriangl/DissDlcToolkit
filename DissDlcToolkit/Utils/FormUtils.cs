@@ -54,14 +54,20 @@ namespace DissDlcToolkit.Utils
             return openFileDialog(filter);
         }
 
-        internal static string openTxtSaveDialog()
+        public static string openAt3FileDialog()
+        {
+            string filter = "AT3 files (*.at3)|*.at3|All Files (*.*)|*.*";
+            return openFileDialog(filter);
+        }
+
+        public static string openTxtSaveDialog()
         {
             string filter = "TXT files (*.txt)|*.txt";
             string title = "Save report to text file...";
             return openFileSaveDialog(filter, title);
         }
 
-        internal static string openExcelSaveDialog()
+        public static string openExcelSaveDialog()
         {
             string filter = "XLSX files (*.xlsx)|*.xlsx";
             string title = "Save report to Excel spreadsheet...";

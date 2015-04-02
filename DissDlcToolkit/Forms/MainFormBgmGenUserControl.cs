@@ -40,7 +40,7 @@ namespace DissDlcToolkit.Forms
                 String controllerFolder = Directory.GetParent(controllerFilePath).FullName;
 
                 // Getting data from BgmTable
-                BgmTable table = new BgmTable(controllerFilePath);
+                BgmTable bgmTable = new BgmTable(controllerFilePath);
 
                 // Attempt to crack BGM DLC Slot from filename
                 int dlcSlotNumber = 0;
@@ -66,9 +66,9 @@ namespace DissDlcToolkit.Forms
 
                 // Getting Form BGM entries
                 BindingList<FormBgmEntry> formEntries = new BindingList<FormBgmEntry>();
-                foreach (int i in Enumerable.Range(0, table.entries.Count - 1))
+                foreach (int i in Enumerable.Range(0, bgmTable.entries.Count))
                 {
-                    BgmEntry entry = (BgmEntry)table.entries[i];
+                    BgmEntry entry = bgmTable.entries[i];
                     FormBgmEntry formEntry = new FormBgmEntry(entry);
                     String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", entry.internalFileName)) + ".edat";
                     String hashedInternalFilePath = System.IO.Path.Combine(controllerFolder, hashedInternalFileName);
@@ -104,15 +104,23 @@ namespace DissDlcToolkit.Forms
             bgmGenBgmListBox.DataSource = bs;
             
             // Enable controls
-            Boolean enabled = true;
+            enableForm(true);
+        }
+
+        private void enableForm(Boolean enabled)
+        {
             bgmGenBgmListBox.Enabled = enabled;
             bgmGenUpButton.Enabled = enabled;
-            bgmGenDownButton.Enabled = enabled;
             bgmGenDownButton.Enabled = enabled;
             bgmGenAddButton.Enabled = enabled;
             bgmGenRemoveButton.Enabled = enabled;
             bgmGenBgmTitleTextBox.Enabled = enabled;
-            bgmGenGameValueComboBox.Enabled = enabled;
+            bgmGenBrowseAt3Button.Enabled = enabled;
+            bgmGenDlcSlotComboBox.Enabled = enabled;
+            bgmGenBgmVolumeTrackBar.Enabled = enabled;
+            bgmGenCharactersSelectButton.Enabled = enabled;
+            bgmGenStageSelectButton.Enabled = enabled;
+            bgmGenSaveButton.Enabled = enabled;
         }
 
         private void bgmGenBgmListBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,16 +136,19 @@ namespace DissDlcToolkit.Forms
         {
             if (index != -1)
             {
-                FormBgmEntry entry = (FormBgmEntry)bgmFormEntries[index];
+                FormBgmEntry formEntry = (FormBgmEntry)bgmFormEntries[index];
 
                 bgmGenBgmTitleTextBox.DataBindings.Clear();
                 bgmGenAt3FileTextBox.DataBindings.Clear();
 
-                bgmGenBgmTitleTextBox.Text = entry.bgmTitle;
-                bgmGenAt3FileTextBox.Text = entry.filePath;                
+                bgmGenBgmTitleTextBox.Text = formEntry.bgmTitle;
+                bgmGenAt3FileTextBox.Text = formEntry.filePath;                
 
-                bgmGenBgmTitleTextBox.DataBindings.Add(new Binding("Text", entry, "bgmTitle", true, DataSourceUpdateMode.OnPropertyChanged));
-                bgmGenAt3FileTextBox.DataBindings.Add(new Binding("Text", entry, "filePath", true, DataSourceUpdateMode.OnPropertyChanged));
+                bgmGenBgmTitleTextBox.DataBindings.Add(new Binding("Text", formEntry, "bgmTitle", true, DataSourceUpdateMode.OnPropertyChanged));
+                bgmGenAt3FileTextBox.DataBindings.Add(new Binding("Text", formEntry, "filePath", true, DataSourceUpdateMode.OnPropertyChanged));
+
+                bgmGenVolumeTextBox.Text = formEntry.entry.bgmVolume.ToString();
+                bgmGenBgmVolumeTrackBar.Value = formEntry.entry.bgmVolume;
             }
         }
 
@@ -160,19 +171,19 @@ namespace DissDlcToolkit.Forms
                 int newIndex = (((currentBgmIndex + offset) % entrySize) + entrySize) % entrySize;
 
                 // Then move the entry around
-                FormBgmEntry entry = (FormBgmEntry)bgmFormEntries[currentBgmIndex];
-                bgmFormEntries.Remove(entry);
-                bgmFormEntries.Insert(newIndex, entry);
-
-                bgmGenBgmListBox.SetSelected(newIndex, true);
+                FormBgmEntry formEntry = (FormBgmEntry)bgmFormEntries[currentBgmIndex];
+                bgmFormEntries.Remove(formEntry);
+                bgmFormEntries.Insert(newIndex, formEntry);
+                // Highlight new selection
+                bgmGenBgmListBox.SetSelected(newIndex, true);                
             }
         }
 
         private void bgmGenAddButton_Click(object sender, EventArgs e)
         {
             // Add a new element
-            FormBgmEntry newEntry = new FormBgmEntry(new BgmEntry());
-            newEntry.bgmTitle = "New entry";
+            BgmEntry bgmEntry = new BgmEntry();
+            FormBgmEntry newEntry = new FormBgmEntry(bgmEntry);
             bgmFormEntries.Insert(currentBgmIndex + 1, newEntry);
             bgmGenBgmListBox.SetSelected(currentBgmIndex + 1, true);
         }
@@ -184,7 +195,13 @@ namespace DissDlcToolkit.Forms
 
         private void bgmGenNewButton_Click(object sender, EventArgs e)
         {
-            bindDataAndEnableForm(new BindingList<FormBgmEntry>());
+            BindingList<FormBgmEntry> newBgmFormEntries = new BindingList<FormBgmEntry>();
+
+            // Add new dummy entry and select it
+            BgmEntry bgmEntry = new BgmEntry();
+            FormBgmEntry newEntry = new FormBgmEntry(bgmEntry);
+            newBgmFormEntries.Add(newEntry);
+            bindDataAndEnableForm(newBgmFormEntries);
         }
 
         private void bgmGenSaveButton_Click(object sender, EventArgs e)
@@ -196,10 +213,129 @@ namespace DissDlcToolkit.Forms
         private void saveDataToFiles()
         {
             // TODO Validate data
+            int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
+            if (selectedBgmSlotIndex < 0){
+                MessageBox.Show("You have to select a valid DLC slot");
+                return;
+            }
+
+            if (bgmFormEntries.Count <= 0)
+            {
+                MessageBox.Show("You have to add at least one BGM to the list");
+                return;
+            }
+
             int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
             // Get DLC folder
             String baseFolder = Settings.getDlcMainFolder();
-            String dlcFolder = System.IO.Path.Combine(baseFolder, "[Slot " + bgmGenDlcSlotComboBox.Text + "][BGM]");
+            String dlcFolder = System.IO.Path.Combine(baseFolder, 
+                "[Slot " + bgmGenDlcSlotComboBox.Text + "][BGM]");
+            createDlcFolder(dlcFolder);           
+
+            // Prepare copy
+            List<String> bgmNames = new List<String>();
+            BgmTable bgmTable = new BgmTable();
+            foreach (FormBgmEntry formEntry in bgmFormEntries)
+            {
+                // Save text strings
+                bgmNames.Add(formEntry.bgmTitle);
+                bgmTable.addEntry(formEntry.entry);
+            }
+
+            // Ready bgmTable
+            bgmTable.generateRandomEntryNamesAndIds(bgmDlcSlot);
+
+            // Save bgm names
+            String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+            String textHashedFilePath = System.IO.Path.Combine(dlcFolder, textHashedFileName);
+            MessFileWriter.encodeDLCText(bgmNames, textHashedFilePath);
+
+            // Save bgm controller
+            String controllerHashedFileName = Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+            String controllerHashedFilePath = System.IO.Path.Combine(dlcFolder, controllerHashedFileName);
+            bgmTable.writeToFile(controllerHashedFilePath);
+
+            // Copy bgm to dlc folder
+            foreach (FormBgmEntry formEntry in bgmFormEntries)
+            {
+                String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", formEntry.entry.internalFileName)) + ".edat";
+                String hashedInternalFilePath = System.IO.Path.Combine(dlcFolder, hashedInternalFileName);
+                if (File.Exists(formEntry.filePath))
+                {
+                    File.Copy(formEntry.filePath, hashedInternalFilePath, true);
+                }
+            }
+        }
+
+        private void createDlcFolder(string dlcFolder)
+        {
+            /*if (Directory.Exists(dlcFolder))
+            {
+                // Check if any of the elements are contained in that folder
+                // just so we don't delete them by accident
+                bool containsBgmData = false;
+                foreach (FormBgmEntry entry in bgmFormEntries)
+                {
+                    if (entry.filePath != null && Directory.GetParent(entry.filePath).Equals(dlcFolder))
+                    {
+                        containsBgmData = true;
+                        break;
+                    }
+                }
+                if (!containsBgmData)
+                {
+                    Directory.Delete(dlcFolder, true);
+                    Directory.CreateDirectory(dlcFolder);
+                }
+            }
+            else
+            {
+                Directory.CreateDirectory(dlcFolder);
+            }
+             */
+            if (Directory.Exists(dlcFolder))
+            {
+                Directory.Delete(dlcFolder, true);
+            }
+            Directory.CreateDirectory(dlcFolder);
+        }
+
+        private void bgmGenBrowseAt3Button_Click(object sender, EventArgs e)
+        {
+            String at3FilePath = FormUtils.openAt3FileDialog();
+            if (at3FilePath != null && !at3FilePath.Trim().Equals(""))
+            {
+                bgmGenAt3FileTextBox.Text = at3FilePath;
+            }
+        }
+
+        private void bgmGenCharactersSelectButton_Click(object sender, EventArgs e)
+        {
+            BgmEntry bgmEntry = bgmFormEntries[currentBgmIndex].entry;
+            BgmSelectCharactersForm characterSelectForm = new BgmSelectCharactersForm(
+                bgmEntry.bgmCharactersToPlay);
+            if (characterSelectForm.ShowDialog(this).Equals(DialogResult.OK))
+            {
+                bgmEntry.bgmCharactersToPlay = characterSelectForm.returnValue;
+            }
+        }
+
+        private void bgmGenStageSelectButton_Click(object sender, EventArgs e)
+        {
+            BgmEntry bgmEntry = bgmFormEntries[currentBgmIndex].entry;
+            BgmSelectStageForm stageSelectForm = new BgmSelectStageForm(
+                bgmEntry.bgmStagesToPlay);
+            if (stageSelectForm.ShowDialog(this).Equals(DialogResult.OK))
+            {
+                bgmEntry.bgmStagesToPlay = stageSelectForm.returnValue;
+            }
+        }
+
+        private void bgmGenBgmVolumeTrackBar_Scroll(object sender, EventArgs e)
+        {
+            // Sync text box with trackbar
+            bgmGenVolumeTextBox.Text = bgmGenBgmVolumeTrackBar.Value.ToString();
+            bgmFormEntries[currentBgmIndex].entry.bgmVolume = Convert.ToByte(bgmGenBgmVolumeTrackBar.Value);
         }
     }
 }
