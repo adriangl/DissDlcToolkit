@@ -84,10 +84,9 @@ namespace DissDlcToolkit.Forms
                 }
 
                 // Set DLC slot if any
-                if (dlcSlotNumber != -1)
-                {
-                    bgmGenDlcSlotComboBox.SelectedIndex = dlcSlotNumber - 1;
-                }
+                bgmGenDlcSlotComboBox.SelectedIndex = (dlcSlotNumber != -1)
+                        ? dlcSlotNumber - 1
+                        : 0;
 
                 // Bind data
                 bindDataAndEnableForm(formEntries);
@@ -127,9 +126,9 @@ namespace DissDlcToolkit.Forms
         {
             if (currentBgmIndex != bgmGenBgmListBox.SelectedIndex)
             {
-                currentBgmIndex = bgmGenBgmListBox.SelectedIndex;
-                showBgmFormEntry(currentBgmIndex);
+                currentBgmIndex = bgmGenBgmListBox.SelectedIndex;                
             }
+            showBgmFormEntry(currentBgmIndex);
         }
 
         private void showBgmFormEntry(int index)
@@ -190,18 +189,29 @@ namespace DissDlcToolkit.Forms
 
         private void bgmGenRemoveButton_Click(object sender, EventArgs e)
         {
-            bgmFormEntries.RemoveAt(currentBgmIndex);
+            if (bgmFormEntries.Count > 1)
+            {
+                bgmFormEntries.RemoveAt(currentBgmIndex);
+            }
+            else
+            {
+                MessageBox.Show("You have to keep at least one BGM in the list!");
+            }
         }
 
         private void bgmGenNewButton_Click(object sender, EventArgs e)
         {
             BindingList<FormBgmEntry> newBgmFormEntries = new BindingList<FormBgmEntry>();
+            
+            // Setup slot to 1 by default
+            bgmGenDlcSlotComboBox.SelectedIndex = 0;
 
             // Add new dummy entry and select it
             BgmEntry bgmEntry = new BgmEntry();
             FormBgmEntry newEntry = new FormBgmEntry(bgmEntry);
             newBgmFormEntries.Add(newEntry);
             bindDataAndEnableForm(newBgmFormEntries);
+
         }
 
         private void bgmGenSaveButton_Click(object sender, EventArgs e)
