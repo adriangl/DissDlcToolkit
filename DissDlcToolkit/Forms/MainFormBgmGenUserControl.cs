@@ -347,5 +347,15 @@ namespace DissDlcToolkit.Forms
             bgmGenVolumeTextBox.Text = bgmGenBgmVolumeTrackBar.Value.ToString();
             bgmFormEntries[currentBgmIndex].entry.bgmVolume = Convert.ToByte(bgmGenBgmVolumeTrackBar.Value);
         }
+
+        private void bgmGenDlcSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void bgmGenDlcSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
     }
 }

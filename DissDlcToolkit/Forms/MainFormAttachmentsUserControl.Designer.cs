@@ -306,6 +306,8 @@
             this.attachmentCreationBaseComboBox.Name = "attachmentCreationBaseComboBox";
             this.attachmentCreationBaseComboBox.Size = new System.Drawing.Size(148, 21);
             this.attachmentCreationBaseComboBox.TabIndex = 3;
+            this.attachmentCreationBaseComboBox.SelectedIndexChanged += new System.EventHandler(this.attachmentCreationBaseComboBox_SelectedIndexChanged);
+            this.attachmentCreationBaseComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.attachmentCreationBaseComboBox_Validating);
             // 
             // attachmentCreationDlcSlotComboBox
             // 
@@ -318,6 +320,8 @@
             this.attachmentCreationDlcSlotComboBox.Name = "attachmentCreationDlcSlotComboBox";
             this.attachmentCreationDlcSlotComboBox.Size = new System.Drawing.Size(148, 21);
             this.attachmentCreationDlcSlotComboBox.TabIndex = 4;
+            this.attachmentCreationDlcSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.attachmentCreationDlcSlotComboBox_SelectedIndexChanged);
+            this.attachmentCreationDlcSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.attachmentCreationDlcSlotComboBox_Validating);
             // 
             // attachmentCreationGmoFileTextBox
             // 

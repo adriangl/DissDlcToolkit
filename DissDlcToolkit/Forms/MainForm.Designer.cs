@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabHostMain = new System.Windows.Forms.TabControl();
             this.tabDlcGen = new System.Windows.Forms.TabPage();
             this.mainFormDlcGenUserControl1 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
@@ -43,8 +45,6 @@
             this.mainFormBgmGenUserControl1 = new DissDlcToolkit.Forms.MainFormBgmGenUserControl();
             this.tabReporter = new System.Windows.Forms.TabPage();
             this.mainFormDlcReporterUserControl1 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
-            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabHostMain.SuspendLayout();
             this.tabDlcGen.SuspendLayout();
@@ -68,7 +68,18 @@
             this.aboutToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             resources.ApplyResources(this.fileToolStripMenuItem, "fileToolStripMenuItem");
-            this.fileToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            resources.ApplyResources(this.aboutToolStripMenuItem1, "aboutToolStripMenuItem1");
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // tabHostMain
             // 
@@ -146,18 +157,6 @@
             // 
             resources.ApplyResources(this.mainFormDlcReporterUserControl1, "mainFormDlcReporterUserControl1");
             this.mainFormDlcReporterUserControl1.Name = "mainFormDlcReporterUserControl1";
-            // 
-            // settingsToolStripMenuItem
-            // 
-            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            resources.ApplyResources(this.settingsToolStripMenuItem, "settingsToolStripMenuItem");
-            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
-            // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            resources.ApplyResources(this.aboutToolStripMenuItem1, "aboutToolStripMenuItem1");
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // MainForm
             // 

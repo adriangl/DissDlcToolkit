@@ -71,6 +71,7 @@ namespace DissDlcToolkit.Forms
 
         private void exexAuraSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            FormUtils.genericValidateComboBox(sender);
             if (currentAuraSlotIndex != exexAuraSlotComboBox.SelectedIndex)
             {
                 saveValuesToAuraSlot(currentAuraSlotIndex);
@@ -258,6 +259,11 @@ namespace DissDlcToolkit.Forms
             {
                 Logger.Log("MainFormExexUserControl", "The exex index is not valid");
             }
+        }
+
+        private void exexAuraSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
         }
     }
 }

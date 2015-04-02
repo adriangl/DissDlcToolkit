@@ -66,7 +66,7 @@ namespace DissDlcToolkit.Forms
             configPlayerEnabled();
             configAssistEnabled();
             configGimExtraEnabled();
-            
+            FormUtils.genericValidateComboBox(sender);
         }
 
         private void configPlayerEnabled()
@@ -398,6 +398,41 @@ namespace DissDlcToolkit.Forms
             {
                 Directory.Delete(dlcFolder, true);
             }
+        }
+
+        private void dlcGenCharacterComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenCostumeSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenPlayerDlcSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenAssistDlcSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenCostumeSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenPlayerDlcSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void dlcGenAssistDlcSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
         }
     }
 }

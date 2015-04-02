@@ -242,6 +242,7 @@
             this.exexAuraSlotComboBox.Size = new System.Drawing.Size(100, 21);
             this.exexAuraSlotComboBox.TabIndex = 5;
             this.exexAuraSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.exexAuraSlotComboBox_SelectedIndexChanged);
+            this.exexAuraSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.exexAuraSlotComboBox_Validating);
             // 
             // exexInnerGlowTextBox
             // 

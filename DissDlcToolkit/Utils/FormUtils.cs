@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +76,7 @@ namespace DissDlcToolkit.Utils
             return openFileSaveDialog(filter, title);
         }
 
-        private static string openFileSaveDialog(string filter, string title)
+        public static string openFileSaveDialog(string filter, string title)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = filter;
@@ -91,10 +93,23 @@ namespace DissDlcToolkit.Utils
             }
         }
 
-        internal static string openGenericFileDialog()
+        public static string openGenericFileDialog()
         {
             string filter = "All Files (*.*)|*.*";
             return openFileDialog(filter);
+        }
+
+        // Checks if a ComboBox has a value & colors it if the value is invalid
+        public static bool genericValidateComboBox(object sender)
+        {
+            if (!(sender is ComboBox)) { return false; }
+
+            ComboBox cb = sender as ComboBox;
+            cb.SelectionLength = 0;
+
+            cb.BackColor = cb.SelectedValue == null ? Color.DarkSalmon : SystemColors.Window;
+
+            return cb.SelectedValue == null;
         }
     }
 }

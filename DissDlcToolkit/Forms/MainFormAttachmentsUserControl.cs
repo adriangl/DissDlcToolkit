@@ -237,5 +237,25 @@ namespace DissDlcToolkit.Forms
                 }
             }
         }
+
+        private void attachmentCreationBaseComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void attachmentCreationBaseComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void attachmentCreationDlcSlotComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
+
+        private void attachmentCreationDlcSlotComboBox_Validating(object sender, CancelEventArgs e)
+        {
+            FormUtils.genericValidateComboBox(sender);
+        }
     }
 }
