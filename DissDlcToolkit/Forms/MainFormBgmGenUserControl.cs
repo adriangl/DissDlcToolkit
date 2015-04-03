@@ -245,8 +245,8 @@ namespace DissDlcToolkit.Forms
             
             // Get DLC folder
             String baseFolder = Settings.getDlcMainFolder();
-            String dlcFolder = System.IO.Path.Combine(baseFolder, 
-                "[Slot " + bgmGenDlcSlotComboBox.Text + "][BGM]");
+            String dlcFolder = System.IO.Path.Combine(baseFolder,
+                "[BGM][Slot " + bgmGenDlcSlotComboBox.Text + "]");
             createDlcFolder(dlcFolder);           
 
             // Prepare copy

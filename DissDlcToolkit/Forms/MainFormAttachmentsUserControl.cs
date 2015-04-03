@@ -115,7 +115,7 @@ namespace DissDlcToolkit.Forms
 
                     // Create needed folders
                     String baseFolder = Settings.getDlcMainFolder();
-                    String dlcFolder = System.IO.Path.Combine(baseFolder, "[Slot " + attachmentCreationDlcSlotComboBox.Text + "][Attachment]");
+                    String dlcFolder = System.IO.Path.Combine(baseFolder, "[Attachment][Slot " + attachmentCreationDlcSlotComboBox.Text + "]");
                     if (Directory.Exists(dlcFolder))
                     {
                         Directory.Delete(dlcFolder, true);

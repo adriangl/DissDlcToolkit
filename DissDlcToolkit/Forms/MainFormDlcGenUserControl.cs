@@ -254,7 +254,7 @@ namespace DissDlcToolkit.Forms
             
             // Create needed folders; base folder by default will be in the same path as the executable
             String baseFolder = Settings.getDlcMainFolder();
-            String dlcFolder = System.IO.Path.Combine(baseFolder, "[" + dlcGenCostumeSlotComboBox.Text + "]" + "[" + dlcGenCharacterComboBox.Text + "]");
+            String dlcFolder = System.IO.Path.Combine(baseFolder, "[" + dlcGenCharacterComboBox.Text + "]" + "[" + dlcGenCostumeSlotComboBox.Text + "]");
             deleteNewDlcFolder(dlcFolder);
             Directory.CreateDirectory(dlcFolder);
 
