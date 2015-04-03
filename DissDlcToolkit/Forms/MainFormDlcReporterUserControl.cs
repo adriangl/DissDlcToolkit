@@ -18,7 +18,10 @@ namespace DissDlcToolkit.Forms
     public partial class MainFormDlcReporterUserControl : UserControl
     {
         private const String TAG = "MainFormDlcReporterUserControl";
-        private ExcelPackage pck;
+        
+        private ExcelPackage baseExcelPackage;
+        
+        private ExcelWorksheet characterDlcWorksheet;
 
         public MainFormDlcReporterUserControl()
         {
@@ -53,7 +56,7 @@ namespace DissDlcToolkit.Forms
             reporterDataTextBox.Text = "";
 
             // Get a worksheet to write excel values
-            ExcelWorksheet ws = initExcelWorkbook();
+            initExcelWorkbook();
             int excelRow = 2;
 
             // Iterate through all possible DLC Object Table names
@@ -73,8 +76,8 @@ namespace DissDlcToolkit.Forms
                             String textData = getTextDataForEntry(folder, i, objectTableHashFileName, entry);
                             reporterDataTextBox.AppendText(textData);
                             // And add them to Excel sheet
-                            addExcelDataForEntry(folder, i, objectTableHashFileName, entry, ws, excelRow);
-                            ws.Cells[ws.Dimension.Address].AutoFitColumns();
+                            addExcelDataForEntry(folder, i, objectTableHashFileName, entry, characterDlcWorksheet, excelRow);
+                            characterDlcWorksheet.Cells[characterDlcWorksheet.Dimension.Address].AutoFitColumns();
                             excelRow++;
                         }
                     }
@@ -104,25 +107,25 @@ namespace DissDlcToolkit.Forms
         private ExcelWorksheet initExcelWorkbook()
         {
             // Init Excel spreadsheet data
-            pck = new ExcelPackage();
+            baseExcelPackage = new ExcelPackage();
             // Add the "DLC Files" sheet & headers
-            var ws = pck.Workbook.Worksheets.Add("DLC files");
-            ws.Cells["A1"].Value = "DLC Slot";
-            ws.Cells["B1"].Value = "Character";
-            ws.Cells["C1"].Value = "Type";
-            ws.Cells["D1"].Value = "DLC ID";
-            ws.Cells["E1"].Value = "Costume Slot";
-            ws.Cells["F1"].Value = "DLC Model name";
-            ws.Cells["G1"].Value = "DLC .objx name";
-            ws.Cells["H1"].Value = "Controller";
-            ws.Cells["I1"].Value = "GMO";
-            ws.Cells["J1"].Value = "GIM";
-            ws.Cells["K1"].Value = "GIM Extra";
-            ws.Cells["L1"].Value = "EXEX";
-            ws.Cells["M1"].Value = "COSX";
-            ws.Cells["N1"].Value = "OBJX";
-            ws.Cells["A1:N1"].Style.Font.Bold = true;
-            return ws;
+            characterDlcWorksheet = baseExcelPackage.Workbook.Worksheets.Add("DLC files");
+            characterDlcWorksheet.Cells["A1"].Value = "DLC Slot";
+            characterDlcWorksheet.Cells["B1"].Value = "Character";
+            characterDlcWorksheet.Cells["C1"].Value = "Type";
+            characterDlcWorksheet.Cells["D1"].Value = "DLC ID";
+            characterDlcWorksheet.Cells["E1"].Value = "Costume Slot";
+            characterDlcWorksheet.Cells["F1"].Value = "DLC Model name";
+            characterDlcWorksheet.Cells["G1"].Value = "DLC .objx name";
+            characterDlcWorksheet.Cells["H1"].Value = "Controller";
+            characterDlcWorksheet.Cells["I1"].Value = "GMO";
+            characterDlcWorksheet.Cells["J1"].Value = "GIM";
+            characterDlcWorksheet.Cells["K1"].Value = "GIM Extra";
+            characterDlcWorksheet.Cells["L1"].Value = "EXEX";
+            characterDlcWorksheet.Cells["M1"].Value = "COSX";
+            characterDlcWorksheet.Cells["N1"].Value = "OBJX";
+            characterDlcWorksheet.Cells["A1:N1"].Style.Font.Bold = true;
+            return characterDlcWorksheet;
         }
 
         private String getTextDataForEntry(String folder, int dlcObjectEntrySlot, String objectTableHashFileName, ObjectEntry entry)
@@ -148,7 +151,8 @@ namespace DissDlcToolkit.Forms
             return builder.ToString();
         }
 
-        private void addExcelDataForEntry(String folder, int dlcObjectEntrySlot, String objectTableHashFileName, ObjectEntry entry, ExcelWorksheet ws, int excelRow)
+        private void addExcelDataForEntry(String folder, int dlcObjectEntrySlot, 
+            String objectTableHashFileName, ObjectEntry entry, ExcelWorksheet ws, int excelRow)
         {
             ws.Cells["A"+excelRow].Value = dlcObjectEntrySlot;
             ws.Cells["B"+excelRow].Value = GlobalData.getInstance().getCharacterNameFromId(entry.characterId);
@@ -196,7 +200,8 @@ namespace DissDlcToolkit.Forms
             {
                 try
                 {
-                    using (StreamWriter writer = new StreamWriter(new FileStream(fileToSave, FileMode.Create)))
+                    using (StreamWriter writer = new StreamWriter(new FileStream(
+                        fileToSave, FileMode.Create)))
                     {
                         writer.Write(reporterDataTextBox.Text);
                     }
@@ -218,10 +223,13 @@ namespace DissDlcToolkit.Forms
             {
                 try
                 {
-                    pck.File = new FileInfo(@fileToSave);
-                    pck.Save();
-                    reporterSaveToExcelButton.Enabled = false;
-                    MessageBox.Show("Excel spreadsheet exported OK!");
+                    using (ExcelPackage packageToSave = new ExcelPackage())
+                    {
+                        packageToSave.File = new FileInfo(@fileToSave);
+                        packageToSave.Workbook.Worksheets.Add("DLC Files", characterDlcWorksheet);
+                        packageToSave.Save();
+                        MessageBox.Show("Excel spreadsheet exported OK!");
+                    }
                 }
                 catch (Exception ex)
                 {
