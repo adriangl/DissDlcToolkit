@@ -40,5 +40,38 @@ namespace DissDlcToolkit
             Properties.Settings.Default.createExexBackupWhenSaving = enabled;
             Properties.Settings.Default.Save();
         }
+
+        public static void setDlcGenReadmeEnabled(bool p)
+        {
+            Properties.Settings.Default.dlcGenReadmeEnabled = p;
+            Properties.Settings.Default.Save();
+        }
+
+        public static void setAttachmentReadmeEnabled(bool p)
+        {
+            Properties.Settings.Default.attachmentGenReadmeEnabled = p;
+            Properties.Settings.Default.Save();
+        }
+
+        public static void setBgmReadmeEnabled(bool p)
+        {
+            Properties.Settings.Default.bgmGenReadmeEnabled = p;
+            Properties.Settings.Default.Save();
+        }
+
+        public static bool getDlcGenReadmeEnabled()
+        {
+            return Properties.Settings.Default.dlcGenReadmeEnabled;
+        }
+
+        public static bool getAttachmentReadmeEnabled()
+        {
+            return Properties.Settings.Default.attachmentGenReadmeEnabled;
+        }
+
+        public static bool getBgmReadmeEnabled()
+        {
+            return Properties.Settings.Default.bgmGenReadmeEnabled;
+        }
     }
 }

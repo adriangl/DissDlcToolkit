@@ -307,62 +307,62 @@ namespace DissDlcToolkit.Forms
             String gimExtraHashFileName = Hasher.hash(("menu/JP/battle/chara_image/" + playerObjectEntry.modelName + "_2.gim").ToLower()) + ".edat";
 
             // Write player files in DLC folder
-            using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+
+            StringBuilder readmeStringBuilder = new StringBuilder();
+            try
             {
-                try
+                ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+
+                readmeStringBuilder.AppendLine(dlcGenCharacterComboBox.Text + " " + dlcGenCostumeSlotComboBox.Text);
+                readmeStringBuilder.AppendLine("-----------------------");
+                readmeStringBuilder.AppendLine("Player object entry slot: " + playerDlcSlotNumber.ToString());
+                readmeStringBuilder.AppendLine("Player object entry ID: " + MiscUtils.swapEndianness(playerObjectEntry.id).ToString("X4"));
+                readmeStringBuilder.AppendLine("-----------------------");
+
+                playerObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
+                readmeStringBuilder.AppendLine("Player object entry (BIN):\t" + objectTableHashFileName);
+
+                // If selected character is other than Aerith, add player models, portraits and exex file
+                if (dlcGenPlayerGmoGimEnabled)
                 {
-                    ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+                    File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, playerGmoHashFileName));
+                    readmeStringBuilder.AppendLine("Player model (GMO):\t\t" + playerGmoHashFileName);
 
-                    readmeFileWriter.WriteLine(dlcGenCharacterComboBox.Text + " " + dlcGenCostumeSlotComboBox.Text);
-                    readmeFileWriter.WriteLine("-----------------------");
-                    readmeFileWriter.WriteLine("Player object entry slot: " + playerDlcSlotNumber.ToString());
-                    readmeFileWriter.WriteLine("Player object entry ID: " + MiscUtils.swapEndianness(playerObjectEntry.id).ToString("X4"));
-                    readmeFileWriter.WriteLine("-----------------------");
+                    File.Copy(playerGimMainFile, System.IO.Path.Combine(dlcFolder, gimMainHashFileName));
+                    readmeStringBuilder.AppendLine("Player portrait (GIM):\t\t" + gimMainHashFileName);
 
-                    playerObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
-                    readmeFileWriter.WriteLine("Player object entry (BIN):\t" + objectTableHashFileName);
-
-                    // If selected character is other than Aerith, add player models, portraits and exex file
-                    if (dlcGenPlayerGmoGimEnabled)
+                    if (dlcGenPlayerGimFileExtraEnabled)
                     {
-                        File.Copy(playerGmoFile, System.IO.Path.Combine(dlcFolder, playerGmoHashFileName));
-                        readmeFileWriter.WriteLine("Player model (GMO):\t\t" + playerGmoHashFileName);
-
-                        File.Copy(playerGimMainFile, System.IO.Path.Combine(dlcFolder, gimMainHashFileName));
-                        readmeFileWriter.WriteLine("Player portrait (GIM):\t\t" + gimMainHashFileName);
-
-                        if (dlcGenPlayerGimFileExtraEnabled)
-                        {
-                            File.Copy(playerGimExtraFile, System.IO.Path.Combine(dlcFolder, gimExtraHashFileName));
-                            readmeFileWriter.WriteLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
-                        }
-
-                        byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
-                        if (exexBuffer != null)
-                        {
-                            File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, exexHashFileName), exexBuffer);
-                            readmeFileWriter.WriteLine("Player EX Mode effects (EXEX):\t" + exexHashFileName);
-                        }
+                        File.Copy(playerGimExtraFile, System.IO.Path.Combine(dlcFolder, gimExtraHashFileName));
+                        readmeStringBuilder.AppendLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
                     }
 
-                    byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
-                    if (cosxBuffer != null)
+                    byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
+                    if (exexBuffer != null)
                     {
-                        File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, cosxHashFileName), cosxBuffer);
-                        readmeFileWriter.WriteLine("Player costume effects (COSX):\t" + cosxHashFileName);
+                        File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, exexHashFileName), exexBuffer);
+                        readmeStringBuilder.AppendLine("Player EX Mode effects (EXEX):\t" + exexHashFileName);
                     }
+                }
 
-                    readmeFileWriter.WriteLine("-----------------------");
-                }
-                catch (Exception e)
+                byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
+                if (cosxBuffer != null)
                 {
-                    MessageBox.Show("There was an error with one or some of the player input files."+"\r\n"+
-                        "Please verify that they are valid files");
-                    Logger.Log(TAG, e);
-                    deleteNewDlcFolder(dlcFolder);
-                    return;
+                    File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, cosxHashFileName), cosxBuffer);
+                    readmeStringBuilder.AppendLine("Player costume effects (COSX):\t" + cosxHashFileName);
                 }
+
+                readmeStringBuilder.AppendLine("-----------------------");
             }
+            catch (Exception e)
+            {
+                MessageBox.Show("There was an error with one or some of the player input files."+"\r\n"+
+                    "Please verify that they are valid files");
+                Logger.Log(TAG, e);
+                deleteNewDlcFolder(dlcFolder);
+                return;
+            }
+            
 
             // Generate assist DLC (if needed)
             if (dlcGenAssistEnabled && !dlcGenAssistGmoFileTextBox.Text.Equals(""))
@@ -410,23 +410,21 @@ namespace DissDlcToolkit.Forms
                     String assistObjectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + assistDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
                     String assistGmoHashFileName = Hasher.hash(("obj/" + assistObjectEntry.modelName + ".gmo").ToLower()) + ".edat";
 
-                    // Write assist files in DLC folder 
-                    using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Append)))
-                    {
-                        ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+                    // Write assist files in DLC folder                    
+                    ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
 
-                        readmeFileWriter.WriteLine("Assist object entry slot: " + assistDlcSlotNumber.ToString());
-                        readmeFileWriter.WriteLine("Assist object entry ID: " + MiscUtils.swapEndianness(assistObjectEntry.id).ToString("X4"));
-                        readmeFileWriter.WriteLine("-----------------------");
+                    readmeStringBuilder.AppendLine("Assist object entry slot: " + assistDlcSlotNumber.ToString());
+                    readmeStringBuilder.AppendLine("Assist object entry ID: " + MiscUtils.swapEndianness(assistObjectEntry.id).ToString("X4"));
+                    readmeStringBuilder.AppendLine("-----------------------");
 
-                        assistObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, assistObjectTableHashFileName));
-                        readmeFileWriter.WriteLine("Assist object entry (BIN):\t" + assistObjectTableHashFileName);
+                    assistObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, assistObjectTableHashFileName));
+                    readmeStringBuilder.AppendLine("Assist object entry (BIN):\t" + assistObjectTableHashFileName);
 
-                        File.Copy(assistGmoFile, System.IO.Path.Combine(dlcFolder, assistGmoHashFileName));
-                        readmeFileWriter.WriteLine("Assist model (GMO):\t\t" + assistGmoHashFileName);
+                    File.Copy(assistGmoFile, System.IO.Path.Combine(dlcFolder, assistGmoHashFileName));
+                    readmeStringBuilder.AppendLine("Assist model (GMO):\t\t" + assistGmoHashFileName);
 
-                        readmeFileWriter.WriteLine("-----------------------");
-                    }
+                    readmeStringBuilder.AppendLine("-----------------------");
+                    
 
                 }
                 catch (Exception e)
@@ -436,6 +434,15 @@ namespace DissDlcToolkit.Forms
                     Logger.Log(TAG, e);
                     deleteNewDlcFolder(dlcFolder);
                     return;
+                }
+            }
+
+            // Write readme
+            if (Settings.getDlcGenReadmeEnabled())
+            {
+                using (StreamWriter writer = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                {
+                    writer.Write(readmeStringBuilder);
                 }
             }
 

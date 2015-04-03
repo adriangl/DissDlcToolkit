@@ -25,6 +25,10 @@ namespace DissDlcToolkit.Forms
             settingsMainDlcFolderTextBox.Text = mainDlcFolder;
             // Load exex backup data
             settingsBackupExex.Checked = Settings.getBackupExexSetting();
+            // Load readme data
+            settingsDlcGenReadmeEnabled.Checked = Settings.getDlcGenReadmeEnabled();
+            settingsAttachmentReadmeEnabled.Checked = Settings.getAttachmentReadmeEnabled();
+            settingsBgmReadmeEnabled.Checked = Settings.getBgmReadmeEnabled();
         }
 
         private void browseMainDlcFolderButton_Click(object sender, EventArgs e)
@@ -43,6 +47,41 @@ namespace DissDlcToolkit.Forms
         {
             // Save exex backup setting
             Settings.setBackupExexSetting(settingsBackupExex.Checked);
+        }
+
+        private void settingsDlcGenReadmeEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.setDlcGenReadmeEnabled(settingsDlcGenReadmeEnabled.Checked);
+        }
+
+        private void settingsAttachmentReadmeEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.setAttachmentReadmeEnabled(settingsAttachmentReadmeEnabled.Checked);
+        }
+
+        private void settingsBgmReadmeEnabled_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.setBgmReadmeEnabled(settingsBgmReadmeEnabled.Checked);
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            settingsDlcGenReadmeEnabled.Checked = !settingsDlcGenReadmeEnabled.Checked;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            settingsAttachmentReadmeEnabled.Checked = !settingsAttachmentReadmeEnabled.Checked;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            settingsBgmReadmeEnabled.Checked = !settingsBgmReadmeEnabled.Checked;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            settingsBackupExex.Checked = !settingsBackupExex.Checked;
         }
     }
 }

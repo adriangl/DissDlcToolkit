@@ -139,31 +139,39 @@ namespace DissDlcToolkit.Forms
                     String objxHashFileName = Hasher.hash(("obj/" + attachmentObjectEntry.objxName + ".objx").ToLower()) + ".edat";
 
                     // Write player files in DLC folder
-                    using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                    StringBuilder readmeStringBuilder = new StringBuilder();
+                    
+                    ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+
+                    readmeStringBuilder.AppendLine("Attachment in slot " + attachmentDlcSlotNumber);
+                    readmeStringBuilder.AppendLine("-----------------------");
+                    readmeStringBuilder.AppendLine("Attachment object entry slot: " + attachmentDlcSlotNumber.ToString());
+                    readmeStringBuilder.AppendLine("Attachment object entry ID: " + MiscUtils.swapEndianness(attachmentObjectEntry.id).ToString("X4"));
+                    readmeStringBuilder.AppendLine("-----------------------");
+
+                    attachmentObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
+                    readmeStringBuilder.AppendLine("Player object entry (BIN):\t\t" + objectTableHashFileName);
+
+                    // If selected character is other than Aerith, add player models, portraits and exex file                    
+                    File.Copy(attachmentGmoFile, System.IO.Path.Combine(dlcFolder, attachmentGmoHashFileName));
+                    readmeStringBuilder.AppendLine("Attachment model (GMO):\t\t\t" + attachmentGmoHashFileName);
+
+                    byte[] objxBuffer = (byte[])rm.GetObject(selectedAttachmentData.internalName.ToUpper() + "_OBJX");
+                    if (objxBuffer != null)
                     {
-                        ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());
+                        File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, objxHashFileName), objxBuffer);
+                        readmeStringBuilder.AppendLine("Attachment object effects (OBJX):\t" + objxHashFileName);
+                    }
 
-                        readmeFileWriter.WriteLine("Attachment in slot " + attachmentDlcSlotNumber);
-                        readmeFileWriter.WriteLine("-----------------------");
-                        readmeFileWriter.WriteLine("Attachment object entry slot: " + attachmentDlcSlotNumber.ToString());
-                        readmeFileWriter.WriteLine("Attachment object entry ID: " + MiscUtils.swapEndianness(attachmentObjectEntry.id).ToString("X4"));
-                        readmeFileWriter.WriteLine("-----------------------");
+                    readmeStringBuilder.AppendLine("-----------------------");
 
-                        attachmentObjectTable.writeToFile(System.IO.Path.Combine(dlcFolder, objectTableHashFileName));
-                        readmeFileWriter.WriteLine("Player object entry (BIN):\t\t" + objectTableHashFileName);
-
-                        // If selected character is other than Aerith, add player models, portraits and exex file                    
-                        File.Copy(attachmentGmoFile, System.IO.Path.Combine(dlcFolder, attachmentGmoHashFileName));
-                        readmeFileWriter.WriteLine("Attachment model (GMO):\t\t\t" + attachmentGmoHashFileName);
-
-                        byte[] objxBuffer = (byte[])rm.GetObject(selectedAttachmentData.internalName.ToUpper() + "_OBJX");
-                        if (objxBuffer != null)
+                    // Write readme
+                    if (Settings.getAttachmentReadmeEnabled())
+                    {
+                        using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
                         {
-                            File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, objxHashFileName), objxBuffer);
-                            readmeFileWriter.WriteLine("Attachment object effects (OBJX):\t" + objxHashFileName);
+                            readmeFileWriter.Write(readmeStringBuilder);
                         }
-
-                        readmeFileWriter.WriteLine("-----------------------");
                     }
 
                     MessageBox.Show("Success!!");

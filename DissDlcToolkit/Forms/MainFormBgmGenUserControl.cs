@@ -286,14 +286,17 @@ namespace DissDlcToolkit.Forms
             }
 
             // Generate readme
-            String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
-            using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+            if (Settings.getBgmReadmeEnabled())
             {
-                readmeFileWriter.WriteLine("BGM DLC Slot "+bgmGenDlcSlotComboBox.Text);
-                readmeFileWriter.WriteLine("-----------------------");
-                for (int i = 0; i < bgmNames.Count; i++)
+                String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+                using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
                 {
-                    readmeFileWriter.WriteLine(bgmNames[i] + " -> " + bgmFileNames[i]);
+                    readmeFileWriter.WriteLine("BGM DLC Slot " + bgmGenDlcSlotComboBox.Text);
+                    readmeFileWriter.WriteLine("-----------------------");
+                    for (int i = 0; i < bgmNames.Count; i++)
+                    {
+                        readmeFileWriter.WriteLine(bgmNames[i] + " -> " + bgmFileNames[i]);
+                    }
                 }
             }
 

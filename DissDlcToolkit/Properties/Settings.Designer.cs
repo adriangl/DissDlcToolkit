@@ -46,5 +46,41 @@ namespace DissDlcToolkit.Properties {
                 this["createExexBackupWhenSaving"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool dlcGenReadmeEnabled {
+            get {
+                return ((bool)(this["dlcGenReadmeEnabled"]));
+            }
+            set {
+                this["dlcGenReadmeEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool bgmGenReadmeEnabled {
+            get {
+                return ((bool)(this["bgmGenReadmeEnabled"]));
+            }
+            set {
+                this["bgmGenReadmeEnabled"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool attachmentGenReadmeEnabled {
+            get {
+                return ((bool)(this["attachmentGenReadmeEnabled"]));
+            }
+            set {
+                this["attachmentGenReadmeEnabled"] = value;
+            }
+        }
     }
 }
