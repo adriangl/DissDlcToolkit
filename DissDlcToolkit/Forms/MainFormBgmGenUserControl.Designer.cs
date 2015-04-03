@@ -81,7 +81,7 @@
             // bgmGenSaveButton
             // 
             this.bgmGenSaveButton.Enabled = false;
-            this.bgmGenSaveButton.Location = new System.Drawing.Point(235, 230);
+            this.bgmGenSaveButton.Location = new System.Drawing.Point(231, 230);
             this.bgmGenSaveButton.Name = "bgmGenSaveButton";
             this.bgmGenSaveButton.Size = new System.Drawing.Size(75, 23);
             this.bgmGenSaveButton.TabIndex = 27;

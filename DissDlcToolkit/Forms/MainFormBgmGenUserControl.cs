@@ -251,6 +251,7 @@ namespace DissDlcToolkit.Forms
 
             // Prepare copy
             List<String> bgmNames = new List<String>();
+            List<String> bgmFileNames = new List<String>();
             BgmTable bgmTable = new BgmTable();
             foreach (FormBgmEntry formEntry in bgmFormEntries)
             {
@@ -281,7 +282,23 @@ namespace DissDlcToolkit.Forms
                 {
                     File.Copy(formEntry.filePath, hashedInternalFilePath, true);
                 }
+                bgmFileNames.Add(hashedInternalFileName);
             }
+
+            // Generate readme
+            String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+            using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+            {
+                readmeFileWriter.WriteLine("BGM DLC Slot "+bgmGenDlcSlotComboBox.Text);
+                readmeFileWriter.WriteLine("-----------------------");
+                for (int i = 0; i < bgmNames.Count; i++)
+                {
+                    readmeFileWriter.WriteLine(bgmNames[i] + " -> " + bgmFileNames[i]);
+                }
+            }
+
+            MessageBox.Show("Success!");
+
         }
 
         private void createDlcFolder(string dlcFolder)
