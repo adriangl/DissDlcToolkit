@@ -23,10 +23,13 @@ namespace DissDlcToolkit.Models
         public UInt16 alt1AssistID { get; set; }
         public UInt16 alt2PlayerID { get; set; }
         public UInt16 alt2AssistID { get; set; }
+        public UInt16 manikinPlayerID { get; set; }
+        public UInt16 manikinAssistID { get; set; }
 
         public CharacterData(String characterName, String internalName, 
             UInt16 normalPlayerId, UInt16 normalAssistId, UInt16 alt1PlayerId, 
-            UInt16 alt1AssistId, UInt16 alt2PlayerId, UInt16 alt2AssistId)
+            UInt16 alt1AssistId, UInt16 alt2PlayerId, UInt16 alt2AssistId, 
+            UInt16 manikinPlayerId, UInt16 manikinAssistId)
         {
             this.characterName = characterName;
             this.internalName = internalName;
@@ -36,6 +39,8 @@ namespace DissDlcToolkit.Models
             this.alt1AssistID = alt1AssistId;
             this.alt2PlayerID = alt2PlayerId;
             this.alt2AssistID = alt2AssistId;
+            this.manikinPlayerID = manikinPlayerId;
+            this.manikinAssistID = manikinAssistId;
 
             // Read from resources           
             ResourceManager rm = new ResourceManager("DissDlcToolkit.Properties.Resources", Assembly.GetExecutingAssembly());

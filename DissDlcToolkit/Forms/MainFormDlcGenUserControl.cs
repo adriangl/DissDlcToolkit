@@ -62,11 +62,11 @@ namespace DissDlcToolkit.Forms
 
         private void dlcGenCharacterComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            FormUtils.genericValidateComboBox(sender);
             configCostumeSlots();
             configPlayerEnabled();
             configAssistEnabled();
             configGimExtraEnabled();
-            FormUtils.genericValidateComboBox(sender);
         }
 
         private void configPlayerEnabled()
@@ -112,26 +112,33 @@ namespace DissDlcToolkit.Forms
 
         private void configCostumeSlots()
         {
+            // Get selected character internal name
+            String selectedCharacterInternalName = ((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName;
             // Config costume slot keys & values depending on which can be used for characters
             ArrayList dlcGenCostumeSlotKeyValues = new ArrayList();
             // Add "Normal", "Alt. 1" & "Alt. 2" Slots
             dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x01, "Normal"));
             dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x02, "Alt. 1"));
             // Feral Chaos doesn't have an "Alt. 2" costume, don't add it
-            if (!((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_org210"))
+            if (!selectedCharacterInternalName.Equals("p_org210"))
             {
                 dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x03, "Alt. 2"));
             }
+            // Add manikin slot; Aerith and Feral Chaos can't have them
+            if (!selectedCharacterInternalName.Equals("p_org210") && !selectedCharacterInternalName.Equals("p_sev120"))
+            {
+                dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x00, "Manikin"));
+            }
             // Add "DLC x" Slots
             // Aerith can't use DLC x Slots (yet), don't add them in this case
-            if (!((CharacterData)dlcGenCharacterComboBox.SelectedValue).internalName.Equals("p_sev120"))
+            if (!selectedCharacterInternalName.Equals("p_sev120"))
             {
                 for (Byte i = 1; i <= 9; i++)
                 {
                     KeyValuePair<Byte, String> data = new KeyValuePair<Byte, String>((byte)(i + (byte)3), "DLC " + i);
                     dlcGenCostumeSlotKeyValues.Add(data);
                 }
-            }
+            }            
             dlcGenCostumeSlotComboBox.DataSource = dlcGenCostumeSlotKeyValues;
             dlcGenCostumeSlotComboBox.DisplayMember = "Value";
             dlcGenCostumeSlotComboBox.ValueMember = "Key";
@@ -256,6 +263,9 @@ namespace DissDlcToolkit.Forms
             // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
             switch (costumeDlcSlot)
             {
+                case 0x00: // Manikin
+                    playerObjectEntry.id = characterData.manikinPlayerID;
+                    break;
                 case 0x01: // Normal
                     playerObjectEntry.id = characterData.normalPlayerID;
                     break;
@@ -270,7 +280,9 @@ namespace DissDlcToolkit.Forms
                     break;
             }
             playerObjectEntry.objectEntrySlot = Convert.ToByte(playerDlcSlotNumber);
-            playerObjectEntry.modelName = characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P";
+            playerObjectEntry.modelName = (costumeDlcSlot != 0x00)
+                ? characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P"
+                : characterData.internalName.ToUpper() + "_ZAKO";
 
             // Get hashed filenames, so the game can read them
             String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + playerDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
@@ -351,6 +363,9 @@ namespace DissDlcToolkit.Forms
                     // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
                     switch (costumeDlcSlot)
                     {
+                        case 0x00: // Manikin
+                            playerObjectEntry.id = characterData.manikinAssistID;
+                            break;
                         case 0x01: // Normal
                             assistObjectEntry.id = characterData.normalAssistID;
                             break;
@@ -365,7 +380,9 @@ namespace DissDlcToolkit.Forms
                             break;
                     }
                     assistObjectEntry.objectEntrySlot = Convert.ToByte(assistDlcSlotNumber);
-                    assistObjectEntry.modelName = characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P_A";
+                    assistObjectEntry.modelName = (costumeDlcSlot != 0x00)
+                        ? characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P_A"
+                        : characterData.internalName.ToUpper() + "_ZAKO_A";
 
                     // Get hashed filenames, so the game can read them
                     String assistObjectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + assistDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
