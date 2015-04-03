@@ -384,5 +384,10 @@ namespace DissDlcToolkit.Forms
         {
             FormUtils.genericValidateComboBox(sender);
         }
+
+        private void bgmGenDlcSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
     }
 }

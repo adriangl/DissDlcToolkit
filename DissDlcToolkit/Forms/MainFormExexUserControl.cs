@@ -272,5 +272,10 @@ namespace DissDlcToolkit.Forms
         {
             FormUtils.genericValidateComboBox(sender);
         }
+
+        private void exexAuraSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
     }
 }

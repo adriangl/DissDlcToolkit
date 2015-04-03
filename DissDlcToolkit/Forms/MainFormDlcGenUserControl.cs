@@ -491,5 +491,25 @@ namespace DissDlcToolkit.Forms
         {
             FormUtils.genericValidateComboBox(sender);
         }
+
+        private void dlcGenCharacterComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
+
+        private void dlcGenCostumeSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
+
+        private void dlcGenPlayerDlcSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
+
+        private void dlcGenAssistDlcSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
     }
 }

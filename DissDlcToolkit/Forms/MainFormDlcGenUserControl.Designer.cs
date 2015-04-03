@@ -208,6 +208,7 @@
             this.dlcGenAssistDlcSlotComboBox.Size = new System.Drawing.Size(121, 21);
             this.dlcGenAssistDlcSlotComboBox.TabIndex = 7;
             this.dlcGenAssistDlcSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenAssistDlcSlotComboBox_SelectedIndexChanged);
+            this.dlcGenAssistDlcSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dlcGenAssistDlcSlotComboBox_KeyDown);
             this.dlcGenAssistDlcSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.dlcGenAssistDlcSlotComboBox_Validating);
             // 
             // dlcGenPlayerDlcSlotComboBox
@@ -220,6 +221,7 @@
             this.dlcGenPlayerDlcSlotComboBox.Size = new System.Drawing.Size(121, 21);
             this.dlcGenPlayerDlcSlotComboBox.TabIndex = 6;
             this.dlcGenPlayerDlcSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenPlayerDlcSlotComboBox_SelectedIndexChanged);
+            this.dlcGenPlayerDlcSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dlcGenPlayerDlcSlotComboBox_KeyDown);
             this.dlcGenPlayerDlcSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.dlcGenPlayerDlcSlotComboBox_Validating);
             // 
             // dlcGenCostumeSlotComboBox
@@ -232,6 +234,7 @@
             this.dlcGenCostumeSlotComboBox.Size = new System.Drawing.Size(121, 21);
             this.dlcGenCostumeSlotComboBox.TabIndex = 5;
             this.dlcGenCostumeSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenCostumeSlotComboBox_SelectedIndexChanged);
+            this.dlcGenCostumeSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dlcGenCostumeSlotComboBox_KeyDown);
             this.dlcGenCostumeSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.dlcGenCostumeSlotComboBox_Validating);
             // 
             // dlcGenCharacterComboBox
@@ -244,6 +247,7 @@
             this.dlcGenCharacterComboBox.Size = new System.Drawing.Size(121, 21);
             this.dlcGenCharacterComboBox.TabIndex = 4;
             this.dlcGenCharacterComboBox.SelectedIndexChanged += new System.EventHandler(this.dlcGenCharacterComboBox_SelectedIndexChanged);
+            this.dlcGenCharacterComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dlcGenCharacterComboBox_KeyDown);
             this.dlcGenCharacterComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.dlcGenCharacterComboBox_Validating);
             // 
             // dlcGenBrowseAssistGmoButton

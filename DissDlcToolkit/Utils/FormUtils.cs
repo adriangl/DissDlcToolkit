@@ -111,5 +111,12 @@ namespace DissDlcToolkit.Utils
 
             return cb.SelectedValue == null;
         }
+
+        internal static void removeDropDown(object sender)
+        {
+            if (!(sender is ComboBox)) { return; }
+            ComboBox cb = sender as ComboBox;
+            cb.DroppedDown = false;
+        }
     }
 }

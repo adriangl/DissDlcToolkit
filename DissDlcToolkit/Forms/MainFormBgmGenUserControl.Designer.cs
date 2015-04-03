@@ -136,6 +136,7 @@
             this.bgmGenDlcSlotComboBox.Size = new System.Drawing.Size(82, 21);
             this.bgmGenDlcSlotComboBox.TabIndex = 24;
             this.bgmGenDlcSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.bgmGenDlcSlotComboBox_SelectedIndexChanged);
+            this.bgmGenDlcSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.bgmGenDlcSlotComboBox_KeyDown);
             this.bgmGenDlcSlotComboBox.Validating += new System.ComponentModel.CancelEventHandler(this.bgmGenDlcSlotComboBox_Validating);
             // 
             // label4

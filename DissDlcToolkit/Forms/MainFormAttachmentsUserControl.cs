@@ -272,5 +272,15 @@ namespace DissDlcToolkit.Forms
         {
             FormUtils.genericValidateComboBox(sender);
         }
+
+        private void attachmentCreationBaseComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
+
+        private void attachmentCreationDlcSlotComboBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            FormUtils.removeDropDown(sender);
+        }
     }
 }
