@@ -165,6 +165,17 @@ namespace DissDlcToolkit.Forms
 
         private void generateDlcFiles()
         {
+            // Validate ComboBox Data against null values
+            if (dlcGenCharacterComboBox.SelectedItem == null
+                || dlcGenCostumeSlotComboBox.SelectedItem == null
+                || dlcGenPlayerDlcSlotComboBox.SelectedItem == null
+                || dlcGenAssistDlcSlotComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Select valid values in the highlighted fields.");
+                return;
+            }
+
+
             // Get needed data for generating the DLC
             Byte costumeDlcSlot = (Byte)dlcGenCostumeSlotComboBox.SelectedValue;
 

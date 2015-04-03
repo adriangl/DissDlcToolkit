@@ -90,6 +90,13 @@ namespace DissDlcToolkit.Forms
 
         private void attachmentCreationGenerateButton_Click(object sender, EventArgs e)
         {
+            if (attachmentCreationDlcSlotComboBox.SelectedItem == null
+                || attachmentCreationBaseComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Select valid values in the highlighted fields.");
+                return;
+            }
+            
             String attachmentGmoFile = attachmentCreationGmoFileTextBox.Text;
             if (attachmentGmoFile.Equals(""))
             {

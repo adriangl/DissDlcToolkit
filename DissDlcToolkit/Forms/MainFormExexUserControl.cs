@@ -129,6 +129,13 @@ namespace DissDlcToolkit.Forms
 
         private void exexSaveButton_Click(object sender, EventArgs e)
         {
+            // Validate data, just in case
+            if (exexAuraSlotComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Select valid values in the highlighted fields.");
+                return;
+            }
+            
             saveValuesToAuraSlot(currentAuraSlotIndex);
             // Backup existing file if the user allowed it & the file exists, and overwrite old copies
             if (Settings.getBackupExexSetting() && File.Exists(@exexFile))

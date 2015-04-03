@@ -107,7 +107,7 @@ namespace DissDlcToolkit.Utils
             ComboBox cb = sender as ComboBox;
             cb.SelectionLength = 0;
 
-            cb.BackColor = cb.SelectedValue == null ? Color.DarkSalmon : SystemColors.Window;
+            cb.BackColor = cb.SelectedItem == null ? Color.DarkSalmon : SystemColors.Window;
 
             return cb.SelectedValue == null;
         }

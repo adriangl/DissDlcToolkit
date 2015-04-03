@@ -223,6 +223,12 @@ namespace DissDlcToolkit.Forms
         private void saveDataToFiles()
         {
             // Validate data
+            if (bgmGenDlcSlotComboBox.SelectedItem == null)
+            {
+                MessageBox.Show("Select valid values in the highlighted fields.");
+                return;
+            }
+
             int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
             if (selectedBgmSlotIndex < 0){
                 MessageBox.Show("You have to select a valid DLC slot");
@@ -234,7 +240,8 @@ namespace DissDlcToolkit.Forms
             {
                 MessageBox.Show("You have to add at least one BGM to the list");
                 return;
-            }           
+            }   
+        
             
             // Get DLC folder
             String baseFolder = Settings.getDlcMainFolder();
