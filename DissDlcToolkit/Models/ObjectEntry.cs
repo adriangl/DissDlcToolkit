@@ -119,6 +119,8 @@ namespace DissDlcToolkit.Models
         {
             switch (this.costumeId)
             {
+                case COSTUME_SLOT_MANIKIN:
+                    return "Manikin";
                 case COSTUME_SLOT_NORMAL:
                     return "Normal";
                 case COSTUME_SLOT_ALT1:

@@ -12,6 +12,7 @@ using DissDlcToolkit.Utils;
 using DissDlcToolkit.Models;
 using OfficeOpenXml;
 using FolderSelect;
+using System.Collections;
 
 namespace DissDlcToolkit.Forms
 {
@@ -22,6 +23,7 @@ namespace DissDlcToolkit.Forms
         private ExcelPackage baseExcelPackage;
         
         private ExcelWorksheet characterDlcWorksheet;
+        private ExcelWorksheet bgmDlcWorksheet;
 
         public MainFormDlcReporterUserControl()
         {
@@ -57,12 +59,14 @@ namespace DissDlcToolkit.Forms
 
             // Get a worksheet to write excel values
             initExcelWorkbook();
-            int excelRow = 2;
+            int characterExcelRow = 2;
+            int bgmExcelRow = 2;
 
+            // Character DLC checking
             // Iterate through all possible DLC Object Table names
             try
             {
-                for (int i = 1; i <= 999; i++)
+                foreach (int i in Enumerable.Range(1, 999))
                 {
                     String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + i.ToString("d3") + "oe.bin") + ".edat";
                     String pathToSearch = System.IO.Path.Combine(folder, objectTableHashFileName);
@@ -73,12 +77,12 @@ namespace DissDlcToolkit.Forms
                         foreach (ObjectEntry entry in hashedFileObjectTable.entries)
                         {
                             // Print results in TextBox
-                            String textData = getTextDataForEntry(folder, i, objectTableHashFileName, entry);
+                            String textData = getCharacterDlcTextDataForEntry(folder, i, objectTableHashFileName, entry);
                             reporterDataTextBox.AppendText(textData);
                             // And add them to Excel sheet
-                            addExcelDataForEntry(folder, i, objectTableHashFileName, entry, characterDlcWorksheet, excelRow);
+                            addCharacterDlcExcelDataForEntry(folder, i, objectTableHashFileName, entry, characterDlcWorksheet, characterExcelRow);
                             characterDlcWorksheet.Cells[characterDlcWorksheet.Dimension.Address].AutoFitColumns();
-                            excelRow++;
+                            characterExcelRow++;
                         }
                     }
                 }
@@ -89,6 +93,63 @@ namespace DissDlcToolkit.Forms
                 Logger.Log(TAG, e);
                 return;
             }
+
+            // BGM DLC Checking
+            try
+            {
+                foreach (int i in Enumerable.Range(1, 999))
+                {
+                    String bgmTableHashFileName = Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", i.ToString("D3"))) + ".edat";
+                    String pathToSearch = System.IO.Path.Combine(folder, bgmTableHashFileName);
+                    if (File.Exists(pathToSearch))
+                    {
+                        // We have found a Bgm table inside the folder; try to find the corresponding
+                        // strings from text file in DLC slot
+                        ArrayList bgmTitles = new ArrayList();
+                        String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", i.ToString("D3"))) + ".edat";
+                        String textHashedFilePath = System.IO.Path.Combine(folder, textHashedFileName);
+                        if (File.Exists(textHashedFilePath))
+                        {
+                            bgmTitles = MessFileReader.decodeDLCText(@textHashedFilePath);
+                        }
+
+                        BgmTable bgmTable = new BgmTable(pathToSearch);
+
+                        // Getting Form BGM entries
+                        List<FormBgmEntry> formEntries = new List<FormBgmEntry>();
+                        foreach (int j in Enumerable.Range(0, bgmTable.entries.Count))
+                        {
+                            BgmEntry entry = bgmTable.entries[j];
+                            FormBgmEntry formEntry = new FormBgmEntry(entry);                           
+                            if (bgmTitles.Count > j)
+                            {
+                                formEntry.bgmTitle = (String)bgmTitles[j];
+                            }
+                            formEntries.Add(formEntry);
+                        }
+
+                        foreach (FormBgmEntry entry in formEntries)
+                        {
+                            // Print results in TextBox
+                            String textData = getBgmDlcTextDataForEntry(i, entry);
+                            reporterDataTextBox.AppendText(textData);
+                            // And add them to Excel sheet
+                            addBgmDlcExcelDataForEntry(i, entry, bgmDlcWorksheet, bgmExcelRow);
+                            bgmDlcWorksheet.Cells[bgmDlcWorksheet.Dimension.Address].AutoFitColumns();
+                            bgmExcelRow++;
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("There was a problem with one or some of the files in the selected folder");
+                Logger.Log(TAG, e);
+                return;
+            }
+
+
+
             // If the reporter text box has any data, then that means that there's data in the folder
             if (!reporterDataTextBox.Text.Trim().Equals(""))
             {
@@ -103,13 +164,13 @@ namespace DissDlcToolkit.Forms
             }
             
         }
-
-        private ExcelWorksheet initExcelWorkbook()
+ 
+        private void initExcelWorkbook()
         {
             // Init Excel spreadsheet data
             baseExcelPackage = new ExcelPackage();
             // Add the "DLC Files" sheet & headers
-            characterDlcWorksheet = baseExcelPackage.Workbook.Worksheets.Add("DLC files");
+            characterDlcWorksheet = baseExcelPackage.Workbook.Worksheets.Add("Character DLC files");
             characterDlcWorksheet.Cells["A1"].Value = "DLC Slot";
             characterDlcWorksheet.Cells["B1"].Value = "Character";
             characterDlcWorksheet.Cells["C1"].Value = "Type";
@@ -125,16 +186,25 @@ namespace DissDlcToolkit.Forms
             characterDlcWorksheet.Cells["M1"].Value = "COSX";
             characterDlcWorksheet.Cells["N1"].Value = "OBJX";
             characterDlcWorksheet.Cells["A1:N1"].Style.Font.Bold = true;
-            return characterDlcWorksheet;
+
+            // Add the "BGM DLC Files" sheet & headers
+            bgmDlcWorksheet = baseExcelPackage.Workbook.Worksheets.Add("BGM DLC files");
+            bgmDlcWorksheet.Cells["A1"].Value = "BGM Title";
+            bgmDlcWorksheet.Cells["B1"].Value = "BGM Slot";
+            bgmDlcWorksheet.Cells["C1"].Value = "BGM ID";
+            bgmDlcWorksheet.Cells["D1"].Value = "BGM File";
+            bgmDlcWorksheet.Cells["E1"].Value = "BGM Slot File";
+            bgmDlcWorksheet.Cells["F1"].Value = "BGM Slot Text File";
+            bgmDlcWorksheet.Cells["A1:F1"].Style.Font.Bold = true;
         }
 
-        private String getTextDataForEntry(String folder, int dlcObjectEntrySlot, String objectTableHashFileName, ObjectEntry entry)
+        private String getCharacterDlcTextDataForEntry(String folder, int dlcObjectEntrySlot, String objectTableHashFileName, ObjectEntry entry)
         {
             StringBuilder builder = new StringBuilder();
             builder.AppendLine("DLC Slot: " + dlcObjectEntrySlot);
             builder.AppendLine("Character: " + GlobalData.getInstance().getCharacterNameFromId(entry.characterId));
             builder.AppendLine("Type: " + entry.getFormattedObjectEntryType());
-            builder.AppendLine("DLC ID: " + MiscUtils.swapEndianness(entry.id).ToString("X4"));
+            builder.AppendLine("DLC ID: " + entry.id.ToString("X4"));
             builder.AppendLine("Costume slot: " + entry.getFormattedCostumeSlot());
             builder.AppendLine("DLC Model name: " + entry.modelName);
             builder.AppendLine("DLC .objx name: " + entry.objxName);
@@ -151,13 +221,26 @@ namespace DissDlcToolkit.Forms
             return builder.ToString();
         }
 
-        private void addExcelDataForEntry(String folder, int dlcObjectEntrySlot, 
+        private string getBgmDlcTextDataForEntry(int bgmDlcSlot, FormBgmEntry formEntry)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine("BGM Title: " + formEntry.bgmTitle);
+            builder.AppendLine("BGM Slot: " + bgmDlcSlot);
+            builder.AppendLine("BGM ID: " + formEntry.entry.id.ToString("X4"));
+            builder.AppendLine("BGM File: " + Hasher.hash(String.Format("bgm/{0}", formEntry.entry.internalFileName)) + ".edat");
+            builder.AppendLine("BGM Slot File: " + Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", bgmDlcSlot.ToString("D3"))) + ".edat");
+            builder.AppendLine("BGM Slot Text File: " + Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", bgmDlcSlot.ToString("D3"))) + ".edat");
+            builder.AppendLine("--------------------------------------");
+            return builder.ToString();
+        }
+
+        private void addCharacterDlcExcelDataForEntry(String folder, int dlcObjectEntrySlot, 
             String objectTableHashFileName, ObjectEntry entry, ExcelWorksheet ws, int excelRow)
         {
             ws.Cells["A"+excelRow].Value = dlcObjectEntrySlot;
             ws.Cells["B"+excelRow].Value = GlobalData.getInstance().getCharacterNameFromId(entry.characterId);
             ws.Cells["C"+excelRow].Value = entry.getFormattedObjectEntryType();
-            ws.Cells["D"+excelRow].Value = MiscUtils.swapEndianness(entry.id).ToString("X4");
+            ws.Cells["D"+excelRow].Value = entry.id.ToString("X4");
             ws.Cells["E"+excelRow].Value = entry.getFormattedCostumeSlot();
             ws.Cells["F"+excelRow].Value = entry.modelName;
             ws.Cells["G"+excelRow].Value = entry.objxName;
@@ -169,8 +252,20 @@ namespace DissDlcToolkit.Forms
             ws.Cells["L"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".exex").ToLower()) + ".edat");
             ws.Cells["M" + excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".cosx").ToLower()) + ".edat");
             ws.Cells["N"+excelRow].Value = getFileNameIfExists(null, folder, Hasher.hash(("obj/" + entry.modelName + ".objx").ToLower()) + ".edat");
-        
         }
+
+        private void addBgmDlcExcelDataForEntry(int bgmDlcSlot, FormBgmEntry formEntry, ExcelWorksheet bgmDlcWorksheet, int bgmExcelRow)
+        {
+            bgmDlcWorksheet.Cells["A" + bgmExcelRow].Value = formEntry.bgmTitle;
+            bgmDlcWorksheet.Cells["B" + bgmExcelRow].Value = bgmDlcSlot;
+            bgmDlcWorksheet.Cells["C" + bgmExcelRow].Value = formEntry.entry.id.ToString("X4");
+            bgmDlcWorksheet.Cells["D" + bgmExcelRow].Value = Hasher.hash(String.Format("bgm/{0}",
+                formEntry.entry.internalFileName)) + ".edat";
+            bgmDlcWorksheet.Cells["E" + bgmExcelRow].Value = Hasher.hash(
+                String.Format("dlc/bgm/dlc_{0}.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+            bgmDlcWorksheet.Cells["F" + bgmExcelRow].Value = Hasher.hash(
+                String.Format("text/jp/dlc/bgm_{0}t.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+        }  
 
         private void addFileNameToStringBuilderIfExists(string description, string folder, string fileName, StringBuilder builder)
         {
@@ -226,7 +321,8 @@ namespace DissDlcToolkit.Forms
                     using (ExcelPackage packageToSave = new ExcelPackage())
                     {
                         packageToSave.File = new FileInfo(@fileToSave);
-                        packageToSave.Workbook.Worksheets.Add("DLC Files", characterDlcWorksheet);
+                        packageToSave.Workbook.Worksheets.Add("Character DLC Files", characterDlcWorksheet);
+                        packageToSave.Workbook.Worksheets.Add("BGM DLC Files", bgmDlcWorksheet);
                         packageToSave.Save();
                         MessageBox.Show("Excel spreadsheet exported OK!");
                     }
