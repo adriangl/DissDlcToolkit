@@ -153,7 +153,6 @@ namespace DissDlcToolkit.Forms
             // If the reporter text box has any data, then that means that there's data in the folder
             if (!reporterDataTextBox.Text.Trim().Equals(""))
             {
-                reporterSaveToTextButton.Enabled = true;
                 reporterSaveToExcelButton.Enabled = true;
                 reporterFolderLabel.Text = folder;
                 MessageBox.Show("DLC read OK!!");
@@ -286,29 +285,6 @@ namespace DissDlcToolkit.Forms
                     return fileName;
             }
             return null;
-        }
-
-        private void reporterSaveToTextButton_Click(object sender, EventArgs e)
-        {
-            String fileToSave = FormUtils.openTxtSaveDialog();
-            if (fileToSave != null)
-            {
-                try
-                {
-                    using (StreamWriter writer = new StreamWriter(new FileStream(
-                        fileToSave, FileMode.Create)))
-                    {
-                        writer.Write(reporterDataTextBox.Text);
-                    }
-                    reporterSaveToTextButton.Enabled = false;
-                    MessageBox.Show("Text file exported OK!");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("The text file could not be exported.");
-                    Logger.Log(TAG, ex);
-                }
-            }
         }
 
         private void reporterSaveToExcelButton_Click(object sender, EventArgs e)
