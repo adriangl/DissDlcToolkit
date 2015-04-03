@@ -57,7 +57,7 @@ namespace DissDlcToolkit.Forms
 
         private void attachmentLinkControllerRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            attachmentLinkDataLabel.Text = "Controller to link";
+            attachmentLinkDataLabel.Text = "Attachment controller";
             attachmentLinkDataTextBox.Text = "";
             attachmentLinkDataTextBox.MaxLength = 0;
             attachmentLinkDataTextBox.Enabled = false;
@@ -66,7 +66,7 @@ namespace DissDlcToolkit.Forms
 
         private void attachmentLinkIdRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            attachmentLinkDataLabel.Text = "ID to link";
+            attachmentLinkDataLabel.Text = "Attachment ID";
             attachmentLinkDataTextBox.Text = "";
             attachmentLinkDataTextBox.MaxLength = 4;
             attachmentLinkDataTextBox.Enabled = true;

@@ -83,8 +83,8 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 5;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.59383F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.99486F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -113,24 +113,24 @@
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(3, 2);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 26);
+            this.label4.Size = new System.Drawing.Size(78, 26);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Base controller";
+            this.label4.Text = "Player or assist controller";
             // 
             // attachmentLinkBaseControllerTextBox
             // 
             this.attachmentLinkBaseControllerTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.attachmentLinkBaseControllerTextBox, 2);
-            this.attachmentLinkBaseControllerTextBox.Location = new System.Drawing.Point(80, 5);
+            this.attachmentLinkBaseControllerTextBox.Location = new System.Drawing.Point(87, 5);
             this.attachmentLinkBaseControllerTextBox.Name = "attachmentLinkBaseControllerTextBox";
-            this.attachmentLinkBaseControllerTextBox.Size = new System.Drawing.Size(148, 20);
+            this.attachmentLinkBaseControllerTextBox.Size = new System.Drawing.Size(142, 20);
             this.attachmentLinkBaseControllerTextBox.TabIndex = 8;
             // 
             // attachmentLinkBrowseCharacterControllerButton
             // 
             this.attachmentLinkBrowseCharacterControllerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.attachmentLinkBrowseCharacterControllerButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.attachmentLinkBrowseCharacterControllerButton.Location = new System.Drawing.Point(239, 4);
+            this.attachmentLinkBrowseCharacterControllerButton.Location = new System.Drawing.Point(240, 4);
             this.attachmentLinkBrowseCharacterControllerButton.Name = "attachmentLinkBrowseCharacterControllerButton";
             this.attachmentLinkBrowseCharacterControllerButton.Size = new System.Drawing.Size(61, 23);
             this.attachmentLinkBrowseCharacterControllerButton.TabIndex = 6;
@@ -147,7 +147,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 31);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 31);
+            this.panel2.Size = new System.Drawing.Size(232, 31);
             this.panel2.TabIndex = 9;
             // 
             // attachmentLinkIdRadioButton
@@ -184,7 +184,7 @@
             this.attachmentLinkDataLabel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.attachmentLinkDataLabel.Location = new System.Drawing.Point(3, 71);
             this.attachmentLinkDataLabel.Name = "attachmentLinkDataLabel";
-            this.attachmentLinkDataLabel.Size = new System.Drawing.Size(71, 13);
+            this.attachmentLinkDataLabel.Size = new System.Drawing.Size(78, 13);
             this.attachmentLinkDataLabel.TabIndex = 10;
             this.attachmentLinkDataLabel.Text = "DummyText";
             // 
@@ -192,9 +192,9 @@
             // 
             this.attachmentLinkDataTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.SetColumnSpan(this.attachmentLinkDataTextBox, 2);
-            this.attachmentLinkDataTextBox.Location = new System.Drawing.Point(80, 68);
+            this.attachmentLinkDataTextBox.Location = new System.Drawing.Point(87, 68);
             this.attachmentLinkDataTextBox.Name = "attachmentLinkDataTextBox";
-            this.attachmentLinkDataTextBox.Size = new System.Drawing.Size(148, 20);
+            this.attachmentLinkDataTextBox.Size = new System.Drawing.Size(142, 20);
             this.attachmentLinkDataTextBox.TabIndex = 11;
             this.attachmentLinkDataTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.attachmentLinkDataTextBox_KeyPress);
             // 
@@ -202,7 +202,7 @@
             // 
             this.attachmentLinkBrowseLinkedControllerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.attachmentLinkBrowseLinkedControllerButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.attachmentLinkBrowseLinkedControllerButton.Location = new System.Drawing.Point(239, 66);
+            this.attachmentLinkBrowseLinkedControllerButton.Location = new System.Drawing.Point(240, 66);
             this.attachmentLinkBrowseLinkedControllerButton.Name = "attachmentLinkBrowseLinkedControllerButton";
             this.attachmentLinkBrowseLinkedControllerButton.Size = new System.Drawing.Size(61, 23);
             this.attachmentLinkBrowseLinkedControllerButton.TabIndex = 12;
@@ -214,7 +214,7 @@
             // 
             this.attachmentLinkGenerateButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.attachmentLinkGenerateButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.attachmentLinkGenerateButton.Location = new System.Drawing.Point(311, 65);
+            this.attachmentLinkGenerateButton.Location = new System.Drawing.Point(312, 65);
             this.attachmentLinkGenerateButton.Margin = new System.Windows.Forms.Padding(0);
             this.attachmentLinkGenerateButton.Name = "attachmentLinkGenerateButton";
             this.attachmentLinkGenerateButton.Size = new System.Drawing.Size(75, 26);
