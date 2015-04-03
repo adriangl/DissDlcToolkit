@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.generalSettingsGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.settingsMainDlcFolderTextBox = new System.Windows.Forms.TextBox();
@@ -76,7 +77,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.43243F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.56757F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel1.Controls.Add(this.settingsMainDlcFolderTextBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.browseMainDlcFolderButton, 2, 0);
@@ -93,7 +94,7 @@
             this.settingsMainDlcFolderTextBox.Location = new System.Drawing.Point(98, 6);
             this.settingsMainDlcFolderTextBox.Name = "settingsMainDlcFolderTextBox";
             this.settingsMainDlcFolderTextBox.ReadOnly = true;
-            this.settingsMainDlcFolderTextBox.Size = new System.Drawing.Size(194, 20);
+            this.settingsMainDlcFolderTextBox.Size = new System.Drawing.Size(193, 20);
             this.settingsMainDlcFolderTextBox.TabIndex = 2;
             // 
             // label1
@@ -109,9 +110,9 @@
             // browseMainDlcFolderButton
             // 
             this.browseMainDlcFolderButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.browseMainDlcFolderButton.Location = new System.Drawing.Point(298, 4);
+            this.browseMainDlcFolderButton.Location = new System.Drawing.Point(297, 4);
             this.browseMainDlcFolderButton.Name = "browseMainDlcFolderButton";
-            this.browseMainDlcFolderButton.Size = new System.Drawing.Size(69, 23);
+            this.browseMainDlcFolderButton.Size = new System.Drawing.Size(70, 23);
             this.browseMainDlcFolderButton.TabIndex = 3;
             this.browseMainDlcFolderButton.Text = "Browse...";
             this.browseMainDlcFolderButton.UseVisualStyleBackColor = true;
@@ -132,7 +133,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.053691F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.94631F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel2.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.settingsBackupExex, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(7, 20);
@@ -182,7 +183,7 @@
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.053691F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.94631F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.settingsDlcGenReadmeEnabled, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(7, 20);
@@ -232,7 +233,7 @@
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.053691F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.94631F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.settingsAttachmentReadmeEnabled, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(7, 20);
@@ -282,7 +283,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.053691F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 91.94631F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel5.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.settingsBgmReadmeEnabled, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(7, 20);
@@ -328,7 +329,11 @@
             this.Controls.Add(this.generalSettingsGroupBox);
             this.Controls.Add(this.exexSettingsGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Settings";
             this.generalSettingsGroupBox.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

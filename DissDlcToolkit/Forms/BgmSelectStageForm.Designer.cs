@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BgmSelectStageForm));
             this.bgmSelectStageCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.bgmSelectStageListGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bgmSelectStageSaveButton = new System.Windows.Forms.Button();
             this.bgmSelectStageInvertSelection = new System.Windows.Forms.Button();
+            this.bgmSelectStageSaveButton = new System.Windows.Forms.Button();
             this.bgmSelectStageSelectAllButton = new System.Windows.Forms.Button();
             this.bgmSelectStageListGroupBox.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -40,6 +41,7 @@
             // 
             // bgmSelectStageCheckedListBox
             // 
+            this.bgmSelectStageCheckedListBox.CheckOnClick = true;
             this.bgmSelectStageCheckedListBox.FormattingEnabled = true;
             this.bgmSelectStageCheckedListBox.Items.AddRange(new object[] {
             "Old Chaos Shrine",
@@ -65,7 +67,6 @@
             this.bgmSelectStageCheckedListBox.Name = "bgmSelectStageCheckedListBox";
             this.bgmSelectStageCheckedListBox.Size = new System.Drawing.Size(206, 274);
             this.bgmSelectStageCheckedListBox.TabIndex = 0;
-            this.bgmSelectStageCheckedListBox.CheckOnClick = true;
             // 
             // bgmSelectStageListGroupBox
             // 
@@ -94,18 +95,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(206, 56);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // bgmSelectStageSaveButton
-            // 
-            this.bgmSelectStageSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.bgmSelectStageSaveButton, 2);
-            this.bgmSelectStageSaveButton.Location = new System.Drawing.Point(3, 31);
-            this.bgmSelectStageSaveButton.Name = "bgmSelectStageSaveButton";
-            this.bgmSelectStageSaveButton.Size = new System.Drawing.Size(200, 22);
-            this.bgmSelectStageSaveButton.TabIndex = 1;
-            this.bgmSelectStageSaveButton.Text = "Save";
-            this.bgmSelectStageSaveButton.UseVisualStyleBackColor = true;
-            this.bgmSelectStageSaveButton.Click += new System.EventHandler(this.bgmSelectStageSaveButton_Click);
-            // 
             // bgmSelectStageInvertSelection
             // 
             this.bgmSelectStageInvertSelection.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,6 +106,18 @@
             this.bgmSelectStageInvertSelection.Text = "Invert selection";
             this.bgmSelectStageInvertSelection.UseVisualStyleBackColor = true;
             this.bgmSelectStageInvertSelection.Click += new System.EventHandler(this.bgmSelectStageInvertSelection_Click);
+            // 
+            // bgmSelectStageSaveButton
+            // 
+            this.bgmSelectStageSaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.bgmSelectStageSaveButton, 2);
+            this.bgmSelectStageSaveButton.Location = new System.Drawing.Point(3, 31);
+            this.bgmSelectStageSaveButton.Name = "bgmSelectStageSaveButton";
+            this.bgmSelectStageSaveButton.Size = new System.Drawing.Size(200, 22);
+            this.bgmSelectStageSaveButton.TabIndex = 1;
+            this.bgmSelectStageSaveButton.Text = "Save";
+            this.bgmSelectStageSaveButton.UseVisualStyleBackColor = true;
+            this.bgmSelectStageSaveButton.Click += new System.EventHandler(this.bgmSelectStageSaveButton_Click);
             // 
             // bgmSelectStageSelectAllButton
             // 
@@ -136,7 +137,11 @@
             this.ClientSize = new System.Drawing.Size(242, 383);
             this.Controls.Add(this.bgmSelectStageListGroupBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BgmSelectStageForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Select characters";
             this.bgmSelectStageListGroupBox.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
