@@ -550,4 +550,193 @@
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="P_EHT100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_EHT100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_EHT110_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT110_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_EHT110_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT110_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_EHT200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_EHT200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_EHT200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV210_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV210_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FIV210_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FIV210_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR110_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR110_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR110_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR110_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_FOR200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_FOR200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST110_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST110_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST110_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST110_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST120_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST120_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST120_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST120_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST130_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST130_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST130_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST130_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_GST200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_GST200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_NIN100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_NIN100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_NIN100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_NIN100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_NIN200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_NIN200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_NIN200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_NIN200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ONE100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ONE100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ONE100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ONE100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ONE200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ONE200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ONE200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ONE200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ORG210_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ORG210_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_ORG210_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_ORG210_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV110_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV110_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV110_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV110_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV120_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV120_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SEV200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SEV200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SIX100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SIX100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SIX100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SIX100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SIX200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SIX200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_SIX200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_SIX200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN110_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN110_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN110_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN110_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TEN200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TEN200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_THR100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_THR100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_THR100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_THR100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_THR200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_THR200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_THR200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_THR200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TWO100_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TWO100_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TWO100_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TWO100_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TWO200_COSX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TWO200_COSX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="P_TWO200_EXEX_ZAKO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\P_TWO200_EXEX_ZAKO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

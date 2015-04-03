@@ -125,9 +125,16 @@ namespace DissDlcToolkit.Forms
                 dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x03, "Alt. 2"));
             }
             // Add manikin slot; Aerith and Feral Chaos can't have them
+            // Also disable manikin effects box
             if (!selectedCharacterInternalName.Equals("p_org210") && !selectedCharacterInternalName.Equals("p_sev120"))
             {
                 dlcGenCostumeSlotKeyValues.Add(new KeyValuePair<Byte, String>(0x00, "Manikin"));
+                dlcGenIncludeManikinEffects.Enabled = true;                
+            }
+            else
+            {
+                dlcGenIncludeManikinEffects.Enabled = false;
+                dlcGenIncludeManikinEffects.Checked = false;
             }
             // Add "DLC x" Slots
             // Aerith can't use DLC x Slots (yet), don't add them in this case
@@ -263,16 +270,16 @@ namespace DissDlcToolkit.Forms
             // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
             switch (costumeDlcSlot)
             {
-                case 0x00: // Manikin
+                case ObjectEntry.COSTUME_SLOT_MANIKIN: // Manikin
                     playerObjectEntry.id = characterData.manikinPlayerID;
                     break;
-                case 0x01: // Normal
+                case ObjectEntry.COSTUME_SLOT_NORMAL: // Normal
                     playerObjectEntry.id = characterData.normalPlayerID;
                     break;
-                case 0x02: // Alt. 1
+                case ObjectEntry.COSTUME_SLOT_ALT1: // Alt. 1
                     playerObjectEntry.id = characterData.alt1PlayerID;
                     break;
-                case 0x03: // Alt. 2
+                case ObjectEntry.COSTUME_SLOT_ALT2: // Alt. 2
                     playerObjectEntry.id = characterData.alt2PlayerID;
                     break;
                 default: // DLC X; estimate it
@@ -280,9 +287,16 @@ namespace DissDlcToolkit.Forms
                     break;
             }
             playerObjectEntry.objectEntrySlot = Convert.ToByte(playerDlcSlotNumber);
-            playerObjectEntry.modelName = (costumeDlcSlot != 0x00)
+            playerObjectEntry.modelName = (costumeDlcSlot != ObjectEntry.COSTUME_SLOT_MANIKIN)
                 ? characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P"
                 : characterData.internalName.ToUpper() + "_ZAKO";
+
+            // If the user marks the 'include manikin voices & effects', add flag
+            if (dlcGenIncludeManikinEffects.Checked)
+            {
+                playerObjectEntry.objectEntryType = ObjectEntry.DLC_TYPE_MANIKIN_PLAYER;
+            }
+            
 
             // Get hashed filenames, so the game can read them
             String objectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + playerDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";
@@ -323,7 +337,7 @@ namespace DissDlcToolkit.Forms
                             readmeFileWriter.WriteLine("Player extra portrait (GIM):\t" + gimExtraHashFileName);
                         }
 
-                        byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX");
+                        byte[] exexBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_EXEX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
                         if (exexBuffer != null)
                         {
                             File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, exexHashFileName), exexBuffer);
@@ -331,7 +345,7 @@ namespace DissDlcToolkit.Forms
                         }
                     }
 
-                    byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX");
+                    byte[] cosxBuffer = (byte[])rm.GetObject(characterData.internalName.ToUpper() + "_COSX" + ((dlcGenIncludeManikinEffects.Checked) ? "_ZAKO" : ""));
                     if (cosxBuffer != null)
                     {
                         File.WriteAllBytes(System.IO.Path.Combine(dlcFolder, cosxHashFileName), cosxBuffer);
@@ -363,16 +377,16 @@ namespace DissDlcToolkit.Forms
                     // If it's a DLC X costume add corresponding ID; if it isn't, put proper data
                     switch (costumeDlcSlot)
                     {
-                        case 0x00: // Manikin
+                        case ObjectEntry.COSTUME_SLOT_MANIKIN: // Manikin
                             playerObjectEntry.id = characterData.manikinAssistID;
                             break;
-                        case 0x01: // Normal
+                        case ObjectEntry.COSTUME_SLOT_NORMAL: // Normal
                             assistObjectEntry.id = characterData.normalAssistID;
                             break;
-                        case 0x02: // Alt. 1
+                        case ObjectEntry.COSTUME_SLOT_ALT1: // Alt. 1
                             assistObjectEntry.id = characterData.alt1AssistID;
                             break;
-                        case 0x03: // Alt. 2
+                        case ObjectEntry.COSTUME_SLOT_ALT2: // Alt. 2
                             assistObjectEntry.id = characterData.alt2AssistID;
                             break;
                         default: // DLC X
@@ -380,9 +394,17 @@ namespace DissDlcToolkit.Forms
                             break;
                     }
                     assistObjectEntry.objectEntrySlot = Convert.ToByte(assistDlcSlotNumber);
-                    assistObjectEntry.modelName = (costumeDlcSlot != 0x00)
+                    assistObjectEntry.modelName = (costumeDlcSlot != ObjectEntry.COSTUME_SLOT_MANIKIN)
                         ? characterData.internalName.ToUpper() + "_" + costumeDlcSlot.ToString("X") + "P_A"
                         : characterData.internalName.ToUpper() + "_ZAKO_A";
+
+                    /*
+                    // If the user marks the 'include manikin voices & effects', add flag
+                    if (costumeDlcSlot == ObjectEntry.COSTUME_SLOT_MANIKIN)
+                    {
+                        assistObjectEntry.objectEntryType = ObjectEntry.DLC_TYPE_MANIKIN_ASSIST;
+                    }
+                     */
 
                     // Get hashed filenames, so the game can read them
                     String assistObjectTableHashFileName = Hasher.hash("dlc/obj/dlc_" + assistDlcSlotNumber.ToString("d3") + "oe.bin") + ".edat";

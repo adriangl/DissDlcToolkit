@@ -50,6 +50,7 @@
             this.dlcGenBrowsePlayerGimFileMainButton = new System.Windows.Forms.Button();
             this.dlcGenBrowsePlayerGmoButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dlcGenIncludeManikinEffects = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -321,6 +322,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.dlcGenGenerateButton, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.dlcGenIncludeManikinEffects, 2, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -335,6 +337,17 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(401, 272);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // dlcGenIncludeManikinEffects
+            // 
+            this.dlcGenIncludeManikinEffects.Location = new System.Drawing.Point(296, 30);
+            this.dlcGenIncludeManikinEffects.Margin = new System.Windows.Forms.Padding(0);
+            this.dlcGenIncludeManikinEffects.Name = "dlcGenIncludeManikinEffects";
+            this.tableLayoutPanel1.SetRowSpan(this.dlcGenIncludeManikinEffects, 2);
+            this.dlcGenIncludeManikinEffects.Size = new System.Drawing.Size(104, 30);
+            this.dlcGenIncludeManikinEffects.TabIndex = 21;
+            this.dlcGenIncludeManikinEffects.Text = "Include manikin effects";
+            this.dlcGenIncludeManikinEffects.UseVisualStyleBackColor = true;
             // 
             // MainFormDlcGenUserControl
             // 
@@ -373,6 +386,7 @@
         private System.Windows.Forms.Button dlcGenBrowsePlayerGimFileMainButton;
         private System.Windows.Forms.Button dlcGenBrowsePlayerGmoButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.CheckBox dlcGenIncludeManikinEffects;
 
 
     }

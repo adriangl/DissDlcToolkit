@@ -263,9 +263,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_EHT100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_EHT100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_EHT100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -303,9 +323,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_EHT110_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_EHT110_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_EHT110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT110_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT110_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -343,9 +383,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_EHT200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_EHT200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_EHT200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_EHT200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_EHT200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -383,9 +443,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FIV100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FIV100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FIV100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -423,9 +503,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FIV200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FIV200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FIV200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -463,9 +563,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FIV210_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FIV210_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FIV210_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FIV210_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FIV210_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -503,9 +623,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FOR100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FOR100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FOR100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -543,9 +683,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FOR110_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FOR110_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FOR110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR110_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR110_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -583,9 +743,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_FOR200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_FOR200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_FOR200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_FOR200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_FOR200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -623,9 +803,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_GST100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_GST100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_GST100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -663,9 +863,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_GST110_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_GST110_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_GST110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST110_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST110_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -703,9 +923,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_GST120_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_GST120_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_GST120_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST120_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST120_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -743,9 +983,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_GST130_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_GST130_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_GST130_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST130_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST130_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -783,9 +1043,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_GST200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_GST200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_GST200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_GST200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_GST200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -823,9 +1103,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_NIN100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_NIN100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_NIN100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -863,9 +1163,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_NIN200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_NIN200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_NIN200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_NIN200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_NIN200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -903,9 +1223,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_ONE100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_ONE100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_ONE100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -943,9 +1283,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_ONE200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_ONE200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_ONE200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ONE200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ONE200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -973,9 +1333,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_ORG210_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG210_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_ORG210_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_ORG210_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_ORG210_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_ORG210_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1023,9 +1403,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SEV100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SEV100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_SEV100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1063,9 +1463,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SEV110_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SEV110_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_SEV110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV110_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV110_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1103,6 +1523,16 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SEV120_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV120_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SEV200_1P {
             get {
                 object obj = ResourceManager.GetObject("P_SEV200_1P", resourceCulture);
@@ -1133,9 +1563,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SEV200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SEV200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_SEV200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SEV200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SEV200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1173,9 +1623,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SIX100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SIX100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_SIX100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1213,9 +1683,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_SIX200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_SIX200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_SIX200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_SIX200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_SIX200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1253,9 +1743,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_TEN100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_TEN100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_TEN100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1293,9 +1803,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_TEN110_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_TEN110_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_TEN110_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN110_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN110_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1333,9 +1863,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_TEN200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_TEN200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_TEN200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TEN200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TEN200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1373,9 +1923,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_THR100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_THR100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_THR100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_THR100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1413,9 +1983,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_THR200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_THR200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_THR200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_THR200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_THR200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1453,9 +2043,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_TWO100_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_TWO100_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_TWO100_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO100_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO100_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -1493,9 +2103,29 @@ namespace DissDlcToolkit.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Byte[].
         /// </summary>
+        internal static byte[] P_TWO200_COSX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_COSX_ZAKO", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
         internal static byte[] P_TWO200_EXEX {
             get {
                 object obj = ResourceManager.GetObject("P_TWO200_EXEX", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] P_TWO200_EXEX_ZAKO {
+            get {
+                object obj = ResourceManager.GetObject("P_TWO200_EXEX_ZAKO", resourceCulture);
                 return ((byte[])(obj));
             }
         }

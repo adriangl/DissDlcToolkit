@@ -30,6 +30,7 @@ namespace DissDlcToolkit.Models
         public const byte DLC_TYPE_MANIKIN_PLAYER = 0x05;
         public const byte DLC_TYPE_MANIKIN_ASSIST = 0x0D;
 
+        public const byte COSTUME_SLOT_MANIKIN = 0x00;
         public const byte COSTUME_SLOT_NORMAL = 0x01;
         public const byte COSTUME_SLOT_ALT1 = 0x02;
         public const byte COSTUME_SLOT_ALT2 = 0x03;
