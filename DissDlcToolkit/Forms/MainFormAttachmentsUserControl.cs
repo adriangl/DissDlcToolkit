@@ -179,7 +179,7 @@ namespace DissDlcToolkit.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBoxEx.Show(this, "There was a problem saving the attachment files.");
+                    MessageBoxEx.Show(this, "There was a problem saving the attachment files. Check 'log.txt' for more details");
                     Logger.Log(TAG, ex);
                 }
             }

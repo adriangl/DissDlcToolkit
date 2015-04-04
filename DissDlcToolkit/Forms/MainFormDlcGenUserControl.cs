@@ -357,8 +357,7 @@ namespace DissDlcToolkit.Forms
             }
             catch (Exception e)
             {
-                MessageBoxEx.Show(this, "There was an error with one or some of the player input files."+"\r\n"+
-                    "Please verify that they are valid files");
+                MessageBoxEx.Show(this, "There was a problem with one or some of the player input files. Check 'log.txt' for more details");
                 Logger.Log(TAG, e);
                 deleteNewDlcFolder(dlcFolder);
                 return;
@@ -430,8 +429,7 @@ namespace DissDlcToolkit.Forms
                 }
                 catch (Exception e)
                 {
-                    MessageBoxEx.Show(this, "There was an error with one or some of the assist input files." + "\r\n" +
-                        "Please verify that they are valid files");
+                    MessageBoxEx.Show(this, "There was a problem with one or some of the assist input files. Check 'log.txt' for more details");
                     Logger.Log(TAG, e);
                     deleteNewDlcFolder(dlcFolder);
                     return;
@@ -441,9 +439,18 @@ namespace DissDlcToolkit.Forms
             // Write readme
             if (Settings.getDlcGenReadmeEnabled())
             {
-                using (StreamWriter writer = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                try
                 {
-                    writer.Write(readmeStringBuilder);
+                    using (StreamWriter writer = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                    {
+                        writer.Write(readmeStringBuilder);
+                    }
+                }
+                catch (Exception e)
+                {
+                    MessageBoxEx.Show(this, "There was a problem writing the readme. Check 'log.txt' for more details");
+                    Logger.Log(TAG, e);
+                    return;
                 }
             }
 

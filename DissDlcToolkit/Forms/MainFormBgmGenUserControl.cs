@@ -231,86 +231,95 @@ namespace DissDlcToolkit.Forms
 
         private void saveDataToFiles()
         {
-            // Validate data
-            if (bgmGenDlcSlotComboBox.SelectedItem == null)
+            try
             {
-                MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
-                return;
-            }
-
-            int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
-            if (selectedBgmSlotIndex < 0){
-                MessageBoxEx.Show(this, "You have to select a valid DLC slot");
-                return;
-            }
-            int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
-
-            if (bgmFormEntries.Count <= 0)
-            {
-                MessageBoxEx.Show(this, "You have to add at least one BGM to the list");
-                return;
-            }   
-        
-            
-            // Get DLC folder
-            String baseFolder = Settings.getDlcMainFolder();
-            String dlcFolder = System.IO.Path.Combine(baseFolder,
-                "[BGM][Slot " + bgmGenDlcSlotComboBox.Text + "]");
-            createDlcFolder(dlcFolder);           
-
-            // Prepare copy
-            List<String> bgmNames = new List<String>();
-            List<String> bgmFileNames = new List<String>();
-            BgmTable bgmTable = new BgmTable();
-            foreach (FormBgmEntry formEntry in bgmFormEntries)
-            {
-                // Save text strings
-                bgmNames.Add(formEntry.bgmTitle);
-                bgmTable.addEntry(formEntry.entry);
-            }
-
-            // Ready bgmTable
-            bgmTable.generateRandomEntryNamesAndIds(bgmDlcSlot);
-
-            // Save bgm names
-            String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
-            String textHashedFilePath = System.IO.Path.Combine(dlcFolder, textHashedFileName);
-            MessFileWriter.encodeDLCText(bgmNames, textHashedFilePath);
-
-            // Save bgm controller
-            String controllerHashedFileName = Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
-            String controllerHashedFilePath = System.IO.Path.Combine(dlcFolder, controllerHashedFileName);
-            bgmTable.writeToFile(controllerHashedFilePath);
-
-            // Copy bgm to dlc folder
-            foreach (FormBgmEntry formEntry in bgmFormEntries)
-            {
-                String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", formEntry.entry.internalFileName)) + ".edat";
-                String hashedInternalFilePath = System.IO.Path.Combine(dlcFolder, hashedInternalFileName);
-                if (File.Exists(formEntry.filePath))
+                // Validate data
+                if (bgmGenDlcSlotComboBox.SelectedItem == null)
                 {
-                    File.Copy(formEntry.filePath, hashedInternalFilePath, true);
+                    MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
+                    return;
                 }
-                bgmFileNames.Add(hashedInternalFileName);
-            }
 
-            // Generate readme
-            if (Settings.getBgmReadmeEnabled())
-            {
-                String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
-                using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
+                if (selectedBgmSlotIndex < 0)
                 {
-                    readmeFileWriter.WriteLine("BGM DLC Slot " + bgmGenDlcSlotComboBox.Text);
-                    readmeFileWriter.WriteLine("-----------------------");
-                    for (int i = 0; i < bgmNames.Count; i++)
+                    MessageBoxEx.Show(this, "You have to select a valid DLC slot");
+                    return;
+                }
+                int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
+
+                if (bgmFormEntries.Count <= 0)
+                {
+                    MessageBoxEx.Show(this, "You have to add at least one BGM to the list");
+                    return;
+                }
+
+
+                // Get DLC folder
+                String baseFolder = Settings.getDlcMainFolder();
+                String dlcFolder = System.IO.Path.Combine(baseFolder,
+                    "[BGM][Slot " + bgmGenDlcSlotComboBox.Text + "]");
+                createDlcFolder(dlcFolder);
+
+                // Prepare copy
+                List<String> bgmNames = new List<String>();
+                List<String> bgmFileNames = new List<String>();
+                BgmTable bgmTable = new BgmTable();
+                foreach (FormBgmEntry formEntry in bgmFormEntries)
+                {
+                    // Save text strings
+                    bgmNames.Add(formEntry.bgmTitle);
+                    bgmTable.addEntry(formEntry.entry);
+                }
+
+                // Ready bgmTable
+                bgmTable.generateRandomEntryNamesAndIds(bgmDlcSlot);
+
+                // Save bgm names
+                String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+                String textHashedFilePath = System.IO.Path.Combine(dlcFolder, textHashedFileName);
+                MessFileWriter.encodeDLCText(bgmNames, textHashedFilePath);
+
+                // Save bgm controller
+                String controllerHashedFileName = Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", bgmDlcSlot.ToString("D3"))) + ".edat";
+                String controllerHashedFilePath = System.IO.Path.Combine(dlcFolder, controllerHashedFileName);
+                bgmTable.writeToFile(controllerHashedFilePath);
+
+                // Copy bgm to dlc folder
+                foreach (FormBgmEntry formEntry in bgmFormEntries)
+                {
+                    String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", formEntry.entry.internalFileName)) + ".edat";
+                    String hashedInternalFilePath = System.IO.Path.Combine(dlcFolder, hashedInternalFileName);
+                    if (File.Exists(formEntry.filePath))
                     {
-                        readmeFileWriter.WriteLine(bgmNames[i] + " -> " + bgmFileNames[i]);
+                        File.Copy(formEntry.filePath, hashedInternalFilePath, true);
+                    }
+                    bgmFileNames.Add(hashedInternalFileName);
+                }
+
+                // Generate readme
+                if (Settings.getBgmReadmeEnabled())
+                {
+                    String readmeFilePath = System.IO.Path.Combine(dlcFolder, "readme.txt");
+                    using (StreamWriter readmeFileWriter = new StreamWriter(new FileStream(readmeFilePath, FileMode.Create)))
+                    {
+                        readmeFileWriter.WriteLine("BGM DLC Slot " + bgmGenDlcSlotComboBox.Text);
+                        readmeFileWriter.WriteLine("-----------------------");
+                        for (int i = 0; i < bgmNames.Count; i++)
+                        {
+                            readmeFileWriter.WriteLine(bgmNames[i] + " -> " + bgmFileNames[i]);
+                        }
                     }
                 }
+
+                MessageBoxEx.Show(this, "Success!");
             }
-
-            MessageBoxEx.Show(this, "Success!");
-
+            catch (Exception ex)
+            {
+                MessageBoxEx.Show(this, "There was a problem saving the BGM files. Check 'log.txt' for more details");
+                Logger.Log("MainFormBgmGenUserControl", ex);
+                return;
+            }
         }
 
         private void createDlcFolder(string dlcFolder)
