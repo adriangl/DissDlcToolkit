@@ -65,9 +65,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.85678F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.84655F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.55243F));
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.swapSlotsCharacterControllerBrowseButton, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -91,7 +91,7 @@
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label4.Location = new System.Drawing.Point(3, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 13);
+            this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 18;
             this.label4.Text = "Controller";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -100,7 +100,7 @@
             // 
             this.swapSlotsCharacterControllerBrowseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.swapSlotsCharacterControllerBrowseButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.swapSlotsCharacterControllerBrowseButton.Location = new System.Drawing.Point(289, 7);
+            this.swapSlotsCharacterControllerBrowseButton.Location = new System.Drawing.Point(306, 7);
             this.swapSlotsCharacterControllerBrowseButton.Name = "swapSlotsCharacterControllerBrowseButton";
             this.swapSlotsCharacterControllerBrowseButton.Size = new System.Drawing.Size(72, 22);
             this.swapSlotsCharacterControllerBrowseButton.TabIndex = 16;
@@ -115,18 +115,18 @@
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label2.Location = new System.Drawing.Point(3, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(124, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 15;
             this.label2.Text = "DLC Slot";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // swapSlotsCharacterControllerTextBox
             // 
-            this.swapSlotsCharacterControllerTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.swapSlotsCharacterControllerTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.swapSlotsCharacterControllerTextBox.Enabled = false;
-            this.swapSlotsCharacterControllerTextBox.Location = new System.Drawing.Point(133, 8);
+            this.swapSlotsCharacterControllerTextBox.Location = new System.Drawing.Point(64, 8);
             this.swapSlotsCharacterControllerTextBox.Name = "swapSlotsCharacterControllerTextBox";
-            this.swapSlotsCharacterControllerTextBox.Size = new System.Drawing.Size(124, 20);
+            this.swapSlotsCharacterControllerTextBox.Size = new System.Drawing.Size(227, 20);
             this.swapSlotsCharacterControllerTextBox.TabIndex = 17;
             // 
             // swapSlotsCharacterSlotComboBox
@@ -135,9 +135,9 @@
             this.swapSlotsCharacterSlotComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.swapSlotsCharacterSlotComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.swapSlotsCharacterSlotComboBox.FormattingEnabled = true;
-            this.swapSlotsCharacterSlotComboBox.Location = new System.Drawing.Point(133, 43);
+            this.swapSlotsCharacterSlotComboBox.Location = new System.Drawing.Point(64, 43);
             this.swapSlotsCharacterSlotComboBox.Name = "swapSlotsCharacterSlotComboBox";
-            this.swapSlotsCharacterSlotComboBox.Size = new System.Drawing.Size(124, 21);
+            this.swapSlotsCharacterSlotComboBox.Size = new System.Drawing.Size(227, 21);
             this.swapSlotsCharacterSlotComboBox.TabIndex = 14;
             this.swapSlotsCharacterSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.swapSlotsCharacterSlotComboBox_SelectedIndexChanged);
             this.swapSlotsCharacterSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.swapSlotsCharacterSlotComboBox_KeyDown);
@@ -146,9 +146,9 @@
             // swapSlotsCharacterSwapButton
             // 
             this.swapSlotsCharacterSwapButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.swapSlotsCharacterSwapButton.Location = new System.Drawing.Point(133, 79);
+            this.swapSlotsCharacterSwapButton.Location = new System.Drawing.Point(64, 79);
             this.swapSlotsCharacterSwapButton.Name = "swapSlotsCharacterSwapButton";
-            this.swapSlotsCharacterSwapButton.Size = new System.Drawing.Size(124, 23);
+            this.swapSlotsCharacterSwapButton.Size = new System.Drawing.Size(227, 23);
             this.swapSlotsCharacterSwapButton.TabIndex = 19;
             this.swapSlotsCharacterSwapButton.Text = "Swap!";
             this.swapSlotsCharacterSwapButton.UseVisualStyleBackColor = true;
@@ -158,9 +158,9 @@
             // 
             this.swapSlotsCharacterChangeIdCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.swapSlotsCharacterChangeIdCheckBox.AutoSize = true;
-            this.swapSlotsCharacterChangeIdCheckBox.Location = new System.Drawing.Point(263, 45);
+            this.swapSlotsCharacterChangeIdCheckBox.Location = new System.Drawing.Point(297, 45);
             this.swapSlotsCharacterChangeIdCheckBox.Name = "swapSlotsCharacterChangeIdCheckBox";
-            this.swapSlotsCharacterChangeIdCheckBox.Size = new System.Drawing.Size(125, 17);
+            this.swapSlotsCharacterChangeIdCheckBox.Size = new System.Drawing.Size(91, 17);
             this.swapSlotsCharacterChangeIdCheckBox.TabIndex = 20;
             this.swapSlotsCharacterChangeIdCheckBox.Text = "Change ID";
             this.swapSlotsCharacterChangeIdCheckBox.UseVisualStyleBackColor = true;
@@ -178,9 +178,9 @@
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.85678F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.35806F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.04092F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.swapSlotsBgmControllerBrowseButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 1);
@@ -204,7 +204,7 @@
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Controller";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +213,7 @@
             // 
             this.swapSlotsBgmControllerBrowseButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.swapSlotsBgmControllerBrowseButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.swapSlotsBgmControllerBrowseButton.Location = new System.Drawing.Point(289, 7);
+            this.swapSlotsBgmControllerBrowseButton.Location = new System.Drawing.Point(307, 7);
             this.swapSlotsBgmControllerBrowseButton.Name = "swapSlotsBgmControllerBrowseButton";
             this.swapSlotsBgmControllerBrowseButton.Size = new System.Drawing.Size(72, 22);
             this.swapSlotsBgmControllerBrowseButton.TabIndex = 16;
@@ -228,18 +228,18 @@
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label3.Location = new System.Drawing.Point(3, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 13);
+            this.label3.Size = new System.Drawing.Size(55, 13);
             this.label3.TabIndex = 15;
             this.label3.Text = "DLC Slot";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // swapSlotsBgmControllerTextBox
             // 
-            this.swapSlotsBgmControllerTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.swapSlotsBgmControllerTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.swapSlotsBgmControllerTextBox.Enabled = false;
-            this.swapSlotsBgmControllerTextBox.Location = new System.Drawing.Point(133, 8);
+            this.swapSlotsBgmControllerTextBox.Location = new System.Drawing.Point(64, 8);
             this.swapSlotsBgmControllerTextBox.Name = "swapSlotsBgmControllerTextBox";
-            this.swapSlotsBgmControllerTextBox.Size = new System.Drawing.Size(124, 20);
+            this.swapSlotsBgmControllerTextBox.Size = new System.Drawing.Size(229, 20);
             this.swapSlotsBgmControllerTextBox.TabIndex = 17;
             // 
             // swapSlotsBgmSlotComboBox
@@ -268,9 +268,9 @@
             "17",
             "18",
             "19"});
-            this.swapSlotsBgmSlotComboBox.Location = new System.Drawing.Point(133, 45);
+            this.swapSlotsBgmSlotComboBox.Location = new System.Drawing.Point(64, 45);
             this.swapSlotsBgmSlotComboBox.Name = "swapSlotsBgmSlotComboBox";
-            this.swapSlotsBgmSlotComboBox.Size = new System.Drawing.Size(124, 21);
+            this.swapSlotsBgmSlotComboBox.Size = new System.Drawing.Size(229, 21);
             this.swapSlotsBgmSlotComboBox.TabIndex = 14;
             this.swapSlotsBgmSlotComboBox.SelectedIndexChanged += new System.EventHandler(this.swapSlotsBgmSlotComboBox_SelectedIndexChanged);
             this.swapSlotsBgmSlotComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.swapSlotsBgmSlotComboBox_KeyDown);
@@ -279,9 +279,9 @@
             // swapSlotsBgmSwapButton
             // 
             this.swapSlotsBgmSwapButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.swapSlotsBgmSwapButton.Location = new System.Drawing.Point(133, 81);
+            this.swapSlotsBgmSwapButton.Location = new System.Drawing.Point(64, 81);
             this.swapSlotsBgmSwapButton.Name = "swapSlotsBgmSwapButton";
-            this.swapSlotsBgmSwapButton.Size = new System.Drawing.Size(124, 23);
+            this.swapSlotsBgmSwapButton.Size = new System.Drawing.Size(229, 23);
             this.swapSlotsBgmSwapButton.TabIndex = 19;
             this.swapSlotsBgmSwapButton.Text = "Swap!";
             this.swapSlotsBgmSwapButton.UseVisualStyleBackColor = true;
@@ -291,9 +291,9 @@
             // 
             this.swapSlotsBgmChangeIdsCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.swapSlotsBgmChangeIdsCheckBox.AutoSize = true;
-            this.swapSlotsBgmChangeIdsCheckBox.Location = new System.Drawing.Point(263, 47);
+            this.swapSlotsBgmChangeIdsCheckBox.Location = new System.Drawing.Point(299, 47);
             this.swapSlotsBgmChangeIdsCheckBox.Name = "swapSlotsBgmChangeIdsCheckBox";
-            this.swapSlotsBgmChangeIdsCheckBox.Size = new System.Drawing.Size(125, 17);
+            this.swapSlotsBgmChangeIdsCheckBox.Size = new System.Drawing.Size(89, 17);
             this.swapSlotsBgmChangeIdsCheckBox.TabIndex = 20;
             this.swapSlotsBgmChangeIdsCheckBox.Text = "Change IDs";
             this.swapSlotsBgmChangeIdsCheckBox.UseVisualStyleBackColor = true;
