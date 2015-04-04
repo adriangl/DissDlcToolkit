@@ -85,7 +85,7 @@
             this.bgmGenSaveButton.Name = "bgmGenSaveButton";
             this.bgmGenSaveButton.Size = new System.Drawing.Size(75, 23);
             this.bgmGenSaveButton.TabIndex = 27;
-            this.bgmGenSaveButton.Text = "Save";
+            this.bgmGenSaveButton.Text = "Generate!";
             this.bgmGenSaveButton.UseVisualStyleBackColor = true;
             this.bgmGenSaveButton.Click += new System.EventHandler(this.bgmGenSaveButton_Click);
             // 
