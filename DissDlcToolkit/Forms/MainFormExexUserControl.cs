@@ -163,7 +163,7 @@ namespace DissDlcToolkit.Forms
         {
             if (labelBoxesEnabled)
             {
-                Color backColor = openColorDialog(label.BackColor, invertColor);
+                Color backColor = openColorDialog(label.BackColor);
                 updateColorData(backColor, label, textBox, invertColor, applyAlpha);
             }
         }
@@ -171,25 +171,26 @@ namespace DissDlcToolkit.Forms
         private void updateColorData(Color backColor, Label colorLabel, TextBox colorTextBox,
             Boolean invert, Boolean applyAlpha)
         {
-            Color colorToApply = invert ? MiscUtils.invertColor(backColor) : backColor;
+            Color colorToApply = backColor;
             if (!applyAlpha)
             {
                 colorToApply = Color.FromArgb(0xFF, colorToApply.R, colorToApply.G, colorToApply.B);
             }
+
             colorLabel.BackColor = colorToApply;
-            colorTextBox.Text = applyAlpha ? MiscUtils.argbToString(backColor) : MiscUtils.rgbToString(backColor);
+            Color colorToShowInTextBox = invert ? MiscUtils.invertColor(backColor) : backColor;
+            colorTextBox.Text = applyAlpha ? MiscUtils.argbToString(colorToShowInTextBox) : MiscUtils.rgbToString(colorToShowInTextBox);
         }
 
-        private Color openColorDialog(Color currentColor, Boolean invertColor)
+        private Color openColorDialog(Color currentColor)
         {            
             ArgbColorDialog dialog = new ArgbColorDialog();
             // Sets the initial color select to the current text color.
-            dialog.Color = invertColor ? MiscUtils.invertColor(currentColor) : currentColor;
+            dialog.Color = currentColor;
             dialog.ShowDialog();
 
             // Update the text box color
             return dialog.Color;
-
         }
 
         private void populateFields(ExexTable table)
