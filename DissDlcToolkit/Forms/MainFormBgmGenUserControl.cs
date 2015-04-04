@@ -40,57 +40,65 @@ namespace DissDlcToolkit.Forms
                 // Needed to locate original BGM DLC data
                 String controllerFolder = Directory.GetParent(controllerFilePath).FullName;
 
-                // Getting data from BgmTable
-                BgmTable bgmTable = new BgmTable(controllerFilePath);
-
-                // Attempt to crack BGM DLC Slot from filename
-                int dlcSlotNumber = 0;
-                ArrayList bgmTitles = new ArrayList();
-                foreach (int i in Enumerable.Range(1, 999))
+                try
                 {
-                    if (controllerFileName.Contains(Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", i.ToString("D3")))))
+                    // Getting data from BgmTable
+                    BgmTable bgmTable = new BgmTable(controllerFilePath);
+
+                    // Attempt to crack BGM DLC Slot from filename
+                    int dlcSlotNumber = 0;
+                    ArrayList bgmTitles = new ArrayList();
+                    foreach (int i in Enumerable.Range(1, 999))
                     {
-                        dlcSlotNumber = i;
-                        break;
+                        if (controllerFileName.Contains(Hasher.hash(String.Format("dlc/bgm/dlc_{0}.bin", i.ToString("D3")))))
+                        {
+                            dlcSlotNumber = i;
+                            break;
+                        }
                     }
+                    if (dlcSlotNumber != 0)
+                    {
+                        // Try getting strings from text file in DLC slot
+                        String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", dlcSlotNumber.ToString("D3"))) + ".edat";
+                        String textHashedFilePath = System.IO.Path.Combine(controllerFolder, textHashedFileName);
+                        if (File.Exists(textHashedFilePath))
+                        {
+                            bgmTitles = MessFileReader.decodeDLCText(@textHashedFilePath);
+                        }
+                    }
+
+                    // Getting Form BGM entries
+                    BindingList<FormBgmEntry> formEntries = new BindingList<FormBgmEntry>();
+                    foreach (int i in Enumerable.Range(0, bgmTable.entries.Count))
+                    {
+                        BgmEntry entry = bgmTable.entries[i];
+                        FormBgmEntry formEntry = new FormBgmEntry(entry);
+                        String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", entry.internalFileName)) + ".edat";
+                        String hashedInternalFilePath = System.IO.Path.Combine(controllerFolder, hashedInternalFileName);
+                        if (File.Exists(hashedInternalFilePath))
+                        {
+                            formEntry.filePath = hashedInternalFilePath;
+                        }
+                        if (bgmTitles.Count > 0 && bgmTitles.Count > i)
+                        {
+                            formEntry.bgmTitle = (String)bgmTitles[i];
+                        }
+                        formEntries.Add(formEntry);
+                    }
+
+                    // Set DLC slot if any
+                    bgmGenDlcSlotComboBox.SelectedIndex = (dlcSlotNumber != -1)
+                            ? dlcSlotNumber - 1
+                            : 0;
+
+                    // Bind data
+                    bindDataAndEnableForm(formEntries);
                 }
-                if (dlcSlotNumber != 0)
+                catch (Exception ex)
                 {
-                    // Try getting strings from text file in DLC slot
-                    String textHashedFileName = Hasher.hash(String.Format("text/jp/dlc/bgm_{0}t.bin", dlcSlotNumber.ToString("D3"))) + ".edat";
-                    String textHashedFilePath = System.IO.Path.Combine(controllerFolder, textHashedFileName);
-                    if (File.Exists(textHashedFilePath))
-                    {
-                        bgmTitles = MessFileReader.decodeDLCText(@textHashedFilePath);
-                    }
+                    Logger.Log("MainFormBgmGenUserControl", ex);
+                    MessageBoxEx.Show(this, "There was a problem while processing the BGM table. Make sure that you selected the right file");
                 }
-
-                // Getting Form BGM entries
-                BindingList<FormBgmEntry> formEntries = new BindingList<FormBgmEntry>();
-                foreach (int i in Enumerable.Range(0, bgmTable.entries.Count))
-                {
-                    BgmEntry entry = bgmTable.entries[i];
-                    FormBgmEntry formEntry = new FormBgmEntry(entry);
-                    String hashedInternalFileName = Hasher.hash(String.Format("bgm/{0}", entry.internalFileName)) + ".edat";
-                    String hashedInternalFilePath = System.IO.Path.Combine(controllerFolder, hashedInternalFileName);
-                    if (File.Exists(hashedInternalFilePath))
-                    {
-                        formEntry.filePath = hashedInternalFilePath;
-                    }
-                    if (bgmTitles.Count > 0 && bgmTitles.Count > i)
-                    {
-                        formEntry.bgmTitle = (String)bgmTitles[i];
-                    }
-                    formEntries.Add(formEntry);
-                }
-
-                // Set DLC slot if any
-                bgmGenDlcSlotComboBox.SelectedIndex = (dlcSlotNumber != -1)
-                        ? dlcSlotNumber - 1
-                        : 0;
-
-                // Bind data
-                bindDataAndEnableForm(formEntries);
             }
         }
 
