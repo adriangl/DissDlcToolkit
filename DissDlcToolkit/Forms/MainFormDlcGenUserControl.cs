@@ -13,6 +13,7 @@ using System.IO;
 using DissDlcToolkit.Utils;
 using System.Resources;
 using System.Reflection;
+using DissDlcToolkit.Widgets;
 
 namespace DissDlcToolkit.Forms
 {
@@ -185,7 +186,7 @@ namespace DissDlcToolkit.Forms
                 || dlcGenPlayerDlcSlotComboBox.SelectedItem == null
                 || dlcGenAssistDlcSlotComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Select valid values in the highlighted fields.");
+                MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
                 return;
             }
 
@@ -212,12 +213,12 @@ namespace DissDlcToolkit.Forms
                     if (dlcGenPlayerGimFileExtraEnabled && playerGimExtraFile.Equals(""))
                     {
                         // Cecil Only
-                        MessageBox.Show("You need to select at least a player GMO & GIMs (main and extra)");
+                        MessageBoxEx.Show(this, "You need to select at least a player GMO & GIMs (main and extra)");
                         return;
                     }
                     else
                     {
-                        MessageBox.Show("You need to select at least a player GMO & GIM");
+                        MessageBoxEx.Show(this, "You need to select at least a player GMO & GIM");
                         return;
                     }
                 }                
@@ -229,7 +230,7 @@ namespace DissDlcToolkit.Forms
                 {
                     if (assistGmoFile.Equals(""))
                     {
-                        MessageBox.Show("You need to select an assist GMO");
+                        MessageBoxEx.Show(this, "You need to select an assist GMO");
                         return;
                     }
                 }
@@ -243,7 +244,7 @@ namespace DissDlcToolkit.Forms
                 {
                     if (playerDlcSlotNumber == assistDlcSlotNumber)
                     {
-                        MessageBox.Show("Set different slots for player and assist DLC slots");
+                        MessageBoxEx.Show(this, "Set different slots for player and assist DLC slots");
                         return;
                     }
                 }
@@ -356,7 +357,7 @@ namespace DissDlcToolkit.Forms
             }
             catch (Exception e)
             {
-                MessageBox.Show("There was an error with one or some of the player input files."+"\r\n"+
+                MessageBoxEx.Show(this, "There was an error with one or some of the player input files."+"\r\n"+
                     "Please verify that they are valid files");
                 Logger.Log(TAG, e);
                 deleteNewDlcFolder(dlcFolder);
@@ -429,7 +430,7 @@ namespace DissDlcToolkit.Forms
                 }
                 catch (Exception e)
                 {
-                    MessageBox.Show("There was an error with one or some of the assist input files." + "\r\n" +
+                    MessageBoxEx.Show(this, "There was an error with one or some of the assist input files." + "\r\n" +
                         "Please verify that they are valid files");
                     Logger.Log(TAG, e);
                     deleteNewDlcFolder(dlcFolder);
@@ -446,7 +447,7 @@ namespace DissDlcToolkit.Forms
                 }
             }
 
-            MessageBox.Show("Success!");
+            MessageBoxEx.Show(this, "Success!");
         }
 
         private static void deleteNewDlcFolder(String dlcFolder)

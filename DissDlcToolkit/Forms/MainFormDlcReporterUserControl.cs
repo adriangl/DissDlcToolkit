@@ -13,6 +13,7 @@ using DissDlcToolkit.Models;
 using OfficeOpenXml;
 using FolderSelect;
 using System.Collections;
+using DissDlcToolkit.Widgets;
 
 namespace DissDlcToolkit.Forms
 {
@@ -45,12 +46,12 @@ namespace DissDlcToolkit.Forms
             DirectoryInfo dirInfo = new DirectoryInfo(folder);
             if (!dirInfo.Exists)
             {
-                MessageBox.Show("The selected folder does not exist");
+                MessageBoxEx.Show(this, "The selected folder does not exist");
                 return;
             }
             else if (dirInfo.GetFiles().Length == 0)
             {
-                MessageBox.Show("The selected folder hasn't got any files");
+                MessageBoxEx.Show(this, "The selected folder hasn't got any files");
                 return;
             }
 
@@ -89,7 +90,7 @@ namespace DissDlcToolkit.Forms
             }
             catch (Exception e)
             {
-                MessageBox.Show("There was a problem with one or some of the files in the selected folder");
+                MessageBoxEx.Show(this, "There was a problem with one or some of the files in the selected folder");
                 Logger.Log(TAG, e);
                 return;
             }
@@ -143,7 +144,7 @@ namespace DissDlcToolkit.Forms
             }
             catch (Exception e)
             {
-                MessageBox.Show("There was a problem with one or some of the files in the selected folder");
+                MessageBoxEx.Show(this, "There was a problem with one or some of the files in the selected folder");
                 Logger.Log(TAG, e);
                 return;
             }
@@ -155,11 +156,11 @@ namespace DissDlcToolkit.Forms
             {
                 reporterSaveToExcelButton.Enabled = true;
                 reporterFolderLabel.Text = folder;
-                MessageBox.Show("DLC read OK!!");
+                MessageBoxEx.Show(this, "DLC read OK!!");
             }
             else
             {
-                MessageBox.Show("Couldn't find DLC in this folder");
+                MessageBoxEx.Show(this, "Couldn't find DLC in this folder");
             }
             
         }
@@ -300,12 +301,12 @@ namespace DissDlcToolkit.Forms
                         packageToSave.Workbook.Worksheets.Add("Character DLC Files", characterDlcWorksheet);
                         packageToSave.Workbook.Worksheets.Add("BGM DLC Files", bgmDlcWorksheet);
                         packageToSave.Save();
-                        MessageBox.Show("Excel spreadsheet exported OK!");
+                        MessageBoxEx.Show(this, "Excel spreadsheet exported OK!");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("The Excel file could not be exported.");
+                    MessageBoxEx.Show(this, "The Excel file could not be exported.");
                     Logger.Log(TAG, ex);
                 }
             }

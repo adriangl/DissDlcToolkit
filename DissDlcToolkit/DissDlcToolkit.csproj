@@ -129,6 +129,7 @@
     <Compile Include="Utils\MessFileWriter.cs" />
     <Compile Include="Utils\MiscUtils.cs" />
     <Compile Include="Utils\UnicodeCodec.cs" />
+    <Compile Include="Widgets\MessageBoxEx.cs" />
     <Compile Include="Widgets\RefreshableListBox.cs">
       <SubType>Component</SubType>
     </Compile>

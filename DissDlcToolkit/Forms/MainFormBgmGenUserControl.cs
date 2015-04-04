@@ -10,6 +10,7 @@ using DissDlcToolkit.Models;
 using DissDlcToolkit.Utils;
 using System.IO;
 using System.Collections;
+using DissDlcToolkit.Widgets;
 
 namespace DissDlcToolkit.Forms
 {
@@ -195,7 +196,7 @@ namespace DissDlcToolkit.Forms
             }
             else
             {
-                MessageBox.Show("You have to keep at least one BGM in the list!");
+                MessageBoxEx.Show(this, "You have to keep at least one BGM in the list!");
             }
         }
 
@@ -225,20 +226,20 @@ namespace DissDlcToolkit.Forms
             // Validate data
             if (bgmGenDlcSlotComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Select valid values in the highlighted fields.");
+                MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
                 return;
             }
 
             int selectedBgmSlotIndex = bgmGenDlcSlotComboBox.SelectedIndex;
             if (selectedBgmSlotIndex < 0){
-                MessageBox.Show("You have to select a valid DLC slot");
+                MessageBoxEx.Show(this, "You have to select a valid DLC slot");
                 return;
             }
             int bgmDlcSlot = (int)bgmGenDlcSlotComboBox.SelectedIndex + 1;
 
             if (bgmFormEntries.Count <= 0)
             {
-                MessageBox.Show("You have to add at least one BGM to the list");
+                MessageBoxEx.Show(this, "You have to add at least one BGM to the list");
                 return;
             }   
         
@@ -300,7 +301,7 @@ namespace DissDlcToolkit.Forms
                 }
             }
 
-            MessageBox.Show("Success!");
+            MessageBoxEx.Show(this, "Success!");
 
         }
 

@@ -12,6 +12,7 @@ using DissDlcToolkit.Utils;
 using System.IO;
 using CutoutPro.Winforms;
 using System.Collections;
+using DissDlcToolkit.Widgets;
 
 namespace DissDlcToolkit.Forms
 {
@@ -63,7 +64,7 @@ namespace DissDlcToolkit.Forms
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("The .exex file you tried to load is not a vaild .exex");
+                    MessageBoxEx.Show(this, "The .exex file you tried to load is not a vaild .exex");
                     Logger.Log(TAG, ex);
                 }
             }
@@ -132,7 +133,7 @@ namespace DissDlcToolkit.Forms
             // Validate data, just in case
             if (exexAuraSlotComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Select valid values in the highlighted fields.");
+                MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
                 return;
             }
             
@@ -149,10 +150,10 @@ namespace DissDlcToolkit.Forms
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was a problem writing the .exex file");
+                MessageBoxEx.Show(this, "There was a problem writing the .exex file");
                 Logger.Log(TAG, ex);
             }
-            MessageBox.Show("Success!!");
+            MessageBoxEx.Show(this, "Success!!");
         }
 
         /** 

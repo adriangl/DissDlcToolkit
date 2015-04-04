@@ -14,6 +14,7 @@ using System.IO;
 using System.Resources;
 using System.Reflection;
 using System.Globalization;
+using DissDlcToolkit.Widgets;
 
 namespace DissDlcToolkit.Forms
 {
@@ -93,14 +94,14 @@ namespace DissDlcToolkit.Forms
             if (attachmentCreationDlcSlotComboBox.SelectedItem == null
                 || attachmentCreationBaseComboBox.SelectedItem == null)
             {
-                MessageBox.Show("Select valid values in the highlighted fields.");
+                MessageBoxEx.Show(this, "Select valid values in the highlighted fields.");
                 return;
             }
             
             String attachmentGmoFile = attachmentCreationGmoFileTextBox.Text;
             if (attachmentGmoFile.Equals(""))
             {
-                MessageBox.Show("Select a valid GMO file");
+                MessageBoxEx.Show(this, "Select a valid GMO file");
                 return;
             }
             else
@@ -174,11 +175,11 @@ namespace DissDlcToolkit.Forms
                         }
                     }
 
-                    MessageBox.Show("Success!!");
+                    MessageBoxEx.Show(this, "Success!!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("There was a problem saving the attachment files.");
+                    MessageBoxEx.Show(this, "There was a problem saving the attachment files.");
                     Logger.Log(TAG, ex);
                 }
             }
@@ -210,12 +211,12 @@ namespace DissDlcToolkit.Forms
                 }
                 else
                 {
-                    MessageBox.Show("You need to select a base controller in order to link an attachment");
+                    MessageBoxEx.Show(this, "You need to select a base controller in order to link an attachment");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("There was an error linking the attachment");
+                MessageBoxEx.Show(this, "There was an error linking the attachment");
                 Logger.Log(TAG, ex);
             }
         }
@@ -230,11 +231,11 @@ namespace DissDlcToolkit.Forms
             {
                 File.Copy(baseControllerFile, baseControllerFile + ".bak", true);
                 baseTable.writeToFile(baseControllerFile);
-                MessageBox.Show("Success!!");
+                MessageBoxEx.Show(this, "Success!!");
             }
             else
             {
-                MessageBox.Show("You have surpassed the limit of attachments to add to this controller");
+                MessageBoxEx.Show(this, "You have surpassed the limit of attachments to add to this controller");
             }
         }        
 

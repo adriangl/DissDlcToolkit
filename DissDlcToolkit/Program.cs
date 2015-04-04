@@ -1,4 +1,5 @@
 ﻿using DissDlcToolkit.Utils;
+using DissDlcToolkit.Widgets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace DissDlcToolkit
 
         private static void Application_handleException(Exception e)
         {
-            MessageBox.Show("An unhandled exception has been found.\r\n"+
+            MessageBoxEx.Show(System.Windows.Forms.Application.OpenForms[0], "An unhandled exception has been found.\r\n" +
                             "Please report the error with the contents of the file \"log.txt\"", "ERROR");
             Logger.Log("Application", e);
             Application.Exit();
