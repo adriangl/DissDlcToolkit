@@ -117,8 +117,12 @@ namespace DissDlcToolkit.Models
             addEntry(entry, position);
         }
 
-        public void generateRandomEntryNamesAndIds(int dlcSlot)
+        public void generateRandomEntryNamesAndIds(int dlcSlot, bool forceReloadIds, bool forceReloadNames)
         {
+            if (forceReloadIds)
+            {
+                entryIds.Clear();
+            }
             foreach (BgmEntry entry in entries)
             {
                 // Generate an ID; start from zero
@@ -127,7 +131,7 @@ namespace DissDlcToolkit.Models
 
                 // If the id is the max uint32 max value, assume that it won't have
                 // an ID set, and thus, no internal name
-                if (entry.id == UInt16.MaxValue)
+                if (entry.id == UInt16.MaxValue || forceReloadIds)
                 {
                     bool validIdFound = false;               
 
@@ -139,8 +143,11 @@ namespace DissDlcToolkit.Models
                         {
                             // Save ID & generate new name
                             entry.id = newId;
-                            entry.internalFileName = String.Format("ud_{0}{1}.at3", 
-                                dlcSlot.ToString("D2"), newId.ToString("X4"));
+                            if (forceReloadNames)
+                            {
+                                entry.internalFileName = String.Format("ud_{0}{1}.at3",
+                                    dlcSlot.ToString("D2"), newId.ToString("X4"));
+                            }
                             // Save in hashtable
                             entryIds.Add(entry.id, entry.internalFileName);
                             // Mark as found for the given entry
@@ -155,6 +162,11 @@ namespace DissDlcToolkit.Models
                 }
                 entry.bgmType = BgmEntry.BGM_TYPE_IS_DLC;
             }
+        }
+
+        internal void generateRandomEntryNamesAndIds(int dlcSlotNumber)
+        {            
+            generateRandomEntryNamesAndIds(dlcSlotNumber, false, true);
         }
     }
 }

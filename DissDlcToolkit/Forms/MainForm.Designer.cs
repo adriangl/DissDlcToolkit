@@ -35,22 +35,30 @@
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabHostMain = new System.Windows.Forms.TabControl();
             this.tabDlcGen = new System.Windows.Forms.TabPage();
-            this.mainFormDlcGenUserControl1 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
+            this.mainFormDlcGenUserControl2 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
+            this.tabAttachments = new System.Windows.Forms.TabPage();
+            this.mainFormAttachmentsUserControl2 = new DissDlcToolkit.Forms.MainFormAttachmentsUserControl();
+            this.tabBgmGen = new System.Windows.Forms.TabPage();
+            this.mainFormBgmGenUserControl2 = new DissDlcToolkit.Forms.MainFormBgmGenUserControl();
+            this.tabSwap = new System.Windows.Forms.TabPage();
+            this.mainFormSwapSlotsUserControl1 = new DissDlcToolkit.Forms.MainFormSwapSlotsUserControl();
             this.tabExex = new System.Windows.Forms.TabPage();
+            this.mainFormExexUserControl3 = new DissDlcToolkit.Forms.MainFormExexUserControl();
+            this.tabReporter = new System.Windows.Forms.TabPage();
+            this.mainFormDlcReporterUserControl2 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
+            this.mainFormDlcGenUserControl1 = new DissDlcToolkit.Forms.MainFormDlcGenUserControl();
             this.mainFormExexUserControl2 = new DissDlcToolkit.Forms.MainFormExexUserControl();
             this.mainFormExexUserControl1 = new DissDlcToolkit.Forms.MainFormExexUserControl();
-            this.tabAttachments = new System.Windows.Forms.TabPage();
             this.mainFormAttachmentsUserControl1 = new DissDlcToolkit.Forms.MainFormAttachmentsUserControl();
-            this.tabBgmGen = new System.Windows.Forms.TabPage();
             this.mainFormBgmGenUserControl1 = new DissDlcToolkit.Forms.MainFormBgmGenUserControl();
-            this.tabReporter = new System.Windows.Forms.TabPage();
             this.mainFormDlcReporterUserControl1 = new DissDlcToolkit.Forms.MainFormDlcReporterUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabHostMain.SuspendLayout();
             this.tabDlcGen.SuspendLayout();
-            this.tabExex.SuspendLayout();
             this.tabAttachments.SuspendLayout();
             this.tabBgmGen.SuspendLayout();
+            this.tabSwap.SuspendLayout();
+            this.tabExex.SuspendLayout();
             this.tabReporter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,9 +92,10 @@
             // tabHostMain
             // 
             this.tabHostMain.Controls.Add(this.tabDlcGen);
-            this.tabHostMain.Controls.Add(this.tabExex);
             this.tabHostMain.Controls.Add(this.tabAttachments);
             this.tabHostMain.Controls.Add(this.tabBgmGen);
+            this.tabHostMain.Controls.Add(this.tabSwap);
+            this.tabHostMain.Controls.Add(this.tabExex);
             this.tabHostMain.Controls.Add(this.tabReporter);
             resources.ApplyResources(this.tabHostMain, "tabHostMain");
             this.tabHostMain.Name = "tabHostMain";
@@ -94,23 +103,80 @@
             // 
             // tabDlcGen
             // 
-            this.tabDlcGen.Controls.Add(this.mainFormDlcGenUserControl1);
+            this.tabDlcGen.Controls.Add(this.mainFormDlcGenUserControl2);
             resources.ApplyResources(this.tabDlcGen, "tabDlcGen");
             this.tabDlcGen.Name = "tabDlcGen";
             this.tabDlcGen.UseVisualStyleBackColor = true;
+            // 
+            // mainFormDlcGenUserControl2
+            // 
+            resources.ApplyResources(this.mainFormDlcGenUserControl2, "mainFormDlcGenUserControl2");
+            this.mainFormDlcGenUserControl2.Name = "mainFormDlcGenUserControl2";
+            // 
+            // tabAttachments
+            // 
+            this.tabAttachments.Controls.Add(this.mainFormAttachmentsUserControl2);
+            resources.ApplyResources(this.tabAttachments, "tabAttachments");
+            this.tabAttachments.Name = "tabAttachments";
+            this.tabAttachments.UseVisualStyleBackColor = true;
+            // 
+            // mainFormAttachmentsUserControl2
+            // 
+            resources.ApplyResources(this.mainFormAttachmentsUserControl2, "mainFormAttachmentsUserControl2");
+            this.mainFormAttachmentsUserControl2.Name = "mainFormAttachmentsUserControl2";
+            // 
+            // tabBgmGen
+            // 
+            this.tabBgmGen.Controls.Add(this.mainFormBgmGenUserControl2);
+            resources.ApplyResources(this.tabBgmGen, "tabBgmGen");
+            this.tabBgmGen.Name = "tabBgmGen";
+            this.tabBgmGen.UseVisualStyleBackColor = true;
+            // 
+            // mainFormBgmGenUserControl2
+            // 
+            resources.ApplyResources(this.mainFormBgmGenUserControl2, "mainFormBgmGenUserControl2");
+            this.mainFormBgmGenUserControl2.Name = "mainFormBgmGenUserControl2";
+            // 
+            // tabSwap
+            // 
+            this.tabSwap.Controls.Add(this.mainFormSwapSlotsUserControl1);
+            resources.ApplyResources(this.tabSwap, "tabSwap");
+            this.tabSwap.Name = "tabSwap";
+            this.tabSwap.UseVisualStyleBackColor = true;
+            // 
+            // mainFormSwapSlotsUserControl1
+            // 
+            resources.ApplyResources(this.mainFormSwapSlotsUserControl1, "mainFormSwapSlotsUserControl1");
+            this.mainFormSwapSlotsUserControl1.Name = "mainFormSwapSlotsUserControl1";
+            // 
+            // tabExex
+            // 
+            this.tabExex.Controls.Add(this.mainFormExexUserControl3);
+            resources.ApplyResources(this.tabExex, "tabExex");
+            this.tabExex.Name = "tabExex";
+            this.tabExex.UseVisualStyleBackColor = true;
+            // 
+            // mainFormExexUserControl3
+            // 
+            resources.ApplyResources(this.mainFormExexUserControl3, "mainFormExexUserControl3");
+            this.mainFormExexUserControl3.Name = "mainFormExexUserControl3";
+            // 
+            // tabReporter
+            // 
+            this.tabReporter.Controls.Add(this.mainFormDlcReporterUserControl2);
+            resources.ApplyResources(this.tabReporter, "tabReporter");
+            this.tabReporter.Name = "tabReporter";
+            this.tabReporter.UseVisualStyleBackColor = true;
+            // 
+            // mainFormDlcReporterUserControl2
+            // 
+            resources.ApplyResources(this.mainFormDlcReporterUserControl2, "mainFormDlcReporterUserControl2");
+            this.mainFormDlcReporterUserControl2.Name = "mainFormDlcReporterUserControl2";
             // 
             // mainFormDlcGenUserControl1
             // 
             resources.ApplyResources(this.mainFormDlcGenUserControl1, "mainFormDlcGenUserControl1");
             this.mainFormDlcGenUserControl1.Name = "mainFormDlcGenUserControl1";
-            // 
-            // tabExex
-            // 
-            this.tabExex.Controls.Add(this.mainFormExexUserControl2);
-            this.tabExex.Controls.Add(this.mainFormExexUserControl1);
-            resources.ApplyResources(this.tabExex, "tabExex");
-            this.tabExex.Name = "tabExex";
-            this.tabExex.UseVisualStyleBackColor = true;
             // 
             // mainFormExexUserControl2
             // 
@@ -122,36 +188,15 @@
             resources.ApplyResources(this.mainFormExexUserControl1, "mainFormExexUserControl1");
             this.mainFormExexUserControl1.Name = "mainFormExexUserControl1";
             // 
-            // tabAttachments
-            // 
-            this.tabAttachments.Controls.Add(this.mainFormAttachmentsUserControl1);
-            resources.ApplyResources(this.tabAttachments, "tabAttachments");
-            this.tabAttachments.Name = "tabAttachments";
-            this.tabAttachments.UseVisualStyleBackColor = true;
-            // 
             // mainFormAttachmentsUserControl1
             // 
             resources.ApplyResources(this.mainFormAttachmentsUserControl1, "mainFormAttachmentsUserControl1");
             this.mainFormAttachmentsUserControl1.Name = "mainFormAttachmentsUserControl1";
             // 
-            // tabBgmGen
-            // 
-            this.tabBgmGen.Controls.Add(this.mainFormBgmGenUserControl1);
-            resources.ApplyResources(this.tabBgmGen, "tabBgmGen");
-            this.tabBgmGen.Name = "tabBgmGen";
-            this.tabBgmGen.UseVisualStyleBackColor = true;
-            // 
             // mainFormBgmGenUserControl1
             // 
             resources.ApplyResources(this.mainFormBgmGenUserControl1, "mainFormBgmGenUserControl1");
             this.mainFormBgmGenUserControl1.Name = "mainFormBgmGenUserControl1";
-            // 
-            // tabReporter
-            // 
-            this.tabReporter.Controls.Add(this.mainFormDlcReporterUserControl1);
-            resources.ApplyResources(this.tabReporter, "tabReporter");
-            this.tabReporter.Name = "tabReporter";
-            this.tabReporter.UseVisualStyleBackColor = true;
             // 
             // mainFormDlcReporterUserControl1
             // 
@@ -173,9 +218,10 @@
             this.menuStrip1.PerformLayout();
             this.tabHostMain.ResumeLayout(false);
             this.tabDlcGen.ResumeLayout(false);
-            this.tabExex.ResumeLayout(false);
             this.tabAttachments.ResumeLayout(false);
             this.tabBgmGen.ResumeLayout(false);
+            this.tabSwap.ResumeLayout(false);
+            this.tabExex.ResumeLayout(false);
             this.tabReporter.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -200,6 +246,13 @@
         private Forms.MainFormExexUserControl mainFormExexUserControl2;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
+        private System.Windows.Forms.TabPage tabSwap;
+        private Forms.MainFormDlcGenUserControl mainFormDlcGenUserControl2;
+        private Forms.MainFormAttachmentsUserControl mainFormAttachmentsUserControl2;
+        private Forms.MainFormBgmGenUserControl mainFormBgmGenUserControl2;
+        private Forms.MainFormSwapSlotsUserControl mainFormSwapSlotsUserControl1;
+        private Forms.MainFormExexUserControl mainFormExexUserControl3;
+        private Forms.MainFormDlcReporterUserControl mainFormDlcReporterUserControl2;
 
     }
 }

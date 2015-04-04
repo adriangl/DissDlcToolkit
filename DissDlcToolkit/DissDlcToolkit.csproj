@@ -102,6 +102,12 @@
     <Compile Include="Forms\MainFormExexUserControl.Designer.cs">
       <DependentUpon>MainFormExexUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MainFormSwapSlotsUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFormSwapSlotsUserControl.Designer.cs">
+      <DependentUpon>MainFormSwapSlotsUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainFormExexUserControl.resx">
       <DependentUpon>MainFormExexUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFormSwapSlotsUserControl.resx">
+      <DependentUpon>MainFormSwapSlotsUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>

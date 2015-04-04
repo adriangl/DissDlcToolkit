@@ -122,13 +122,13 @@
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="settingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="settingsToolStripMenuItem.Text" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="aboutToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>116, 22</value>
   </data>
   <data name="aboutToolStripMenuItem1.Text" xml:space="preserve">
     <value>About...</value>
@@ -164,34 +164,31 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="mainFormDlcGenUserControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="mainFormDlcGenUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
   </data>
-  <data name="mainFormDlcGenUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="mainFormDlcGenUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 281</value>
   </data>
-  <data name="mainFormDlcGenUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 278</value>
-  </data>
-  <data name="mainFormDlcGenUserControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="mainFormDlcGenUserControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcGenUserControl1.Name" xml:space="preserve">
-    <value>mainFormDlcGenUserControl1</value>
+  <data name="&gt;&gt;mainFormDlcGenUserControl2.Name" xml:space="preserve">
+    <value>mainFormDlcGenUserControl2</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcGenUserControl1.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormDlcGenUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;mainFormDlcGenUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormDlcGenUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcGenUserControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mainFormDlcGenUserControl2.Parent" xml:space="preserve">
     <value>tabDlcGen</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcGenUserControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mainFormDlcGenUserControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabDlcGen.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="tabDlcGen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>3, 3, 3, 3</value>
   </data>
@@ -202,7 +199,7 @@
     <value>0</value>
   </data>
   <data name="tabDlcGen.Text" xml:space="preserve">
-    <value>DLC Generation</value>
+    <value>Character Gen</value>
   </data>
   <data name="&gt;&gt;tabDlcGen.Name" xml:space="preserve">
     <value>tabDlcGen</value>
@@ -216,97 +213,25 @@
   <data name="&gt;&gt;tabDlcGen.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="mainFormExexUserControl2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="mainFormAttachmentsUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
   </data>
-  <data name="mainFormExexUserControl2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 278</value>
+  <data name="mainFormAttachmentsUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 281</value>
   </data>
-  <data name="mainFormExexUserControl2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl2.Name" xml:space="preserve">
-    <value>mainFormExexUserControl2</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl2.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl2.Parent" xml:space="preserve">
-    <value>tabExex</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl2.ZOrder" xml:space="preserve">
+  <data name="mainFormAttachmentsUserControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="mainFormExexUserControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>None</value>
+  <data name="&gt;&gt;mainFormAttachmentsUserControl2.Name" xml:space="preserve">
+    <value>mainFormAttachmentsUserControl2</value>
   </data>
-  <data name="mainFormExexUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-767, -732</value>
+  <data name="&gt;&gt;mainFormAttachmentsUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormAttachmentsUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="mainFormExexUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 278</value>
-  </data>
-  <data name="mainFormExexUserControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl1.Name" xml:space="preserve">
-    <value>mainFormExexUserControl1</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl1.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl1.Parent" xml:space="preserve">
-    <value>tabExex</value>
-  </data>
-  <data name="&gt;&gt;mainFormExexUserControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabExex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="tabExex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tabExex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 284</value>
-  </data>
-  <data name="tabExex.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabExex.Text" xml:space="preserve">
-    <value>.exex editing</value>
-  </data>
-  <data name="&gt;&gt;tabExex.Name" xml:space="preserve">
-    <value>tabExex</value>
-  </data>
-  <data name="&gt;&gt;tabExex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabExex.Parent" xml:space="preserve">
-    <value>tabHostMain</value>
-  </data>
-  <data name="&gt;&gt;tabExex.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="mainFormAttachmentsUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="mainFormAttachmentsUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>413, 284</value>
-  </data>
-  <data name="mainFormAttachmentsUserControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;mainFormAttachmentsUserControl1.Name" xml:space="preserve">
-    <value>mainFormAttachmentsUserControl1</value>
-  </data>
-  <data name="&gt;&gt;mainFormAttachmentsUserControl1.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormAttachmentsUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;mainFormAttachmentsUserControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mainFormAttachmentsUserControl2.Parent" xml:space="preserve">
     <value>tabAttachments</value>
   </data>
-  <data name="&gt;&gt;mainFormAttachmentsUserControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mainFormAttachmentsUserControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabAttachments.Location" type="System.Drawing.Point, System.Drawing">
@@ -334,27 +259,27 @@
     <value>tabHostMain</value>
   </data>
   <data name="&gt;&gt;tabAttachments.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
-  <data name="mainFormBgmGenUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="mainFormBgmGenUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
   </data>
-  <data name="mainFormBgmGenUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 278</value>
+  <data name="mainFormBgmGenUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 281</value>
   </data>
-  <data name="mainFormBgmGenUserControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="mainFormBgmGenUserControl2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mainFormBgmGenUserControl1.Name" xml:space="preserve">
-    <value>mainFormBgmGenUserControl1</value>
+  <data name="&gt;&gt;mainFormBgmGenUserControl2.Name" xml:space="preserve">
+    <value>mainFormBgmGenUserControl2</value>
   </data>
-  <data name="&gt;&gt;mainFormBgmGenUserControl1.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormBgmGenUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;mainFormBgmGenUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormBgmGenUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;mainFormBgmGenUserControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mainFormBgmGenUserControl2.Parent" xml:space="preserve">
     <value>tabBgmGen</value>
   </data>
-  <data name="&gt;&gt;mainFormBgmGenUserControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mainFormBgmGenUserControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabBgmGen.Location" type="System.Drawing.Point, System.Drawing">
@@ -370,7 +295,7 @@
     <value>4</value>
   </data>
   <data name="tabBgmGen.Text" xml:space="preserve">
-    <value>BGM Generation</value>
+    <value>BGM Gen</value>
   </data>
   <data name="&gt;&gt;tabBgmGen.Name" xml:space="preserve">
     <value>tabBgmGen</value>
@@ -382,27 +307,120 @@
     <value>tabHostMain</value>
   </data>
   <data name="&gt;&gt;tabBgmGen.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
-  <data name="mainFormDlcReporterUserControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="mainFormSwapSlotsUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
   </data>
-  <data name="mainFormDlcReporterUserControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>407, 278</value>
+  <data name="mainFormSwapSlotsUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 281</value>
   </data>
-  <data name="mainFormDlcReporterUserControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="mainFormSwapSlotsUserControl1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcReporterUserControl1.Name" xml:space="preserve">
-    <value>mainFormDlcReporterUserControl1</value>
+  <data name="&gt;&gt;mainFormSwapSlotsUserControl1.Name" xml:space="preserve">
+    <value>mainFormSwapSlotsUserControl1</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcReporterUserControl1.Type" xml:space="preserve">
-    <value>DissDlcToolkit.Forms.MainFormDlcReporterUserControl, DissDlcToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="&gt;&gt;mainFormSwapSlotsUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormSwapSlotsUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcReporterUserControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;mainFormSwapSlotsUserControl1.Parent" xml:space="preserve">
+    <value>tabSwap</value>
+  </data>
+  <data name="&gt;&gt;mainFormSwapSlotsUserControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabSwap.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabSwap.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 284</value>
+  </data>
+  <data name="tabSwap.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="tabSwap.Text" xml:space="preserve">
+    <value>Swap DLC Slots</value>
+  </data>
+  <data name="&gt;&gt;tabSwap.Name" xml:space="preserve">
+    <value>tabSwap</value>
+  </data>
+  <data name="&gt;&gt;tabSwap.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabSwap.Parent" xml:space="preserve">
+    <value>tabHostMain</value>
+  </data>
+  <data name="&gt;&gt;tabSwap.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="mainFormExexUserControl3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="mainFormExexUserControl3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 281</value>
+  </data>
+  <data name="mainFormExexUserControl3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl3.Name" xml:space="preserve">
+    <value>mainFormExexUserControl3</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl3.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl3.Parent" xml:space="preserve">
+    <value>tabExex</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabExex.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="tabExex.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabExex.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 284</value>
+  </data>
+  <data name="tabExex.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabExex.Text" xml:space="preserve">
+    <value>.exex edit</value>
+  </data>
+  <data name="&gt;&gt;tabExex.Name" xml:space="preserve">
+    <value>tabExex</value>
+  </data>
+  <data name="&gt;&gt;tabExex.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabExex.Parent" xml:space="preserve">
+    <value>tabHostMain</value>
+  </data>
+  <data name="&gt;&gt;tabExex.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 3</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 281</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcReporterUserControl2.Name" xml:space="preserve">
+    <value>mainFormDlcReporterUserControl2</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcReporterUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormDlcReporterUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcReporterUserControl2.Parent" xml:space="preserve">
     <value>tabReporter</value>
   </data>
-  <data name="&gt;&gt;mainFormDlcReporterUserControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;mainFormDlcReporterUserControl2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="tabReporter.Location" type="System.Drawing.Point, System.Drawing">
@@ -415,7 +433,7 @@
     <value>2</value>
   </data>
   <data name="tabReporter.Text" xml:space="preserve">
-    <value>DLC Reporter</value>
+    <value>Reporter</value>
   </data>
   <data name="&gt;&gt;tabReporter.Name" xml:space="preserve">
     <value>tabReporter</value>
@@ -427,7 +445,7 @@
     <value>tabHostMain</value>
   </data>
   <data name="&gt;&gt;tabReporter.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabHostMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 27</value>
@@ -449,6 +467,102 @@
   </data>
   <data name="&gt;&gt;tabHostMain.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="mainFormDlcGenUserControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mainFormDlcGenUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormDlcGenUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormDlcGenUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcGenUserControl1.Name" xml:space="preserve">
+    <value>mainFormDlcGenUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcGenUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormDlcGenUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mainFormExexUserControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormExexUserControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormExexUserControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.Name" xml:space="preserve">
+    <value>mainFormExexUserControl2</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl2.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mainFormExexUserControl1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="mainFormExexUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-877, -837</value>
+  </data>
+  <data name="mainFormExexUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormExexUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl1.Name" xml:space="preserve">
+    <value>mainFormExexUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormExexUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormExexUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mainFormAttachmentsUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainFormAttachmentsUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>413, 284</value>
+  </data>
+  <data name="mainFormAttachmentsUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormAttachmentsUserControl1.Name" xml:space="preserve">
+    <value>mainFormAttachmentsUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormAttachmentsUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormAttachmentsUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormBgmGenUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.Name" xml:space="preserve">
+    <value>mainFormBgmGenUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormBgmGenUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormBgmGenUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>407, 278</value>
+  </data>
+  <data name="mainFormDlcReporterUserControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcReporterUserControl1.Name" xml:space="preserve">
+    <value>mainFormDlcReporterUserControl1</value>
+  </data>
+  <data name="&gt;&gt;mainFormDlcReporterUserControl1.Type" xml:space="preserve">
+    <value>DissDlcToolkit.Forms.MainFormDlcReporterUserControl, DissDlcToolkit, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
