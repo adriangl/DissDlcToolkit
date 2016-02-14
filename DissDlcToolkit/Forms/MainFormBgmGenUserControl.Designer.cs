@@ -74,7 +74,7 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.bgmGenBgmListBox);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(814, 535);
             this.panel1.TabIndex = 1;
@@ -83,7 +83,7 @@
             // 
             this.bgmGenSaveButton.Enabled = false;
             this.bgmGenSaveButton.Location = new System.Drawing.Point(462, 442);
-            this.bgmGenSaveButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenSaveButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenSaveButton.Name = "bgmGenSaveButton";
             this.bgmGenSaveButton.Size = new System.Drawing.Size(150, 44);
             this.bgmGenSaveButton.TabIndex = 27;
@@ -99,7 +99,7 @@
             this.tableLayoutPanel4.Controls.Add(this.bgmGenDlcSlotComboBox, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(272, 13);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -135,7 +135,7 @@
             "18",
             "19"});
             this.bgmGenDlcSlotComboBox.Location = new System.Drawing.Point(146, 14);
-            this.bgmGenDlcSlotComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenDlcSlotComboBox.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenDlcSlotComboBox.Name = "bgmGenDlcSlotComboBox";
             this.bgmGenDlcSlotComboBox.Size = new System.Drawing.Size(164, 33);
             this.bgmGenDlcSlotComboBox.TabIndex = 24;
@@ -163,7 +163,7 @@
             this.tableLayoutPanel3.Controls.Add(this.bgmGenNewButton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.bgmGenLoadButton, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(14, 13);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -176,7 +176,7 @@
             this.bgmGenNewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bgmGenNewButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenNewButton.Location = new System.Drawing.Point(6, 7);
-            this.bgmGenNewButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenNewButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenNewButton.Name = "bgmGenNewButton";
             this.bgmGenNewButton.Size = new System.Drawing.Size(111, 48);
             this.bgmGenNewButton.TabIndex = 21;
@@ -189,7 +189,7 @@
             this.bgmGenLoadButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bgmGenLoadButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenLoadButton.Location = new System.Drawing.Point(129, 7);
-            this.bgmGenLoadButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenLoadButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenLoadButton.Name = "bgmGenLoadButton";
             this.bgmGenLoadButton.Size = new System.Drawing.Size(111, 48);
             this.bgmGenLoadButton.TabIndex = 22;
@@ -202,9 +202,9 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel5);
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Location = new System.Drawing.Point(272, 87);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
             this.groupBox1.Size = new System.Drawing.Size(536, 308);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
@@ -218,7 +218,7 @@
             this.tableLayoutPanel5.Controls.Add(this.bgmGenStageSelectButton, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.bgmGenCharactersSelectButton, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(12, 229);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -230,7 +230,7 @@
             this.bgmGenStageSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bgmGenStageSelectButton.Enabled = false;
             this.bgmGenStageSelectButton.Location = new System.Drawing.Point(262, 11);
-            this.bgmGenStageSelectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenStageSelectButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenStageSelectButton.Name = "bgmGenStageSelectButton";
             this.bgmGenStageSelectButton.Size = new System.Drawing.Size(244, 44);
             this.bgmGenStageSelectButton.TabIndex = 1;
@@ -243,7 +243,7 @@
             this.bgmGenCharactersSelectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bgmGenCharactersSelectButton.Enabled = false;
             this.bgmGenCharactersSelectButton.Location = new System.Drawing.Point(6, 11);
-            this.bgmGenCharactersSelectButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenCharactersSelectButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenCharactersSelectButton.Name = "bgmGenCharactersSelectButton";
             this.bgmGenCharactersSelectButton.Size = new System.Drawing.Size(244, 44);
             this.bgmGenCharactersSelectButton.TabIndex = 0;
@@ -267,7 +267,7 @@
             this.tableLayoutPanel2.Controls.Add(this.bgmGenBgmVolumeTrackBar, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.bgmGenVolumeTextBox, 3, 2);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 37);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
@@ -294,7 +294,7 @@
             this.bgmGenBrowseAt3Button.Enabled = false;
             this.bgmGenBrowseAt3Button.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenBrowseAt3Button.Location = new System.Drawing.Point(387, 70);
-            this.bgmGenBrowseAt3Button.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenBrowseAt3Button.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenBrowseAt3Button.Name = "bgmGenBrowseAt3Button";
             this.bgmGenBrowseAt3Button.Size = new System.Drawing.Size(119, 46);
             this.bgmGenBrowseAt3Button.TabIndex = 28;
@@ -308,7 +308,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.bgmGenAt3FileTextBox, 2);
             this.bgmGenAt3FileTextBox.Enabled = false;
             this.bgmGenAt3FileTextBox.Location = new System.Drawing.Point(140, 77);
-            this.bgmGenAt3FileTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenAt3FileTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenAt3FileTextBox.Name = "bgmGenAt3FileTextBox";
             this.bgmGenAt3FileTextBox.Size = new System.Drawing.Size(235, 31);
             this.bgmGenAt3FileTextBox.TabIndex = 27;
@@ -343,11 +343,12 @@
             this.tableLayoutPanel2.SetColumnSpan(this.bgmGenBgmTitleTextBox, 3);
             this.bgmGenBgmTitleTextBox.Enabled = false;
             this.bgmGenBgmTitleTextBox.Location = new System.Drawing.Point(140, 15);
-            this.bgmGenBgmTitleTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenBgmTitleTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenBgmTitleTextBox.Name = "bgmGenBgmTitleTextBox";
             this.bgmGenBgmTitleTextBox.Size = new System.Drawing.Size(366, 31);
             this.bgmGenBgmTitleTextBox.TabIndex = 26;
             this.bgmGenBgmTitleTextBox.TextChanged += new System.EventHandler(this.bgmGenBgmTitleTextBox_TextChanged);
+            this.bgmGenBgmTitleTextBox.Leave += new System.EventHandler(this.bgmGenBgmTitleTextBox_Leave);
             // 
             // bgmGenBgmVolumeTrackBar
             // 
@@ -356,7 +357,7 @@
             this.tableLayoutPanel2.SetColumnSpan(this.bgmGenBgmVolumeTrackBar, 2);
             this.bgmGenBgmVolumeTrackBar.Enabled = false;
             this.bgmGenBgmVolumeTrackBar.Location = new System.Drawing.Point(140, 130);
-            this.bgmGenBgmVolumeTrackBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenBgmVolumeTrackBar.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenBgmVolumeTrackBar.Maximum = 100;
             this.bgmGenBgmVolumeTrackBar.Name = "bgmGenBgmVolumeTrackBar";
             this.bgmGenBgmVolumeTrackBar.Size = new System.Drawing.Size(235, 51);
@@ -367,7 +368,7 @@
             // 
             this.bgmGenVolumeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.bgmGenVolumeTextBox.Location = new System.Drawing.Point(387, 140);
-            this.bgmGenVolumeTextBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenVolumeTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenVolumeTextBox.Name = "bgmGenVolumeTextBox";
             this.bgmGenVolumeTextBox.ReadOnly = true;
             this.bgmGenVolumeTextBox.Size = new System.Drawing.Size(119, 31);
@@ -383,7 +384,7 @@
             this.tableLayoutPanel1.Controls.Add(this.bgmGenUpButton, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.bgmGenDownButton, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 406);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -398,7 +399,7 @@
             this.bgmGenAddButton.Enabled = false;
             this.bgmGenAddButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenAddButton.Location = new System.Drawing.Point(6, 63);
-            this.bgmGenAddButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenAddButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenAddButton.Name = "bgmGenAddButton";
             this.bgmGenAddButton.Size = new System.Drawing.Size(111, 46);
             this.bgmGenAddButton.TabIndex = 24;
@@ -412,7 +413,7 @@
             this.bgmGenRemoveButton.Enabled = false;
             this.bgmGenRemoveButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenRemoveButton.Location = new System.Drawing.Point(129, 63);
-            this.bgmGenRemoveButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenRemoveButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenRemoveButton.Name = "bgmGenRemoveButton";
             this.bgmGenRemoveButton.Size = new System.Drawing.Size(111, 46);
             this.bgmGenRemoveButton.TabIndex = 23;
@@ -426,7 +427,7 @@
             this.bgmGenUpButton.Enabled = false;
             this.bgmGenUpButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenUpButton.Location = new System.Drawing.Point(6, 6);
-            this.bgmGenUpButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenUpButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenUpButton.Name = "bgmGenUpButton";
             this.bgmGenUpButton.Size = new System.Drawing.Size(111, 45);
             this.bgmGenUpButton.TabIndex = 21;
@@ -440,7 +441,7 @@
             this.bgmGenDownButton.Enabled = false;
             this.bgmGenDownButton.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.bgmGenDownButton.Location = new System.Drawing.Point(129, 6);
-            this.bgmGenDownButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenDownButton.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenDownButton.Name = "bgmGenDownButton";
             this.bgmGenDownButton.Size = new System.Drawing.Size(111, 45);
             this.bgmGenDownButton.TabIndex = 22;
@@ -454,7 +455,7 @@
             this.bgmGenBgmListBox.FormattingEnabled = true;
             this.bgmGenBgmListBox.ItemHeight = 25;
             this.bgmGenBgmListBox.Location = new System.Drawing.Point(12, 87);
-            this.bgmGenBgmListBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.bgmGenBgmListBox.Margin = new System.Windows.Forms.Padding(6);
             this.bgmGenBgmListBox.Name = "bgmGenBgmListBox";
             this.bgmGenBgmListBox.Size = new System.Drawing.Size(244, 304);
             this.bgmGenBgmListBox.TabIndex = 0;
@@ -465,7 +466,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "MainFormBgmGenUserControl";
             this.Size = new System.Drawing.Size(814, 535);
             this.panel1.ResumeLayout(false);

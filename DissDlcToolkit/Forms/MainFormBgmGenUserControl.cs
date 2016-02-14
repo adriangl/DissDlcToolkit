@@ -19,10 +19,15 @@ namespace DissDlcToolkit.Forms
 
         private int currentBgmIndex;
         private BindingList<FormBgmEntry> bgmFormEntries;
+        private ToolTip tooltip = new ToolTip();
 
         public MainFormBgmGenUserControl()
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+            // Prepare tooltip
+            tooltip.ToolTipIcon = ToolTipIcon.Warning;
+            tooltip.ToolTipTitle = "CAUTION";
         }
 
         private void button10_Click(object sender, EventArgs e)
@@ -414,12 +419,22 @@ namespace DissDlcToolkit.Forms
             {
                 // Warn the user about the text not displaying properly in PSP
                 bgmGenBgmTitleTextBox.BackColor = Color.LightGoldenrodYellow;
+                int x = 0;
+                int y = -36;
+                tooltip.Show("The text may not be displayed properly in the game!", bgmGenBgmTitleTextBox, x, y);
             }
             else
             {
                 // Restore current box color
                 bgmGenBgmTitleTextBox.BackColor = SystemColors.Window;
+                tooltip.Hide(this);
             }
+        }
+
+        private void bgmGenBgmTitleTextBox_Leave(object sender, EventArgs e)
+        {
+            // Dismiss tooltip
+            tooltip.Hide(this);
         }
     }
 }
