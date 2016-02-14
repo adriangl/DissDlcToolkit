@@ -407,5 +407,19 @@ namespace DissDlcToolkit.Forms
         {
             FormUtils.removeDropDown(sender);
         }
+
+        private void bgmGenBgmTitleTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (bgmGenBgmTitleTextBox.Text.Length >= 36)
+            {
+                // Warn the user about the text not displaying properly in PSP
+                bgmGenBgmTitleTextBox.BackColor = Color.LightGoldenrodYellow;
+            }
+            else
+            {
+                // Restore current box color
+                bgmGenBgmTitleTextBox.BackColor = SystemColors.Window;
+            }
+        }
     }
 }
