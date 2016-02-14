@@ -146,7 +146,7 @@ namespace DissDlcToolkit.Models
                             if (forceReloadNames)
                             {
                                 entry.internalFileName = String.Format("ud_{0}{1}.at3",
-                                    dlcSlot.ToString("D2"), newId.ToString("X4"));
+                                    dlcSlot.ToString("D2"), newId.ToString("x4"));
                             }
                             // Save in hashtable
                             entryIds.Add(entry.id, entry.internalFileName);
