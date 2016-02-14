@@ -10,6 +10,12 @@ Requirements:
 - .NET Framework 4.0 (Should be compatible from Windows XP SP3 onwards)
 
 Changelog:
+- 2/14/2016  -	Version 1.1.2
+    - General:
+        - Support for high DPI screens
+    - BGM Generation Tab:
+        - Removed 36 characters limitation in song names. Now the user will be notified that exceeding that size may not render the name properly in-game. Thanks to convalise for the suggestion!
+        - Fixed bug that generated wrong names for songs with hex numbers that contained uppercase letters. Thanks to Lugia2009 & convalise for the bug report!
 - 4/4/2015  -	Version 1.1.1
     - General:
         - Bugfixes & improved stability
