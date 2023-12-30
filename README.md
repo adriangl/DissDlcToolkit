@@ -1,50 +1,32 @@
-DissDlcToolkit
-==============
+# Dissidia 012 \[duodecim\] Duodecim Final Fantasy DLC Toolkit
 
-Dissidia Duodecim Final Fantasy DLC Toolkit
+## What is this?
+This is a very simple DLC Toolkit for Dissidia Duodecim: Final Fantasy! You can check all the avaliable features in the repo's [wiki page](https://github.com/adriangl/DissDlcToolkit/wiki).
 
-Hi everyone!
-This is a very simple DLC Toolkit for Dissidia Duodecim: Final Fantasy!
-
-Requirements:
+## Requirements:
 - .NET Framework 4.0 (Should be compatible from Windows XP SP3 onwards)
 
-Changelog:
-- 2/14/2016  -	Version 1.1.2
-    - General:
-        - Support for high DPI screens
-    - BGM Generation Tab:
-        - Removed 36 characters limitation in song names. Now the user will be notified that exceeding that size may not render the name properly in-game. Thanks to convalise for the suggestion!
-        - Fixed bug that generated wrong names for songs with hex numbers that contained uppercase letters. Thanks to Lugia2009 & convalise for the bug report!
-- 4/4/2015  -	Version 1.1.1
-    - General:
-        - Bugfixes & improved stability
-        - Added "Settings" menu in "File" menu
-    - Character Generation tab:
-        - Added Manikin costume slot
-        - Added 'Manikin effects' checkbox
-    - BGM Generation Tab:
-        - You can now create BGM packs with ease!
-    - Swap DLC Slots tab:
-        - You can now change DLC slots for Player/Assist/Attachment data or BGM Data
-    - .exex edit tab:
-        - Minor improvements
-    - Reporter tab:
-        - Added support for BGM reporting
-        - Removed "Export as text" button
-- 1/5/2015  -	Version 1.0
-    - Ported all existing code from JRuby to .NET (that's why I jumped to v1.0 :P)
-    - DLC Generation tab:
-        - Added Normal, Alt.1 & Alt.2 options for all characters that support them
-        - Added more character-specific security checks (ex: Aerith can only use Normal, Alt.1 & Alt.2 costume slots)
-    - Support for creating & linking DLC attachments
-    - DLC Reporter tab:
-        - Now reports .objx files' names for easier extraction
-        - Minor improvements in Excel spreadsheet formatting
-    - Added log file for easier bug reporting
-    - Code uploaded to GitHub
-
+## Attributions
 Contains code from the following projects:
 - SharpCompress BZip2 CRC routine: http://sharpcompress.codeplex.com/
 - csharp-ArgbColorDialog: https://github.com/bvssvni/csharp-ArgbColorDialog
 - EPPlus: http://epplus.codeplex.com/
+
+Thanks to all Dissidia modders and devs that contributed with their knowledge all these years to create this tool (SkyBladeCloud, ultimaespio, osdanova and lots more that I can't remember...)
+
+## License
+```
+Copyright (C) 2015 Adrián García
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
